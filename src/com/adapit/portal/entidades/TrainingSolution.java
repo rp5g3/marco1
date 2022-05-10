@@ -66,7 +66,7 @@ public class TrainingSolution extends ComercialSolution {
 	}
 	
 	public enum TrainingSolutionType{
-		Tecnologia_Produ��o_Software, Tecnologia_Metal_Mec�nica, Inform�tica_B�sica, Nivelamento_T�cnico, Para_Venda, Para_Marketing, Organizacional, Capacita��o_Profissional, N�vel_M�dio, N�vel_Superior
+		Tecnologia_Producao_Software, Tecnologia_Metal_Mecanica, Informatica_Basica, Nivelamento_Tecnico, Para_Venda, Para_Marketing, Organizacional, Capacitacao_Profissional, Nivel_Medio, Nivel_Superior
 	}
 
 	public void setAutor(Instrutor comprador) {

@@ -80,7 +80,7 @@ public class Participante extends PessoaEmDivulgacao {
 	@OneToMany(mappedBy="inscrito",fetch=FetchType.LAZY)
 	private Collection<ComercialSolutionItem> itensTreinamentos = new ArrayList<ComercialSolutionItem>();
 	
-	private PrimeiroContatoIniciado primeiroContato = PrimeiroContatoIniciado.Recomenda��o;
+	private PrimeiroContatoIniciado primeiroContato = PrimeiroContatoIniciado.Recomendacao;
 
 	
 	public PrimeiroContatoIniciado getPrimeiroContato() {
