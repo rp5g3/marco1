@@ -1,7 +1,5 @@
 package com.adapit.portal.entidades;
 
-
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collection;
 
