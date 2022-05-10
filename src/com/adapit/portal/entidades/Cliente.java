@@ -22,7 +22,7 @@ import javax.persistence.Table;
 @Entity
 @Inheritance(strategy=InheritanceType.JOINED)
 @Table(name="Customer")
-public class Cliente extends Fornecedor implements Serializable{
+public class Cliente extends Fornecedor {
 
 	private static final long serialVersionUID = 432372357245457L;
 	
