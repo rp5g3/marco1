@@ -117,6 +117,7 @@ public class Arquivo implements Serializable{
     
         // Ensure all the bytes have been read in
         if (offset < bytes.length) {
+						is.close();
             throw new IOException("Could not completely read file "+file.getName());
         }
     
@@ -141,7 +142,7 @@ public class Arquivo implements Serializable{
 			System.out.println("Error Reading The File.");
 			e1.printStackTrace();
 		}
-		//System.out.println("Conteúdo " + b);
+		//System.out.println("Conteï¿½do " + b);
 		return b;
         /*InputStream is = new FileInputStream(file);
         
@@ -186,24 +187,24 @@ public class Arquivo implements Serializable{
 	
 	public static String getName(File f) throws Exception{
 		return f.getName().trim().replace(" ","_")
-		.replace("ç","c").replace("Ç","C")
-		.replace("ã","a").replace("õ","o")
-		.replace("â","a").replace("ô","o").replace("ê","e").replace("î","i").replace("û","u")
-		.replace("á","a").replace("ó","o").replace("é","e").replace("í","i").replace("ú","u")
-		.replace("à","a").replace("ò","o").replace("è","e").replace("ì","i").replace("ù","u")
+		.replace("ï¿½","c").replace("ï¿½","C")
+		.replace("ï¿½","a").replace("ï¿½","o")
+		.replace("ï¿½","a").replace("ï¿½","o").replace("ï¿½","e").replace("ï¿½","i").replace("ï¿½","u")
+		.replace("ï¿½","a").replace("ï¿½","o").replace("ï¿½","e").replace("ï¿½","i").replace("ï¿½","u")
+		.replace("ï¿½","a").replace("ï¿½","o").replace("ï¿½","e").replace("ï¿½","i").replace("ï¿½","u")
 		.replace("\"","_").replace("\'","_").replace(":","_").replace("<","_").replace(">","_")
 		.replace(",","_").replace(";","_").replace("/","_").replace("?","_").replace("~","_")
-		.replace("^","_").replace("]","_").replace("}","_").replace("´","_").replace("`","_")
+		.replace("^","_").replace("]","_").replace("}","_").replace("ï¿½","_").replace("`","_")
 		.replace("[","_").replace("{","_").replace("|","_").replace("\\","_").replace("!","_")
-		.replace("@","_").replace("#","_").replace("$","_").replace("%","_").replace("¨","_")
+		.replace("@","_").replace("#","_").replace("$","_").replace("%","_").replace("ï¿½","_")
 		.replace("&","_").replace("*","_").replace("(","_").replace(")","_").replace("-","_")
 		.replace("+","_").replace("=","_")
-		.replace("ä","a").replace("ë","e").replace("ï","i").replace("ö","o").replace("ü","u")
-		.replace("Ã","A").replace("Õ","O")
-		.replace("Â","A").replace("Ô","O").replace("Ê","E").replace("Î","I").replace("Û","U")
-		.replace("Á","A").replace("Ó","O").replace("É","E").replace("Í","I").replace("Ú","U")
-		.replace("À","A").replace("Ò","O").replace("È","E").replace("Ì","I").replace("Ù","U")
-		.replace("Ä","A").replace("Ë","A").replace("Ï","I").replace("Ö","O").replace("Ü","U")
+		.replace("ï¿½","a").replace("ï¿½","e").replace("ï¿½","i").replace("ï¿½","o").replace("ï¿½","u")
+		.replace("ï¿½","A").replace("ï¿½","O")
+		.replace("ï¿½","A").replace("ï¿½","O").replace("ï¿½","E").replace("ï¿½","I").replace("ï¿½","U")
+		.replace("ï¿½","A").replace("ï¿½","O").replace("ï¿½","E").replace("ï¿½","I").replace("ï¿½","U")
+		.replace("ï¿½","A").replace("ï¿½","O").replace("ï¿½","E").replace("ï¿½","I").replace("ï¿½","U")
+		.replace("ï¿½","A").replace("ï¿½","A").replace("ï¿½","I").replace("ï¿½","O").replace("ï¿½","U")
 		;
 	}
 	
