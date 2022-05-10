@@ -1,0 +1,290 @@
+<LINK rel="stylesheet" type="text/css" href="css/main.css"/>
+<script type="text/javascript" src="js/jquery/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="js/jquery/jquery-ui-1.8.4.custom.min.js"></script>
+<script type="text/javascript" src="js/jquery/jquery.bgiframe-2.1.1.js"></script>
+<style type="text/css">
+   #just_dialog div button { font-size: 62.5%; }
+</style>
+
+<script type="text/javascript"><!--
+
+				jQuery(document).ready(function(){
+					$('.apresentacaoAccordionDiv.head').click(function() {
+						$(this).next().toggle('slow');
+						return false;
+					}).next().hide();
+				});
+				/*jQuery(document).ready(function(){
+					$('.technoAccordionDiv.head').click(function() {
+						$(this).next().toggle();
+						return false;
+					}).next().hide();
+				});*/
+				$(function() {
+					$("#apresentacaoAccordionDiv").accordion();
+				});
+							
+</script>
+
+<script type="text/javascript">
+				jQuery(document).ready(function(){
+					$('.faqLocalAccordionDiv.head').click(function() {
+						$(this).next().toggle('slow');
+						return false;
+					}).next().hide();
+				});
+				$(function() {
+					$("#faqLocalAccordionDiv").accordion();
+				});
+							
+</script>
+<div style="padding-left: 10px; padding-right: 10px; padding-top: 20px;">
+<!-- 
+<p>A Adapit &eacute; uma sociedade limitada (LTDA) civil por quotas
+de responsabilidade de presta&ccedil;&atilde;o de servi&ccedil;os, constitu&iacute;da pelos s&oacute;cios F&aacute;bio
+Paulo Basso e Irani Paulo Basso. A empresa possui o nome fantasia “Adapit” e o
+slogam da mesma &eacute; “Adaptando Tecnologias e Agilizando o Seu Trabalho”. O nome
+da empresa em registro &eacute; “Adapit Solu&ccedil;&otilde;es em Tecnologia da Informa&ccedil;&atilde;o LTDA”. O
+dom&iacute;nio da Adapit &eacute; o setor de software, onde atua principalmente como
+prestadora de servi&ccedil;os. A seguir s&atilde;o explicados os elementos chaves da empresa.</span></a></p>
+
+<br>
+ -->
+<h3 align=center style='text-align:left;font-size:10.0pt;'><i>Neg&oacute;cio</i></h3>
+
+
+<p>Desenvolvimento de Sistemas de Informa&ccedil;&otilde;es (SIs) para empresas de pequeno porte.</p>
+
+
+
+<h3 align=center style='text-align:left;font-size:10.0pt;'><i>Miss&atilde;o</i></h3>
+
+
+<p>Desenvolver software acess&iacute;vel e de qualidade, utilizando as boas pr&aacute;ticas da engenharia
+ de software.</p>
+
+
+
+<h3 align=center style='text-align:left;font-size:10.0pt;'><i>Foco</i></h3>
+
+
+
+<p>O foco da Adapit est&aacute; na produ&ccedil;&atilde;o de SIs integrados, que rodem em plataformas
+web, desktop e mobile, executados por sistemas operacionais livres (Unix, Linux) ou comerciais (Windows e MacOS)
+ou para dispositivos m&oacute;veis (Android).</p>
+
+
+
+<h3 align=center style='text-align:left;font-size:10.0pt;'><i>Objetivos</i></h3>
+
+
+<table style="background-color: transparent;" border="0" width="100%" cellspacing="5">
+	 <tr>
+	 	<td width="20px"><img src="imgs/setamenu.gif"></td>
+	 	<td width>Tornar mais r&aacute;pido e simples o desenvolvimento de sistemas, contribuindo para
+	 	as pesquisas relacionadas com a engenharia de software.</td>
+	 </tr>
+	 <tr>
+	 	<td width="20px"><img src="imgs/setamenu.gif"></td>
+	 	<td width>
+	 	Desenvolver sistemas
+	 	por valores cada vez mais acess&iacute;veis aos clientes.</td>
+	 </tr>
+	 <tr>
+	 	<td width="20px"><img src="imgs/setamenu.gif"></td>
+	 	<td width>
+	 	Disseminar as boas pr&aacute;ticas utilizadas na empresa e contribuir com as pesquisas realizadas
+	 	em institui&ccedil;&otilde;es nacionais.</td>
+	 </tr>
+	 <tr>
+	 	<td width="20px"><img src="imgs/setamenu.gif"></td>
+	 	<td width>
+	 	Fornecer aos estudantes de cursos de engenharia de software, de sistemas de informa&ccedil;&atilde;o e de ci&ecirc;ncias da computa&ccedil;&atilde;o
+	 	 um espa&ccedil;o para a realiza&ccedil;&atilde;o de Pesquisa e Desenvolvimento (P&D).</td>
+	 </tr>
+	 <tr>
+	 	<td width="20px"><img src="imgs/setamenu.gif"></td>
+	 	<td width>
+	 	Formar profissionais qualificados para atuarem como programadores, analistas e gerentes
+	 	de projeto, por meio de treinamentos t&eacute;cnicos elaborados
+	 	 pela empresa.</td>
+	 </tr>
+</table>
+<br>
+
+	<div id="apresentacaoAccordionDiv" >
+		
+		<h3 >
+			<a href="#"><Font color="Black" size="2" face="Arial"><b>A Gente Faz a Diferen&ccedil;a</b></Font></a>
+		</h3>
+		<div style="padding: 5px; padding-left:10px;padding-right:10px;padding-bottom:10px;padding-top:10px;" >		
+		
+		
+			<p>O jornal Zero Hora publicou uma
+			<a href="http://zerohora.clicrbs.com.br/zerohora/jsp/default2.jsp?uf=1&local=1&source=a1727029.xml&template=3898.dwt&edition=9069"
+			 target="_blank">mat&eacute;ria no caderno especial de s&aacute;bado do dia 05/01/2008</a>.
+			 A mat&eacute;ria relata sobre o rumo dos diretores da Adapit, F&aacute;bio e Raquel,
+			no sentido de construir um empreendimento em constante inova&ccedil;&atilde;o, focado em tecnologias. 
+			F&aacute;bio e Raquel apareceram ao lado de famosos empreendedores que tiveram sucesso 
+			como Bill Gates, Steve Jobs, e os criadores do Google.</p>
+		
+			
+		</div>
+		
+		<h3 >
+			<a href="#"><Font color="Black" size="2" face="Arial"><b>Sobre a Empresa</b></Font></a>
+		</h3>
+		<div style="padding: 5px; padding-left:10px;padding-right:10px;padding-bottom:10px;padding-top:10px;">	
+		 <p>A Adapit produz sistemas de informa&ccedil;&atilde;o usando tecnologia livre e pr&oacute;pria. Tal tecnologia 
+		   torna o processo de produ&ccedil;&atilde;o da empresa muito &aacute;gil, permitindo a redu&ccedil;&atilde;o de custos.
+		    As pr&aacute;ticas usadas, bem como as 
+		   ferramentas de produ&ccedil;&atilde;o, s&atilde;o aderentes com as melhores solu&ccedil;&otilde;es de Engenharia de Software.
+		   Tanto as boas pr&aacute;ticas quanto a tecnologia &eacute; comercializada na empresa. A Adapit tamb&eacute;m &eacute; conhecida por
+		   envolver-se em pesquisas de Engenharia de Software, com artigos publicados em eventos nacionais e internacionais e tamb&eacute;m como patrocinadora de eventos de tecnologia.
+		  </p>
+		</div>
+		
+		<h3 >
+				<a href="#"><Font color="Black" size="2" face="Arial"><b>Principais Produtos e Servi&ccedil;os</b></Font></a>
+		</h3>
+		<div style="padding: 5px; padding-left:10px;padding-right:10px;padding-bottom:10px;padding-top:10px;">	
+			 <p>
+			   <ul>
+				<li>Desenvolvimento&nbsp;de&nbsp;software&nbsp;por&nbsp;demanda.
+				<li>Elabora&ccedil;&atilde;o&nbsp;projetos&nbsp;de&nbsp;software.
+				<li>Treinamentos&nbsp;em&nbsp;tecnologias&nbsp;de&nbsp;produ&ccedil;&atilde;o&nbsp;de&nbsp;sistemas.
+				</ul><ul>
+				<li>Sistema&nbsp;Work&nbsp;CASE&nbsp;Toolkit&nbsp;(para&nbsp;quem&nbsp;produz&nbsp;software).
+				<li>Sistema&nbsp;para&nbsp;ag&ecirc;ncias&nbsp;de&nbsp;leiloaria&nbsp;preg&atilde;o eletr&ocirc;nico e&nbsp;leil&atilde;o&nbsp;online 
+			   </ul>	
+			 </p>
+			
+		</div>
+		
+		<h3 >
+				<a href="#"><Font color="Black" size="2" face="Arial"><b>Setor</b></Font></a>
+		</h3>
+		<div style="padding: 5px; padding-left:10px;padding-right:10px;padding-bottom:10px;padding-top:10px;">		
+			<p>O setor da Adapit &eacute; o desenvolvimento de software. Este setor tem crescido muito nos recentes anos,
+			 acarretando em maior necessidade de programadores de sistemas experientes. Em virtude da Adapit n&atilde;o possuir
+			 uma equipe grande para produzir sistemas por demanda, alternativas para angariar maior
+			 agilidade foram utilizadas.</p>
+			 <ul><li>A utiliza&ccedil;&atilde;o de um
+			 processo de desenvolvimento &aacute;gil, como uma adapta&ccedil;&atilde;o do Scrum para o Desenvolvimento Dirigido por Modelos.
+			 <li>A utiliza&ccedil;&atilde;o do
+			 software WCT, simplificando o processo e o desenvolvimento dos sistemas.
+			 <li>A utiliza&ccedil;&atilde;o de
+			 tecnologias livres (Java e Linux) para desenvolver e executar os sistemas. 
+			</ul>
+			<p>Essa combina&ccedil;&atilde;o permite que a empresa,
+			 mesmo com um n&uacute;mero pequeno de desenvolvedores, desenvolva sistemas complexos em pouco tempo e a 
+			 um baixo custo operacional.</p>		
+		</div>
+	
+	
+		<h3 >
+				<a href="#"><Font color="Black" size="2" face="Arial"><b>Área Comercial</b></Font></a>
+		</h3>
+		<div style="padding: 5px; padding-left:10px;padding-right:10px;padding-bottom:10px;padding-top:10px;" >		
+			<p>A &aacute;rea comercial da Adapit &eacute; muito movimentada
+			por empres&aacute;rios e profissionais de empresas que fabricam software. Isto porque a mesma est&aacute; incubada
+			na RAIAR, localizada no Tecnopuc, o parque tecnol&oacute;gico da Pontif&iacute;cia
+			Universidade Cat&oacute;lica do Rio Grande do Sul (PUCRS). Veja as vantajens:</p>
+		
+			 <table border="0" width="100%" cellspacing="5" cellpadding="0" style="background-color: transparent;">
+				 <tr>
+				 	<td width="20px"><img src="imgs/setamenu.gif"></td>
+				 	<td width>Área que concentra empresas principalmente do setor de produ&ccedil;&atilde;o software.</td>
+				 </tr>
+				 <tr>
+				 	<td width="20px"><img src="imgs/setamenu.gif"></td>
+				 	<td width>Localizada em um dos centros de pesquisa e desenvolvimento de Porto Alegre.</td>
+				 </tr> 
+				 <tr>
+				 	<td width="20px"><img src="imgs/setamenu.gif"></td>
+				 	<td width>Área de f&aacute;cil acesso, pr&oacute;xima a bancos e lojas.</td>
+				 </tr>
+			 </table>
+		
+		
+			<p>O local &eacute; considerado muito bom pois, para a Adapit, &eacute; positivo estar perto de f&aacute;bricas
+			de software, que configuram o seu p&uacute;blico alvo.</p>		
+		</div>
+	
+		<h3 >
+				<a href="#"><Font color="Black" size="2" face="Arial"><b>Pesquisa e Desenvolvimento P&D</b></Font></a>
+		</h3>
+		<div style="padding: 5px; padding-left:10px;padding-right:10px;padding-bottom:10px;padding-top:10px;">		
+		
+			<p>Por estar inserida em um ambiente
+			que promove a pesquisa como fonte de bons neg&oacute;cios, a Adapit caracteriza-se por ser desenvolvedora
+			de tecnologias pr&oacute;prias para melhorar a qualidade dos softwares produzidos.
+			
+			<p>A incubadora Raiar possibilita que
+			a Adapit esteja em contato e colabora&ccedil;&atilde;o com pesquisadores de engenharia de software da
+			PUCRS.</p>
+			
+			<p >A Adapit publicou uma s&eacute;rie de artigos sobre suas inova&ccedil;&otilde;es em revistas e 
+			em congressos de engenharia de software, nacionais e internacionais.</p>
+			
+			
+			<p >A Adapit &eacute; patrocinadora de muitos eventos nacionais relacionados com Engenharia de Software.</p>
+		</div>
+	
+	</div>
+
+<!-- 
+
+<h3 align=center style='text-align:left;font-size:10.0pt;'><i>Neg&oacute;cio</i></h3>
+
+
+<p>Produtos e servi&ccedil;os para produtividade de software nos segmentos CPDs, Empresas de TI e F&aacute;bricas de Software.</p>
+
+
+
+<h3 align=center style='text-align:left;font-size:10.0pt;'><i>Miss&atilde;o</i></h3>
+
+
+<p>Maximizar a produ&ccedil;&atilde;o de sistemas, mantendo as tecnologias usuais 
+e agregando qualidade aos processos de produ&ccedil;&atilde;o.</p>
+
+
+
+<h3 align=center style='text-align:left;font-size:10.0pt;'><i>Foco</i></h3>
+
+
+
+<p>O foco da Adapit &eacute; em quem necessita produzir sistemas. Desenvolvemos um conjunto de produtos e 
+servi&ccedil;os que t&ecirc;m por objetivo agregar maior for&ccedil;a competitiva para a pequena e a m&eacute;dia empresa
+ desse setor.</p>
+
+
+
+<h3 align=center style='text-align:left;font-size:10.0pt;'><i>Objetivos</i></h3>
+
+
+<table style="background-color: transparent;" border="0" width="100%" cellspacing="5">
+	 <tr>
+	 	<td width="20px"><img src="imgs/setamenu.gif"></td>
+	 	<td width>Tornar mais r&aacute;pido e simples o desenvolvimento de sistemas.</td>
+	 </tr>
+	 <tr>
+	 	<td width="20px"><img src="imgs/setamenu.gif"></td>
+	 	<td width>
+	 	Desenvolver sistemas
+	 	por valores mais acess&iacute;veis aos clientes.</td>
+	 </tr>
+	 <tr>
+	 	<td width="20px"><img src="imgs/setamenu.gif"></td>
+	 	<td width>
+	 	Desenvolver inova&ccedil;&otilde;es para a Engenharia de Software.</td>
+	 </tr>
+	 <tr>
+	 	<td width="20px"><img src="imgs/setamenu.gif"></td>
+	 	<td width>
+	 	Consolidar-se como a maior refer&ecirc;ncia no Brasil em Solu&ccedil;&otilde;es para a TI at&eacute; 2012.</td>
+	 </tr>
+</table>
+<br>
+ -->
+</div>

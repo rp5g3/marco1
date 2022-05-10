@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/adapitsys/!svn/ver/115/AdapitFromServerJQuery/lib/hibernate3
+END
+hibernate3.jar
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/adapitsys/!svn/ver/115/AdapitFromServerJQuery/lib/hibernate3/hibernate3.jar
+END
+ejb3-persistence.jar
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/adapitsys/!svn/ver/115/AdapitFromServerJQuery/lib/hibernate3/ejb3-persistence.jar
+END
+hibernate-entitymanager.jar
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/adapitsys/!svn/ver/115/AdapitFromServerJQuery/lib/hibernate3/hibernate-entitymanager.jar
+END
+hibernate-annotations.jar
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/adapitsys/!svn/ver/115/AdapitFromServerJQuery/lib/hibernate3/hibernate-annotations.jar
+END
+log4j-1.2.11.jar
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/adapitsys/!svn/ver/115/AdapitFromServerJQuery/lib/hibernate3/log4j-1.2.11.jar
+END
+spring-sandbox.jar
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/adapitsys/!svn/ver/115/AdapitFromServerJQuery/lib/hibernate3/spring-sandbox.jar
+END

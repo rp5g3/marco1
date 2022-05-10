@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/adapitsys/!svn/ver/349/AdapitFromServerJQuery/src/com/adapit/portal/ui/forms/publication
+END
+GridPropertyEditor.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/adapitsys/!svn/ver/173/AdapitFromServerJQuery/src/com/adapit/portal/ui/forms/publication/GridPropertyEditor.java
+END
+PublicationDescricaoPropertyEditorDialog.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/adapitsys/!svn/ver/173/AdapitFromServerJQuery/src/com/adapit/portal/ui/forms/publication/PublicationDescricaoPropertyEditorDialog.java
+END
+ImportPublicationFile.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/adapitsys/!svn/ver/349/AdapitFromServerJQuery/src/com/adapit/portal/ui/forms/publication/ImportPublicationFile.java
+END
+PublicationCadastreForm.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/adapitsys/!svn/ver/284/AdapitFromServerJQuery/src/com/adapit/portal/ui/forms/publication/PublicationCadastreForm.java
+END
+PublicationListForm.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/adapitsys/!svn/ver/173/AdapitFromServerJQuery/src/com/adapit/portal/ui/forms/publication/PublicationListForm.java
+END
+SelecionarPublicationListForm.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/adapitsys/!svn/ver/173/AdapitFromServerJQuery/src/com/adapit/portal/ui/forms/publication/SelecionarPublicationListForm.java
+END

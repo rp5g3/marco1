@@ -1,0 +1,43 @@
+
+
+<div style="padding-left: 10px; padding-right: 10px; padding-top: 20px;">
+
+<p >A
+Adapit utiliza tecnologias pr&oacute;prias e livres para produzir softwares. Essas
+tecnologias permitem construir aplicativos que executam no ambiente de trabalho
+do seu computador, em um web browser e tamb&eacute;m em dispositivos m&oacute;veis, como
+celulares e PDAs.</p>
+
+<p >Umas das principais
+tecnologias utilizadas &eacute; Java. Esta &eacute; uma linguagem de programa&ccedil;&atilde;o livre,
+desenvolvida pela SUN, dispon&iacute;vel em <a href="http://java.sun.com/">http://java.sun.com</a>.
+Java &eacute; utilizada para desenvolver aplicativos como CRMs (Custumer Relationship Management)
+e ERPs (Enterprise Resource Planning), integrados na web com o uso de tecnologias
+Java para SOA (Services Oriented Architecture). Al&eacute;m disso, por Java ser uma
+linguagem multi-plataforma, a Adapit consegue integrar as mesmas solu&ccedil;&otilde;es para
+rodar em celulares e PDAs.</p>
+
+<p >Al&eacute;m de Java e
+SOA, a Adapit utiliza uma nota&ccedil;&atilde;o padr&atilde;o para modelar e automatizar processos
+de neg&oacute;cios dos clientes. Trata-se do BPMN (Business Process Modeling Notation).
+O diretor da empresa argumenta: "Durante a produ&ccedil;&atilde;o de software utilizamos
+o aplicativo da <a href="http://www.intalio.com/">Intalio</a>, que &eacute; livre, para
+modelar e automatizar os processos dos neg&oacute;cios de nossos clientes".</p>
+
+<p>Em parceria com a academia e com a ind&uacute;stria estamos em busca da automa&ccedil;&atilde;o de processos
+de desenvolvimento de software usando solu&ccedil;&otilde;es dispon&iacute;veis no mercado. S&atilde;o exemplos o aplicativo
+da Intalio, o plugin eclipse EPF (Eclipse Process Framework) e o aplicativo JIRA. "Estamos 
+condizindo dois trabalhos de doutorado relacionados com automa&ccedil;&atilde;o de processos e com as solu&ccedil;&otilde;es que
+implementamos no software WCT, criado pela Adapit. Com isso, unimos os
+conceitos de modelagem e automatiza&ccedil;&atilde;o de processos de neg&oacute;cios com a modelagem
+e automatiza&ccedil;&atilde;o de processos de desenvolvimento de software. Logo logo, teremos uma solu&ccedil;&atilde;o
+que viabilize ainda mais qualidade e produtividade aos desenvolvedores de software".</p>
+
+<p >Veja <a
+ style="cursor: hand;	cursor: pointer;" href=""
+ onclick="jqueryOpen('institucional_processos_.html','institucionalContentDiv'); return false;" >aqui</a>
+  o processo de desenvolvimento utilizado pela
+Adapit e tamb&eacute;m o clico de vida.</p>
+
+<br>
+</div>

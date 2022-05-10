@@ -1,0 +1,131 @@
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/adapitsys/!svn/ver/375/AdapitFromServerJQuery/src/com/adapit/portal/services/dao/hibernate
+END
+PublicationServiceDAOHibernate.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/services/dao/hibernate/PublicationServiceDAOHibernate.java
+END
+NewsServiceDAOHibernate.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/adapitsys/!svn/ver/274/AdapitFromServerJQuery/src/com/adapit/portal/services/dao/hibernate/NewsServiceDAOHibernate.java
+END
+UserServiceDAOHibernate.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/adapitsys/!svn/ver/375/AdapitFromServerJQuery/src/com/adapit/portal/services/dao/hibernate/UserServiceDAOHibernate.java
+END
+FileServiceDAOHibernate.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/adapitsys/!svn/ver/349/AdapitFromServerJQuery/src/com/adapit/portal/services/dao/hibernate/FileServiceDAOHibernate.java
+END
+UpdateServiceDAOHibernate.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/adapitsys/!svn/ver/350/AdapitFromServerJQuery/src/com/adapit/portal/services/dao/hibernate/UpdateServiceDAOHibernate.java
+END
+UtilityDAOHibernate.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/services/dao/hibernate/UtilityDAOHibernate.java
+END
+ProjetoServiceDAOHibernate.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/adapitsys/!svn/ver/171/AdapitFromServerJQuery/src/com/adapit/portal/services/dao/hibernate/ProjetoServiceDAOHibernate.java
+END
+ParticipanteServiceDAOHibernate.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/adapitsys/!svn/ver/274/AdapitFromServerJQuery/src/com/adapit/portal/services/dao/hibernate/ParticipanteServiceDAOHibernate.java
+END
+PreferenciaServiceDAOHibernate.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/adapitsys/!svn/ver/274/AdapitFromServerJQuery/src/com/adapit/portal/services/dao/hibernate/PreferenciaServiceDAOHibernate.java
+END
+EnderecoServiceDAOHibernate.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/services/dao/hibernate/EnderecoServiceDAOHibernate.java
+END
+AgendaTreinamentoServiceDAOHibernate.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/services/dao/hibernate/AgendaTreinamentoServiceDAOHibernate.java
+END
+TreinamentoServiceDAOHibernate.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/adapitsys/!svn/ver/173/AdapitFromServerJQuery/src/com/adapit/portal/services/dao/hibernate/TreinamentoServiceDAOHibernate.java
+END
+ContatoDAOHibernate.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/services/dao/hibernate/ContatoDAOHibernate.java
+END
+TurmaServiceDAOHibernate.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/adapitsys/!svn/ver/173/AdapitFromServerJQuery/src/com/adapit/portal/services/dao/hibernate/TurmaServiceDAOHibernate.java
+END
+PessoaServiceDAOHibernate.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/adapitsys/!svn/ver/274/AdapitFromServerJQuery/src/com/adapit/portal/services/dao/hibernate/PessoaServiceDAOHibernate.java
+END
+ComercialSolutionServiceDAOHibernate.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/adapitsys/!svn/ver/349/AdapitFromServerJQuery/src/com/adapit/portal/services/dao/hibernate/ComercialSolutionServiceDAOHibernate.java
+END
+TechDefinitionServiceDAOHibernate.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/adapitsys/!svn/ver/274/AdapitFromServerJQuery/src/com/adapit/portal/services/dao/hibernate/TechDefinitionServiceDAOHibernate.java
+END
+DAOHibernate.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/services/dao/hibernate/DAOHibernate.java
+END
+CategoriaServiceDAOHibernate.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/adapitsys/!svn/ver/284/AdapitFromServerJQuery/src/com/adapit/portal/services/dao/hibernate/CategoriaServiceDAOHibernate.java
+END
+ImagemServiceDAOHibernate.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/adapitsys/!svn/ver/284/AdapitFromServerJQuery/src/com/adapit/portal/services/dao/hibernate/ImagemServiceDAOHibernate.java
+END
+ContaServiceDAOHibernate.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/services/dao/hibernate/ContaServiceDAOHibernate.java
+END

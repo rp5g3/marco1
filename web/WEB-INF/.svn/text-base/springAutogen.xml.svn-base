@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!DOCTYPE beans PUBLIC
+    "-//SPRING//DTD BEAN//EN"
+    "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans
+  default-autowire="byName"
+  default-lazy-init="true"
+  default-dependency-check="none"
+>
+
+  <bean
+      id="utilityDAOHibernate"
+      class="com.adapit.portal.services.dao.hibernate.UtilityDAOHibernate"
+      singleton="true"
+  >
+
+  </bean>
+
+  <bean
+      id="fakeDateEditor"
+      class="com.workcase.utils.DatePropertyEditor"
+  >
+
+  </bean>
+
+  <bean
+      id="userServiceDAOHibernate"
+      class="com.adapit.portal.services.dao.hibernate.UserServiceDAOHibernate"
+      singleton="true"
+  >
+
+  </bean>
+
+  <bean
+      id="newsService"
+      class="com.adapit.portal.services.validation.NewsServiceValidator"
+      singleton="true"
+  >
+
+    <property name="newsService">
+
+      <ref bean="newsServiceDAOHibernate"/>
+    </property>
+
+  </bean>
+
+  <bean
+      id="treinamentoServiceDAOHibernate"
+      class="com.adapit.portal.services.dao.hibernate.TreinamentoServiceDAOHibernate"
+      singleton="true"
+  >
+
+  </bean>
+
+  <bean
+      name="report"
+      class="com.workcase.report.ReportImpl"
+      singleton="true"
+  >
+
+  </bean>
+
+  <bean
+      id="fileService"
+      class="com.adapit.portal.services.validation.FileServiceValidator"
+      singleton="true"
+  >
+
+    <property name="service">
+
+      <ref bean="fileServiceDAOHibernate"/>
+    </property>
+
+  </bean>
+
+  <bean
+      id="projetoService"
+      class="com.adapit.portal.services.validation.ProjetoServiceValidator"
+      singleton="true"
+  >
+
+    <property name="projetoService">
+
+      <ref bean="projetoServiceDAOHibernate"/>
+    </property>
+
+  </bean>
+
+  <bean
+      id="imagemService"
+      class="com.adapit.portal.services.validation.ImagemServiceValidator"
+      singleton="true"
+  >
+
+    <property name="imagemService">
+
+      <ref bean="imagemServiceDAOHibernate"/>
+    </property>
+
+  </bean>
+
+  <bean
+      id="participanteService"
+      class="com.adapit.portal.services.validation.ParticipanteServiceValidator"
+      singleton="true"
+  >
+
+    <property name="participanteService">
+
+      <ref bean="participanteServiceDAOHibernate"/>
+    </property>
+    <property name="pessoaService">
+
+      <ref bean="pessoaServiceDAOHibernate"/>
+    </property>
+    <property name="userService">
+
+      <ref bean="userServiceDAOHibernate"/>
+    </property>
+
+  </bean>
+
+  <bean
+      id="techDefinitionService"
+      class="com.adapit.portal.services.validation.TechDefinitionServiceValidator"
+      singleton="true"
+  >
+
+    <property name="techDefinitionService">
+
+      <ref bean="techDefinitionServiceDAOHibernate"/>
+    </property>
+
+  </bean>
+
+  <bean
+      id="agendaTreinamentoService"
+      class="com.adapit.portal.services.validation.AgendaTreinamentoServiceValidator"
+      singleton="true"
+  >
+
+    <property name="agendaService">
+
+      <ref bean="agendaTreinamentoServiceDAOHibernate"/>
+    </property>
+
+  </bean>
+
+  <bean
+      id="contaServiceDAOHibernate"
+      class="com.adapit.portal.services.dao.hibernate.ContaServiceDAOHibernate"
+      singleton="true"
+  >
+
+  </bean>
+
+  <bean
+      id="publicationService"
+      class="com.adapit.portal.services.validation.PublicationServiceValidator"
+      singleton="true"
+  >
+
+    <property name="publicationService">
+
+      <ref bean="publicationServiceDAOHibernate"/>
+    </property>
+
+  </bean>
+
+  <bean
+      id="usuarioForm"
+      class="com.adapit.portal.services.controllers.usuario.UsuarioFormController"
+      singleton="true"
+  >
+
+    <property name="userService">
+
+      <ref bean="userService"/>
+    </property>
+    <property name="adapitAutenticateUserMailService">
+
+      <ref bean="adapitAutenticateUserMailService"/>
+    </property>
+
+  </bean>
+
+  <bean
+      id="preferenciaServiceDAOHibernate"
+      class="com.adapit.portal.services.dao.hibernate.PreferenciaServiceDAOHibernate"
+      singleton="true"
+  >
+
+  </bean>
+
+  <bean
+      id="fileServiceDAOHibernate"
+      class="com.adapit.portal.services.dao.hibernate.FileServiceDAOHibernate"
+      singleton="true"
+  >
+
+  </bean>
+
+  <bean
+      id="imagemServiceDAOHibernate"
+      class="com.adapit.portal.services.dao.hibernate.ImagemServiceDAOHibernate"
+      singleton="true"
+  >
+
+  </bean>
+
+  <bean
+      id="enderecoService"
+      class="com.adapit.portal.services.validation.EnderecoServiceValidator"
+      singleton="true"
+  >
+
+    <property name="service">
+
+      <ref bean="enderecoServiceDAOHibernate"/>
+    </property>
+
+  </bean>
+
+  <bean
+      id="techDefinitionServiceDAOHibernate"
+      class="com.adapit.portal.services.dao.hibernate.TechDefinitionServiceDAOHibernate"
+      singleton="true"
+  >
+
+  </bean>
+
+  <bean
+      id="contatoService"
+      class="com.adapit.portal.services.validation.ContatoServiceValidator"
+      singleton="true"
+  >
+
+    <property name="contatoService">
+
+      <ref bean="contatoServiceDAOHibernate"/>
+    </property>
+
+  </bean>
+
+  <bean
+      id="contatoServiceDAOHibernate"
+      class="com.adapit.portal.services.dao.hibernate.ContatoDAOHibernate"
+      singleton="true"
+  >
+
+  </bean>
+
+  <bean
+      id="updateService"
+      class="com.adapit.portal.services.validation.UpdateServiceValidator"
+      singleton="true"
+  >
+
+    <property name="updateService">
+
+      <ref bean="updateServiceDAOHibernate"/>
+    </property>
+
+  </bean>
+
+  <bean
+      id="projetoServiceDAOHibernate"
+      class="com.adapit.portal.services.dao.hibernate.ProjetoServiceDAOHibernate"
+      singleton="true"
+  >
+
+  </bean>
+
+  <bean
+      id="participanteServiceDAOHibernate"
+      class="com.adapit.portal.services.dao.hibernate.ParticipanteServiceDAOHibernate"
+      singleton="true"
+  >
+
+  </bean>
+
+  <bean
+      id="publicationServiceDAOHibernate"
+      class="com.adapit.portal.services.dao.hibernate.PublicationServiceDAOHibernate"
+      singleton="true"
+  >
+
+  </bean>
+
+  <bean
+      id="newsServiceDAOHibernate"
+      class="com.adapit.portal.services.dao.hibernate.NewsServiceDAOHibernate"
+      singleton="true"
+  >
+
+  </bean>
+
+  <bean
+      id="categoriaService"
+      class="com.adapit.portal.services.validation.CategoriaServiceValidator"
+      singleton="true"
+  >
+
+    <property name="categoriaService">
+
+      <ref bean="categoriaServiceDAOHibernate"/>
+    </property>
+
+  </bean>
+
+  <bean
+      id="utilityService"
+      class="com.adapit.portal.services.validation.UtilityServiceValidator"
+      singleton="true"
+  >
+
+    <property name="utilityService">
+
+      <ref bean="utilityDAOHibernate"/>
+    </property>
+
+  </bean>
+
+  <bean
+      id="comercialSolutionService"
+      class="com.adapit.portal.services.validation.ComercialSolutionServiceValidator"
+      singleton="true"
+  >
+
+    <property name="comercialSolutionService">
+
+      <ref bean="comercialSolutionServiceDAOHibernate"/>
+    </property>
+    <property name="velocityEngine">
+
+      <ref bean="velocityEngine"/>
+    </property>
+
+  </bean>
+
+  <bean
+      id="turmaService"
+      class="com.adapit.portal.services.validation.TurmaServiceValidator"
+      singleton="true"
+  >
+
+    <property name="turmaService">
+
+      <ref bean="turmaServiceDAOHibernate"/>
+    </property>
+
+  </bean>
+
+  <bean
+      id="treinamentoService"
+      class="com.adapit.portal.services.validation.TreinamentoServiceValidator"
+      singleton="true"
+  >
+
+    <property name="treinamentoService">
+
+      <ref bean="treinamentoServiceDAOHibernate"/>
+    </property>
+
+  </bean>
+
+  <bean
+      id="turmaServiceDAOHibernate"
+      class="com.adapit.portal.services.dao.hibernate.TurmaServiceDAOHibernate"
+      singleton="true"
+  >
+
+  </bean>
+
+  <bean
+      id="preferenciaService"
+      class="com.adapit.portal.services.validation.PreferenciaServiceValidator"
+      singleton="true"
+  >
+
+    <property name="preferenciaService">
+
+      <ref bean="preferenciaServiceDAOHibernate"/>
+    </property>
+
+  </bean>
+
+  <bean
+      id="contaService"
+      class="com.adapit.portal.services.validation.ContaServiceValidator"
+      singleton="true"
+  >
+
+    <property name="contaService">
+
+      <ref bean="contaServiceDAOHibernate"/>
+    </property>
+
+  </bean>
+
+  <bean
+      id="pessoaService"
+      class="com.adapit.portal.services.validation.PessoaServiceValidator"
+      singleton="true"
+  >
+
+    <property name="pessoaService">
+
+      <ref bean="pessoaServiceDAOHibernate"/>
+    </property>
+
+  </bean>
+
+  <bean
+      id="userService"
+      class="com.adapit.portal.services.validation.UserServiceValidator"
+      singleton="true"
+  >
+
+    <property name="userService">
+
+      <ref bean="userServiceDAOHibernate"/>
+    </property>
+
+  </bean>
+
+  <bean
+      id="agendaTreinamentoServiceDAOHibernate"
+      class="com.adapit.portal.services.dao.hibernate.AgendaTreinamentoServiceDAOHibernate"
+      singleton="true"
+  >
+
+  </bean>
+
+  <bean
+      id="updateServiceDAOHibernate"
+      class="com.adapit.portal.services.dao.hibernate.UpdateServiceDAOHibernate"
+      singleton="true"
+  >
+
+  </bean>
+
+  <bean
+      id="pessoaServiceDAOHibernate"
+      class="com.adapit.portal.services.dao.hibernate.PessoaServiceDAOHibernate"
+      singleton="true"
+  >
+
+  </bean>
+
+  <bean
+      id="categoriaServiceDAOHibernate"
+      class="com.adapit.portal.services.dao.hibernate.CategoriaServiceDAOHibernate"
+      singleton="true"
+  >
+
+  </bean>
+
+  <bean
+      id="comercialSolutionServiceDAOHibernate"
+      class="com.adapit.portal.services.dao.hibernate.ComercialSolutionServiceDAOHibernate"
+      singleton="true"
+  >
+
+  </bean>
+
+  <bean
+      id="enderecoServiceDAOHibernate"
+      class="com.adapit.portal.services.dao.hibernate.EnderecoServiceDAOHibernate"
+      singleton="true"
+  >
+
+  </bean>
+
+  <!--
+     To include additional bean definitions for Spring in the generated
+     application context file, add a file to your XDoclet merge directory
+     called spring-beans.xml that contains the <bean></bean> markup.
+  -->
+
+</beans>

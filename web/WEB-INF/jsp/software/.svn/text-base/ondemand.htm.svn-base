@@ -1,0 +1,170 @@
+
+<LINK rel="stylesheet" type="text/css" href="css/default.css" />
+<LINK rel="stylesheet" type="text/css" href="css/jt_DialogBox.css" />
+<script type="text/javascript" src="js/jt_DialogBox.js"></script>
+<script type="text/javascript" src="js/MyApp_dialogs.js"></script>
+
+<script type="text/javascript" src="js/leilao.js"></script>
+<script type="text/javascript" src="js/wz_tooltip.js"></script>
+
+<div style="padding: 10px;">
+<table cellpadding="0" cellspacing="0" width="690px" height="50">
+	<tr>
+		<th colspan="2" align="center" valign="middle" height="25"
+			style="font-family: arial; font-size: 15; background-color: #555555">
+		<center><font
+			style="font-family: arial; font-size: 14; font: bold; color: white">
+		<b>Desenvolvimento de Software por Demanda</b></font></center>
+		</th>
+	</tr>
+	<tr>
+		<td bgcolor="#FFFFFF" width="50%" valign="top">
+			<p>
+			<center><b>Benef&iacute;cios</b></center>
+			</p>
+			<ul>
+				<li>Uso de tecnologias livres, como Java e (Dojo Toolkit ou JQuery
+				 na camada de apresenta&ccedil;&atilde;o web).</li>
+				<li>Roda em qualquer lugar: em web browser, desktop e
+				mobile independentemente do sistema operacional.</li>
+				<li>Intera&ccedil;&atilde;o constante com o cliente.</li>
+				<li>Valores acess&iacute;veis para micro empreendimentos.</li>
+				<li>Material de apoio (apostilas e helps).</li>
+			</ul>
+		</td>
+		<td bgcolor="#FFFFFF" width="50%" valign="top">
+			<p>
+			<center><b>Caracter&iacute;sticas</b></center>
+			</p>
+			<ul>
+				<li>Desenvolvimento muito &aacute;gil, usando Scrum e o nosso software
+				WCT.</li>
+				<li>Primeiro prot&oacute;tipo funcional &eacute; entrege em uma semana.</li>
+				<li>Sistemas de boa qualidade visual.</li>
+				<li>Independente de plataforma.</li>
+				<li>Independente de sistema gerenciador de banco de dados.</li>
+			</ul>
+		</td>
+	</tr>
+</table>
+
+<br>
+<table cellpadding="0" cellspacing="0" width="690px" height="50">
+	<tr>
+		<th colspan="2" align="center" valign="middle" height="25"
+			style="font-family: arial; font-size: 15; background-color: #555555">
+		<center><font
+			style="font-family: arial; font-size: 14; font: bold; color: white">
+		<b>F&aacute;brica de Projetos de Software</b></font></center>
+		</th>
+	</tr>
+	<tr>
+		<td bgcolor="#FFFFFF" width="50%" valign="top">
+			<p>
+			<center><b>Benef&iacute;cios</b></center>
+			</p>
+			<ul>
+				<li>Os requisitos do sistema s&atilde;o descobertos e documentados.</li>
+				<li>Os riscos e pontos cr&iacute;ticos s&atilde;o encontrados.</li>
+				<li>Testes de comportamento da arquitetura do requisitos cr&iacute;ticos.</li>
+				<li>Adequa&ccedil;&atilde;o do tempo e prazos para a experi&ecirc;ncia da equipe.</li>
+				<li>Gera&ccedil;&atilde;o autom&aacute;tica de funcionalidades base a partir do modelos do sistema.</li>
+				<li>Estamos em constante aprimoramento com vis&atilde;o &agrave; implanta&ccedil;&atilde;o da MPS-Br na empresa.</li>
+			</ul>
+		</td>
+		<td bgcolor="#FFFFFF" width="50%" valign="top">
+			<p>
+			<center><b>Caracter&iacute;sticas</b></center>
+			</p>
+			<ul>
+				<li>Levantamento da necessidade de qualifica&ccedil;&atilde;o da equipe de
+				produ&ccedil;&atilde;o.</li>
+				<li>Utiliza&ccedil;&atilde;o de padr&otilde;es de mercado como UML e BPMN.</li>
+				<li>Ger&ecirc;ncia de requisitos.</li>
+				<li>Ger&ecirc;ncia de configura&ccedil;&atilde;o.</li>
+				<li>Engenharia de dom&iacute;nio.</li>
+				<li>R&aacute;pida prototipa&ccedil;&atilde;o da aplica&ccedil;&atilde;o.</li>
+			</ul>
+		</td>
+	</tr>
+</table>
+<br>
+<table cellpadding="0" cellspacing="0" width="690px" height="50">
+	<tr>
+		<th colspan="2" align="center" valign="middle" height="25"
+			style="font-family: arial; font-size: 15; background-color: #555555">
+		<center><font
+			style="font-family: arial; font-size: 14; font: bold; color: white"><b>Gera&ccedil;&atilde;o
+		de Prot&oacute;tipos de Software</b></font></center>
+		</th>
+	</tr>
+	<tr>
+		<td bgcolor="#FFFFFF" width="50%" valign="top">
+			<p>
+			<center><b>Benef&iacute;cios</b></center>
+			</p>
+			<ul>
+				<li>Visualiza&ccedil;&atilde;o do sistema antes de inicar o desenvolvimento.</li>
+				<li>Avaliar a usabilidade enquanto os requisitos s&atilde;o elicitados.</li>
+				<li>Pequenas itera&ccedil;&otilde;es/sprints.</li>
+				<li>Apresentar os pontos principais do sistema antes de
+				constru&iacute;-lo.</li>
+				<li>Encontrar interessados em investir no seu neg&oacute;cio.</li>
+				<li>Transformar o prot&oacute;tipo em funcionalidades de uma aplica&ccedil;&atilde;o.</li>
+			</ul>
+		</td>
+		<td bgcolor="#FFFFFF" width="50%" valign="top">
+			<p>
+			<center><b>Caracter&iacute;sticas</b></center>
+			</p>
+			<ul>
+				<li>Desenvolvido utilizando tecnologia de ponta.</li>
+				<li>O prot&oacute;tipo &eacute; todo constru&iacute;do em modelos utilizando a UML e
+				o MDD.</li>
+				<li>O prot&oacute;tipo &eacute; independente de plataforma e de tecnologias.</li>
+				<li>N&atilde;o h&aacute; a necessidade de conhecer linguagens de programa&ccedil;&atilde;o.</li>
+				<li>Rica documenta&ccedil;&atilde;o.</li>
+			</ul>
+		</td>
+	</tr>
+</table>
+
+<br>
+<!-- 
+<table cellpadding="0" cellspacing="0" width="100%" height="50">
+	<tr>
+		<th colspan="2" align="center" valign="middle" height="25"
+			style="font-family: arial; font-size: 15; background-color: #555555">
+		<center><font
+			style="font-family: arial; font-size: 14; font: bold; color:white"><b>An&aacute;lise
+		de Custos e de Tamanho de Sistemas</b></font></center>
+		</th>
+	</tr>
+	<td bgcolor="#FFFFFF" width="50%" valign="top">
+	<p>
+	<center><b>Benef&iacute;cios</b></center>
+	</p>
+	<ul>
+		<li>An&aacute;lise de investimento e custos de produ&ccedil;&atilde;o.
+		<li>Junto com a f&aacute;brica de projetos, viabiliza o desenvolvimento
+		de um prot&oacute;tipo funcional.
+		<li>C&aacute;lculo de riscos, prazos, qualifica&ccedil;ao e equipe necess&aacute;ria.
+		<li>Estudo de viabilidade
+	</ul>
+	</td>
+	<td bgcolor="#FFFFFF" width="50%" valign="top">
+	<p>
+	<center><b>Caracter&iacute;sticas</b></center>
+	</p>
+	<ul>
+		<li>Pode levar de uma semana a tr&ecirc;s meses, dependendo do tamanho
+		do sistema.
+		<li>Leva em conta a linguagem de programa&ccedil;&atilde;o a ser usada pela
+		f&aacute;brica de software.
+		<li>Projeto elaborado com PMBOK, com APF ou UCP.
+	</ul>
+	</td>
+	</tr>
+</table> -->
+
+</div>

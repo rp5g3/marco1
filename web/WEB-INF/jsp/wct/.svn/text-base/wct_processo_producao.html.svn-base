@@ -1,0 +1,422 @@
+<style type="text/css">
+p {
+	text-align: justify;
+	text-indent: 15pt;
+	font: normal 12px 'Arial', arial;
+}
+
+ol,ul {
+	font: normal 12px 'Arial', arial;
+}
+
+div.round_border {
+	border-width: 2px;
+	border-color: #E4E4E4;
+	border-style: solid;
+	padding: 10px;
+	font-family: arial;
+	font-size: 12;
+	color: #F94949;
+}
+</style>
+<p>A Figura 1 apresenta um esquema geral contextualizando a WCT como 
+      ferramenta de produ&#231;&#227;o usada em uma f&#225;brica de software.</p>
+<br>
+<span id="SoftwareHouseSpan"
+	style="visibility: hidden; left: 0; top: 0; position: absolute;">
+	<table cellpadding="0" cellspacing="0" width="500" height="50">
+		<tr>
+			<th colspan="4" align="center"
+				style="font-family: arial; font-size: 15; color: white; background-color: black; vertical-align: middle;">
+				<center>
+					<b>F&aacute;brica de Software</b>
+				</center></th>
+		</tr>
+		<tr>
+			<td style="font-family: verdana; font-size: 11"><img
+				src="imgs/biggersoftwarehouse.png" border="0" alt="" />
+			</td>
+			<td style="padding: 10px;">
+				<p> Os servi&#231;os prestados para f&#225;brica de software permitem que esta 
+            expanda o seu neg&#243;cio e atenda a um n&#250;mero maior de clientes. A 
+            produ&#231;&#227;o de uma f&#225;brica desse tipo &#233; maximizada com o uso do 
+            software WCT, o que significa que os recursos, humanos ou 
+            ferramentas, alocados em produ&#231;&#227;o, s&#227;o aproveitados ao m&#225;ximo pela 
+            empresa. Al&#233;m disso, a customiza&#231;&#227;o do WCT e os adaptadores 
+            desenvolvidos por demanda permitem uma boa sinergia entre membros 
+            de uma equipe, que &#233; alocada na linha de produto da f&#225;brica, e uma 
+            boa compatibilidade entre as ferramentas utilizadas no 
+            desenvolvimento das aplica&#231;&#245;es.</p>
+			</td>
+		</tr>
+	</table> </span>
+<span id="ResumoWCTSpan"
+	style="visibility: hidden; left: 0; top: 0; position: absolute;">
+	<table cellpadding="0" cellspacing="0" width="450" height="50">
+		<tr>
+			<th colspan="4" align="center"
+				style="font-family: arial; font-size: 15; color: white; background-color: black;">
+				<center>
+					<b>WorkCASE Toolkit (WCT)</b>
+				</center></th>
+		</tr>
+		<tr>
+			<td style="padding: 10px;">
+				<p>O software WCT traz para a f&#225;brica de software maior 
+            produtividade. Ele pode ser entendido como uma m&#225;quina, que recebe 
+            como entrada o modelo de um sistema, aplica transforma&#231;&#245;es neste 
+            modelo, e gera como sa&#237;da os dados que s&#227;o utilizados para compor 
+            uma aplica&#231;&#227;o. Assim, o WCT permite &#224; empresa reduzir os prazos de 
+            entrega dos aplicativos de seus clientes e, como consequ&#234;ncia, 
+            obter maiores lucros.</p>
+				<p>WCT utiliza a abordagem de desenvolvimento denominada como Agile 
+            Model Driven Architecture (AMDA), que traz agilidade na cria&#231;&#227;o de 
+            aplicativos com base em modelos de software.</p>
+			</td>
+		</tr>
+	</table> </span>
+<span id="AdaptadorPTransSpan"
+	style="visibility: hidden; left: 0; top: 0; position: absolute;">
+	<table cellpadding="0" cellspacing="0" width="400" height="50">
+		<tr>
+			<th colspan="4" align="center"
+				style="font-family: arial; font-size: 15; color: white; background-color: black;">
+				<center>
+					<b>Adaptadores de Processos de Transforma&#231;&#227;o de Modelos</b>
+				</center></th>
+		</tr>
+		<tr>
+			<td style="padding: 10px;">
+				<p>O desenvolvimento de adaptadores para processos de transforma&#231;&#227;o 
+            de modelos possibilita &#224; f&#225;brica de software definir os processos 
+            de execu&#231;&#227;o das transforma&#231;&#245;es. As transforma&#231;&#245;es recebem como 
+            entrada modelos de sistemas e geram como sa&#237;da artefatos de 
+            software. Os processos de transforma&#231;&#245;es possibilitam, portanto, 
+            configurar a m&#225;quina de transforma&#231;&#227;o que gera automaticamente ou 
+            de maneira guiada alguns dos artefatos utilizados em uma aplica&#231;&#227;o.</p>
+			</td>
+		</tr>
+	</table> </span>
+
+<span id="LinhaProdutoSpan"
+	style="visibility: hidden; left: 0; top: 0; position: absolute;">
+	<table cellpadding="0" cellspacing="0" width="500" height="50">
+		<tr>
+			<th colspan="4" align="center"
+				style="font-family: arial; font-size: 15; color: white; background-color: black;">
+				<center>
+					<b>Automatiza&#231;&#227;o das Linhas de Produ&#231;ao da F&#225;brica de Software</b>
+				</center></th>
+		</tr>
+		<tr>
+			<td style="padding: 10px;">
+				<p>Uma linha de produ&#231;&#227;o configura tanto o processo de produ&#231;&#227;o de 
+            uma f&#225;brica de software quanto os recursos que s&#227;o alocados em 
+            produ&#231;&#227;o por ela. A ADAPIT prov&#234; produtos e servi&#231;os para 
+            automatizar as linhas de produ&#231;&#227;o. A automatiza&#231;&#227;o traz um alto 
+            valor agregado para a empresa e uma melhoria consider&#225;vel na 
+            produtividade dos mebros da equipe de desenvolvimento de sistemas.
+				</p>
+				<p> A ADAPIT fornece o produto WCT, que permite automatizar linhas de 
+            produ&#231;&#227;o. Os servi&#231;os da ADAPIT permitem customizar o WCT para a 
+            empresa cliente. Assim, garantimos que a automatiza&#231;&#227;o da linha de 
+            produ&#231;&#227;o tem um r&#225;pido retorno sobre o capital investido nas 
+            solu&#231;&#245;es fornecidas pela ADAPIT.</p>
+			</td>
+		</tr>
+	</table> </span>
+
+<span id="Modelo1Span"
+	style="visibility: hidden; left: 0; top: 0; position: absolute;">
+	<table cellpadding="0" cellspacing="0" width="400" height="50">
+		<tr>
+			<th colspan="4" align="center"
+				style="font-family: arial; font-size: 15; color: white; background-color: black;">
+				<center>
+					<b>Modelo de Sistema</b>
+				</center></th>
+		</tr>
+		<tr>
+			<td style="padding: 10px;">
+				<p>Um modelo de um sistema cont&#233;m um conjunto de dados que descreve 
+            uma aplica&#231;&#227;o. F&#225;bricas de software tipicamente iniciam pela 
+            especifica&#231;&#227;o desses dados em uma etapa chamada de modelagem e 
+            projeto de sistemas.</p>
+
+				<p>O software WorkCASE Toolkit (WCT) &#233; um sistema para 
+            desenvolvimento de software dirigido por modelos (MDD). Ele recebe 
+            como entrada o modelo de um sistema em formato XML, XMI ou CMOF, e 
+            aplica transforma&#231;&#245;es autom&#225;ticas ou guiadas por um processo de 
+            transforma&#231;&#227;o.</p>
+			</td>
+		</tr>
+	</table> </span>
+
+<span id="InteroperabilidadeSpan"
+	style="visibility: hidden; left: 0; top: 0; position: absolute;">
+	<table cellpadding="0" cellspacing="0" width="550" height="50">
+		<tr>
+			<th colspan="4" align="center"
+				style="font-family: arial; font-size: 15; color: white; background-color: black;">
+				<center>
+					<b>Interoperabilidade em Modelos e Compatibilidade de Ferramentas 
+            de Produ&#231;&#227;o de Software</b>
+				</center></th>
+		</tr>
+		<tr>
+			<td style="padding: 10px;">
+				<p> Nas f&#225;bricas de software, os dados de uma aplica&#231;&#227;o podem ser 
+            especificados com diversas ferramentas de produ&#231;&#227;o. Por&#233;m, para a 
+            maioria delas os modelos n&#227;o s&#227;o compat&#237;veis, o que ocasiona um 
+            problema de troca de informa&#231;&#227;o entre elas (interoperabilidade). 
+            Como consequ&#234;ncia disso, a f&#225;brica torna-se dependente de 
+            determinados fornecedores e pode aproveitar de apenas alguns 
+            benef&#237;cios desses sistemas.</p>
+
+				<p>O WCT pode ser adaptado para suportar diferentes formatos de 
+            arquivos usados em diferentes ferramentas de produ&#231;&#227;o de software. 
+            Ele possibilita que a f&#225;brica de software opere nos modelos de 
+            sistemas utilizando diversas ferramentas de produ&#231;&#227;o de software.</p>
+			</td>
+		</tr>
+	</table> </span>
+
+<span id="Modelo2Span"
+	style="visibility: hidden; left: 0; top: 0; position: absolute;">
+	<table cellpadding="0" cellspacing="0" width="500" height="50">
+		<tr>
+			<th colspan="4" align="center"
+				style="font-family: arial; font-size: 15; color: white; background-color: black;">
+				<center>
+					<b>Entrada de Dados para Processamento pela WCT</b>
+				</center></th>
+		</tr>
+		<tr>
+			<td style="padding: 10px;">
+				<p>A entrada para o WCT &#233; um modelo de um sistema. Este modelo cont&#233;m 
+            dados, que representam os requisitos de uma aplica&#231;&#227;o em alto 
+            n&#237;vel, simples e de f&#225;cil entendimento. S&#227;o exemplos desses dados 
+            os formul&#225;rios de cadastro, as telas de uma aplica&#231;&#227;o, o modelo do 
+            banco de dados, as intera&#231;&#245;es dos usu&#225;rios com o sistema, dentre 
+            outros. Eles s&#227;o transformados pelo WCT em artefatos de sistemas, 
+            que s&#227;o blocos de constru&#231;&#227;o utilizados para desenvolver uma 
+            aplica&#231;&#227;o.</p>
+
+				<p>Portanto, o WCT converte os dados de um sistema especificados
+					rapidamente em um modelo de entrada em outros dados mais complexos.
+				</p>
+			</td>
+		</tr>
+	</table> </span>
+
+
+<span id="ComponenteArquiteturaSpan"
+	style="visibility: hidden; left: 0; top: 0; position: absolute;">
+	<table cellpadding="0" cellspacing="0" width="400" height="50">
+		<tr>
+			<th colspan="4" align="center"
+				style="font-family: arial; font-size: 15; color: white; background-color: black;">
+				<center>
+					<b>Adaptadores de Tecnologias</b>
+				</center></th>
+		</tr>
+		<tr>
+			<td style="padding: 10px;">
+				<p> Uma f&#225;brica de software pode utilizar muitas tecnologias na sua 
+            linha de produto. A ADAPIT oferece o servi&#231;o de customiza&#231;&#227;o do 
+            WCT para atender as tecnologias utilizadas pela f&#225;brica. A 
+            adapta&#231;&#227;o de tecnologias permite que a linha de produto gere como 
+            sa&#237;da artefatos de software mapeados para as arquiteturas, 
+            linguagens de progra&#231;&#227;o, padr&#245;es de projeto e demais recursos 
+            usados em produ&#231;&#227;o na f&#225;brica de software.</p>
+			</td>
+		</tr>
+	</table> </span>
+
+<span id="ArtefatosSpan"
+	style="visibility: hidden; left: 0; top: 0; position: absolute;">
+	<table cellpadding="0" cellspacing="0" width="400" height="50">
+		<tr>
+			<th colspan="4" align="center"
+				style="font-family: arial; font-size: 15; color: white; background-color: black;">
+				<center>
+					<b>Artefatos de Software</b>
+				</center></th>
+		</tr>
+		<tr>
+			<td style="padding: 10px;">
+				<p> Os artefatos de software s&#227;o dados que especificam partes de uma 
+            aplica&#231;&#227;o. S&#227;o resultantes da transforma&#231;&#227;o de um modelo de 
+            entrada pelo WCT. Um dado de entrada contido no modelo pode ser 
+            uma interface de usu&#225;rio enquanto o artefato resultante &#233; o c&#243;digo 
+            da aplica&#231;&#227;o para a tecnologia a qual executa a interface de 
+            usu&#225;rio. Os artefatos de software s&#227;o resultados do processo de 
+            transforma&#231;&#227;o da linha de produto da f&#225;brica de software.</p>
+			</td>
+		</tr>
+	</table> </span>
+
+<span id="AplicacoesSpan"
+	style="visibility: hidden; left: 0; top: 0; position: absolute;">
+	<table cellpadding="0" cellspacing="0" width="400" height="50">
+		<tr>
+			<th colspan="4" align="center"
+				style="font-family: arial; font-size: 15; color: white; background-color: black;">
+				<center>
+					<b>Aplica&#231;&#227;o</b>
+				</center></th>
+		</tr>
+		<tr>
+			<td style="padding: 10px;">
+				<p>A aplica&#231;&#227;o &#233; um software que pode ser instalado e executado em um 
+            determinado computador. Ela &#233; o resultado do trabalho realizado na 
+            f&#225;brica de software.</p>
+
+				<p>Os produtos e servi&#231;os oferecidos pela ADAPIT possibilitam o 
+            desenvolvimento de aplica&#231;&#245;es em prazos menores e com valores mais 
+            acess&#237;veis aos seus clientes.</p>
+			</td>
+		</tr>
+	</table> </span>
+
+
+
+
+<div style="padding-left: 10px; padding-right: 10px; padding-top: 20px;">
+
+	<center>
+		<b>Delsize o mouse sobre as imagens para mais informa&#231;&#245;es.</b>
+	</center>
+	<br>
+	<center>
+		<img src="imgs/wctproductline.png" border="0" usemap="#wctproductline"
+			alt="" />
+	</center>
+	<map name='wctproductline'>
+		<area shape='rect' coords='74,154,100,190'
+			onmouseover="TagToTip('Modelo2Span')"
+			style="cursor: hand; cursor: pointer;" alt="" />
+		<area shape='polygon' onmouseover="TagToTip('SoftwareHouseSpan')"
+			coords='101,156,122,134,132,133,150,108,184,90,186,122,202,123,204,174,99,176'
+			style="cursor: hand; cursor: pointer;" alt="" />
+		<area shape='rect' coords='99,177,210,207'
+			onmouseover="TagToTip('ResumoWCTSpan')"
+			style="cursor: hand; cursor: pointer;" alt="" />
+		<area shape='polygon'
+			coords='216,173,253,173,247,189,273,188,284,169,294,174,317,191,340,168,357,168,354,184,344,195,211,196'
+			onmouseover="TagToTip('LinhaProdutoSpan')"
+			style="cursor: hand; cursor: pointer;" alt="" />
+		<area shape='rect' coords='368,208,488,255'
+			onmouseover="TagToTip('AplicacoesSpan')"
+			style="cursor: hand; cursor: pointer;" alt="" />
+		<area shape='rect' coords='391,179,493,210'
+			onmouseover="TagToTip('AplicacoesSpan')"
+			style="cursor: hand; cursor: pointer;" alt="" />
+
+		<area shape='rect' coords='211,217,285,260'
+			onmouseover="TagToTip('ComponenteArquiteturaSpan')"
+			style="cursor: hand; cursor: pointer;" alt="" />
+		<area shape='rect' coords='140,224,207,260'
+			onmouseover="TagToTip('ComponenteArquiteturaSpan')"
+			style="cursor: hand; cursor: pointer;" alt="" />
+
+		<area shape='rect' coords='144,207,206,223'
+			title='Adaptador que permite adicionar transformadores específicos de tecnologias'
+			style="cursor: hand; cursor: pointer;" alt="" />
+		<area shape='polygon'
+			coords='209,21,224,1,288,0,287,38,237,109,209,108'
+			onmouseover="TagToTip('AdaptadorPTransSpan')"
+			style="cursor: hand; cursor: pointer;" alt="" />
+		<area shape='polygon'
+			coords='292,46,317,11,353,11,353,103,333,136,309,136'
+			onmouseover="TagToTip('InteroperabilidadeSpan')"
+			style="cursor: hand; cursor: pointer;" alt="" />
+		<area shape='circle' coords='317,172,19'
+			onmouseover="TagToTip('ArtefatosSpan')"
+			style="cursor: hand; cursor: pointer;" alt="" />
+		<area shape='polygon' coords='255,172,262,157,282,170,273,188,247,188'
+			onmouseover="TagToTip('ArtefatosSpan')"
+			style="cursor: hand; cursor: pointer;" alt="" />
+		<area shape='polygon' coords='363,162,382,159,388,176,370,186,354,174'
+			onmouseover="TagToTip('ArtefatosSpan')"
+			style="cursor: hand; cursor: pointer;" alt="" />
+		<area shape='polygon'
+			coords='50,162,56,146,35,140,53,124,77,128,82,146,73,158,72,189,102,189,99,203,64,203,47,195,41,179'
+			onmouseover="TagToTip('LinhaProdutoSpan')"
+			style="cursor: hand; cursor: pointer;" alt="" />
+		<area shape='polygon'
+			coords='17,120,29,107,54,105,54,121,36,140,16,141'
+			onmouseover="TagToTip('Modelo1Span')"
+			style="cursor: hand; cursor: pointer;" alt="" />
+
+	</map>
+	<br>
+
+	<center>
+		<b>Figura 1:</b> Solu&#231;&#227;o para Reduzir Custos de Produ&#231;&#227;o
+	</center>
+	<br /> <br />
+	<div class="round_border ui-corner-all">
+		<p>
+			<b>Onde Est&#227;o as Pessoas?</b>
+        </p>
+      </div>
+      <p>
+        O esquema acima apresentou a f&#225;brica, mas onde est&#227;o as pessoas que 
+        fazem o trabalho acontecer? Elas est&#227;o distribu&#237;das em cada uma das 
+        atividades e s&#227;o elas as construtoras dos artefatos. Cada pessoa &#233; 
+        respons&#225;vel por uma caracter&#237;stica importante do processo de 
+        desenvolvimento como: especialistas que trabalhar&#227;o com modelagem; 
+        outros com an&#225;lise de requisitos; outros com rastreabilidade e 
+        planejamento; outras com adapta&#231;&#245;es da WCT para atender as 
+        necessidades da f&#225;brica; e, por fim, muitas outas programar&#227;o as 
+        funcionalidades pois a WCT &#233; apenas um software de complemento, n&#227;o um 
+        ambiente completo. 
+      </p>
+    
+	<div class="round_border ui-corner-all">
+		<p>
+			<b>WCT N&#227;o &#233; um Framework</b>
+		</p>
+	</div>
+	<p>
+		A WCT n&#227;o &#233; um framework. Apesar de o sistema licen&#231;a <b>server</b> 
+        ser disponibilizado junto com um pequeno framework de controle de 
+        acesso, este serve apenas para uma configura&#231;&#227;o padr&#227;o disponibilizada 
+        pela Adapit para aqueles que n&#227;o tenham definida uma arquitetura. WCT 
+        deve ser configurado para gerar c&#243;digo para o framework utilizado na 
+        f&#225;brica de software.
+	</p>
+
+	<div class="round_border ui-corner-all">
+		<p>
+			<b>WCT N&#227;o &#233; uma Plataforma</b>
+		</p>
+	</div>
+	<p> WCT n&#227;o &#233; uma plataforma de execu&#231;&#227;o de aplicativos. Em muitos 
+        sistemas de produ&#231;&#227;o voc&#234; far&#225; o prot&#243;tipo e testar&#225; logo em seguida 
+        numa infra-estrutura de execu&#231;&#227;o, sendo ela necess&#225;ria em todas as 
+        implanta&#231;&#245;es do sistema. Esse n&#227;o &#233; o caso da WCT. Temos um projeto 
+        futuro para realizar testes funcionais utilizando o modelo, por&#233;m o 
+        mesmo n&#227;o deve ser entendido como um ifra-estrutura de execu&#231;&#227;o da 
+        aplica&#231;&#227;o.</p>
+
+	<p>Os objetivos na WCT s&#227;o apenas o de prototipar a aplica&#231;&#227;o e gerar o 
+        c&#243;digo mais detalhado poss&#237;vel para a sua arquitetura. A 
+        infra-estrutura de execu&#231;&#227;o da sua aplica&#231;&#227;o voc&#234; &#233; quem decide. At&#233; 
+        mesmo o workflow da sua aplica&#231;&#227;o precisa ser definido por voc&#234;, 
+        personalizando desde onde os bot&#245;es de uma tela de CRUD v&#227;o estar, 
+        assim como o local da tela em que resultados ser&#227;o apresentados ao 
+        usu&#225;rio. O resultado da WCT deve ser c&#243;digo para uma aplica&#231;&#227;o normal 
+        como as desenvolvidas por sua equipe de programa&#231;&#227;o.</p>
+
+	<div class="round_border ui-corner-all">
+		<p>
+			<b>WCT N&#227;o &#233; uma IDE</b>
+		</p>
+	</div>
+	<p>A WCT n&#227;o &#233; uma IDE. Significa que voc&#234; n&#227;o vai utiliz&#225;-la para 
+        escrever c&#243;digos Java. Para isso voc&#234; vai utilizar uma IDE como 
+        Eclipse ou NetBeans e ao gerar o c&#243;digo-fonte pela WCT selecionar&#225; o 
+        diret&#243;rio dos fontes configurados na sua IDE.</p>
+</div>

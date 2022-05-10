@@ -1,0 +1,12 @@
+K 10
+svn:ignore
+V 134
+Adapit_25_09_2010.jar
+Adapit_03__12_2010.jar
+Adapit_09__11_2010.jar
+basso_FOMDA_support_OORT_development.pdf
+.sonar
+target
+adapit.war
+
+END

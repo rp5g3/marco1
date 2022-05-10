@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/adapitsys/!svn/ver/389/AdapitFromServerJQuery/src/com/adapit/portal/ui/forms/pessoa/participante
+END
+ParticipanteDadosPessoaJuridicaPanel.java
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/adapitsys/!svn/ver/255/AdapitFromServerJQuery/src/com/adapit/portal/ui/forms/pessoa/participante/ParticipanteDadosPessoaJuridicaPanel.java
+END
+ParticipanteDadosPessoaFisicaPanel.java
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/adapitsys/!svn/ver/255/AdapitFromServerJQuery/src/com/adapit/portal/ui/forms/pessoa/participante/ParticipanteDadosPessoaFisicaPanel.java
+END
+CadastrarParticipanteForm.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/adapitsys/!svn/ver/375/AdapitFromServerJQuery/src/com/adapit/portal/ui/forms/pessoa/participante/CadastrarParticipanteForm.java
+END
+ApresentacaoParticipante.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/adapitsys/!svn/ver/389/AdapitFromServerJQuery/src/com/adapit/portal/ui/forms/pessoa/participante/ApresentacaoParticipante.java
+END
+TipoPessoaSelectionDialog.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/adapitsys/!svn/ver/173/AdapitFromServerJQuery/src/com/adapit/portal/ui/forms/pessoa/participante/TipoPessoaSelectionDialog.java
+END
+SelectPessoaDivulgavelParticipanteDialog.java
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/svn/adapitsys/!svn/ver/375/AdapitFromServerJQuery/src/com/adapit/portal/ui/forms/pessoa/participante/SelectPessoaDivulgavelParticipanteDialog.java
+END
+CadastrarParticipanteTabs.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/adapitsys/!svn/ver/389/AdapitFromServerJQuery/src/com/adapit/portal/ui/forms/pessoa/participante/CadastrarParticipanteTabs.java
+END
+CommonData.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/adapitsys/!svn/ver/274/AdapitFromServerJQuery/src/com/adapit/portal/ui/forms/pessoa/participante/CommonData.java
+END

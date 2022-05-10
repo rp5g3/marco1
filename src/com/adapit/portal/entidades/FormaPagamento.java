@@ -1,0 +1,5 @@
+package com.adapit.portal.entidades;
+
+public enum FormaPagamento {
+	À_vista_em_dinheiro,À_vista_em_cheque,À_vista_boleto_bancario,À_vista_no_cartão_de_crédito,À_vista_por_transferência_bancária,Parcelado_em_boleto_bancário,Parcelado_em_cheque_pré_datado
+}

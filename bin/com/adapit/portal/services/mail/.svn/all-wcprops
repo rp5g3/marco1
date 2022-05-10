@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/adapitsys/!svn/ver/375/AdapitFromServerJQuery/src/com/adapit/portal/services/mail
+END
+BoletoContaMailServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/adapitsys/!svn/ver/173/AdapitFromServerJQuery/src/com/adapit/portal/services/mail/BoletoContaMailServiceImpl.java
+END
+HTMLDataSource.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/adapitsys/!svn/ver/274/AdapitFromServerJQuery/src/com/adapit/portal/services/mail/HTMLDataSource.java
+END
+GenericEmailSender.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/services/mail/GenericEmailSender.java
+END
+NovaSenhaMailService.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/services/mail/NovaSenhaMailService.java
+END
+GenericEmailSenderImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/services/mail/GenericEmailSenderImpl.java
+END
+NovaSenhaMailServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/services/mail/NovaSenhaMailServiceImpl.java
+END
+AdapitAutenticateUserMailService.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/adapitsys/!svn/ver/284/AdapitFromServerJQuery/src/com/adapit/portal/services/mail/AdapitAutenticateUserMailService.java
+END
+UpdateVersionMailSender.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/adapitsys/!svn/ver/274/AdapitFromServerJQuery/src/com/adapit/portal/services/mail/UpdateVersionMailSender.java
+END
+BoletoContaMailService.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/services/mail/BoletoContaMailService.java
+END
+SmtpAuthenticator.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/services/mail/SmtpAuthenticator.java
+END
+AdapitAutenticateUserMailServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/adapitsys/!svn/ver/375/AdapitFromServerJQuery/src/com/adapit/portal/services/mail/AdapitAutenticateUserMailServiceImpl.java
+END
+UpdateVersionMailSenderImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/adapitsys/!svn/ver/375/AdapitFromServerJQuery/src/com/adapit/portal/services/mail/UpdateVersionMailSenderImpl.java
+END

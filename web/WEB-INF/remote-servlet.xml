@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans default-autowire="byName" default-lazy-init="false">
+	
+	<!-- <bean name="personExporter" class="org.springframework.remoting.caucho.BurlapServiceExporter">
+		<property name="service">
+			<ref bean="person"/>
+		</property>
+		<property name="serviceInterface">
+			<value>com.workcase.sample.business.Person</value>
+		</property>
+	</bean>
+
+	<bean name="personTypeExporter" class="org.springframework.remoting.caucho.BurlapServiceExporter">
+		<property name="service">
+			<ref bean="personType"/>
+		</property>
+		<property name="serviceInterface">
+			<value>com.workcase.sample.business.PersonType</value>
+		</property>
+	</bean>
+	
+	<bean name="businessFactoryExporter" class="org.springframework.remoting.caucho.BurlapServiceExporter">
+        <property name="service"><ref bean="businessFactory"/></property>
+        <property name="serviceInterface">
+            <value>com.workcase.sample.business.Business</value>
+        </property>
+	</bean>
+	
+	<bean id="urlMapping"
+		class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="mappings">
+			<props>
+				<prop key="personExporter">personExporter</prop>
+				<prop key="personTypeExporter">personTypeExporter</prop>
+				<prop key="businessFactoryExporter">businessFactoryExporter</prop>
+			</props>
+		</property>
+	</bean> -->
+	
+</beans>

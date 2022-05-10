@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/adapitsys/!svn/ver/284/AdapitFromServerJQuery/src/com/workcase/utils
+END
+BaseFormController.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/adapitsys/!svn/ver/115/AdapitFromServerJQuery/src/com/workcase/utils/BaseFormController.java
+END
+IdGenerator.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/adapitsys/!svn/ver/115/AdapitFromServerJQuery/src/com/workcase/utils/IdGenerator.java
+END
+HibernateExportSchema.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/adapitsys/!svn/ver/115/AdapitFromServerJQuery/src/com/workcase/utils/HibernateExportSchema.java
+END
+Moeda.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/adapitsys/!svn/ver/115/AdapitFromServerJQuery/src/com/workcase/utils/Moeda.java
+END
+DatePropertyEditor.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/adapitsys/!svn/ver/274/AdapitFromServerJQuery/src/com/workcase/utils/DatePropertyEditor.java
+END
+GenericException.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/adapitsys/!svn/ver/172/AdapitFromServerJQuery/src/com/workcase/utils/GenericException.java
+END
+Util.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/adapitsys/!svn/ver/115/AdapitFromServerJQuery/src/com/workcase/utils/Util.java
+END
+TextComponentSwingUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/adapitsys/!svn/ver/284/AdapitFromServerJQuery/src/com/workcase/utils/TextComponentSwingUtil.java
+END

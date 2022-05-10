@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF8" ?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans default-autowire="byName" default-lazy-init="false">
+
+	<!-- xmlns="http://www.springframework.org/schema/beans" xmlnssi="http://www.w3.org/2001/XMLSchema-instance"
+		xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+		xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd" -->
+	<bean id="context"
+		class="org.springframework.context.support.ClassPathXmlApplicationContext">
+		<constructor-arg>
+			<list>
+				<value>springAutogen.xml</value>
+				<value>hibernateContext.xml</value>
+			</list>
+		</constructor-arg>
+	</bean>
+	<!-- bean id="resourceLoader" class="org.springframework.core.io.DefaultResourceLoader"/>
+		<bean id="bindingErrorProcessor" class="org.springframework.validation.DefaultBindingErrorProcessor"/>
+		<bean id="messageCodesResolver" class="org.springframework.validation.DefaultMessageCodesResolver"/>
+		<bean id="propertyEditorRegistrar" class="org.springframework.beans.support.ResourceEditorRegistrar">
+		<constructor-arg><ref bean="resourceLoader"/></constructor-arg>
+		</bean-->
+
+
+
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver" />
+
+	<bean id="commonsAttributesHandlerMapping"
+		class="org.springframework.web.servlet.handler.metadata.CommonsPathMapHandlerMapping" />
+
+	<bean id="messageSource"
+		class="org.springframework.context.support.ResourceBundleMessageSource">
+		<property name="basename">
+			<value>com.workcase.i18n.application</value>
+		</property>
+	</bean>
+	<!-- Hibernate Data Base Access -->
+	<!--bean id="sessionFactory" class="org.springframework.orm.hibernate.LocalSessionFactoryBean">
+		<property name="configLocation">
+		<value>classpath:hibernate.cfg.xml</value>
+		</property>
+		</bean -->
+
+
+	<!--bean id="myAttributes"	class="org.springframework.metadata.commons.CommonsAttributes" /-->
+	<bean id="comattributes"
+		class="org.springframework.metadata.commons.CommonsAttributes"
+		singleton="true" />
+	<!-- bean id="poolingTargetSourceCreator" class="org.springframework.aop.framework.autoproxy.metadata.AttributesPoolingTargetSourceCreator" autowire="constructor"/ -->
+	<!-- Validation -->
+	<bean id="validatorFactory"
+		class="org.springmodules.validation.commons.DefaultValidatorFactory">
+		<property name="validationConfigLocations">
+			<list>
+				<value>/WEB-INF/validator-rules.xml</value>
+				<value>/WEB-INF/validation.xml</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="validator"
+		class="org.springmodules.validation.commons.DefaultBeanValidator">
+		<property name="validatorFactory">
+			<ref local="validatorFactory" />
+		</property>
+	</bean>
+
+<!-- our Authenticator implementation -->
+	<bean id="smtpAuthenticator"
+		class="com.adapit.portal.services.mail.SmtpAuthenticator">
+		<constructor-arg value="adapitsys@gmail.com" />
+		<constructor-arg value="aJeC27RM" />
+	</bean>
+
+<!-- now setup an authenticated session -->
+	<bean id="mailSession" class="javax.mail.Session"
+		factory-method="getInstance">
+		<constructor-arg>
+			<props>
+				<prop key="mail.smtp.auth">true</prop>
+				<prop key="mail.smtp.socketFactory.port">465</prop>
+				<prop key="mail.smtp.socketFactory.class">javax.net.ssl.SSLSocketFactory</prop>
+				<prop key="mail.smtp.socketFactory.fallback">false</prop>
+			</props>
+		</constructor-arg>
+		<constructor-arg ref="smtpAuthenticator" />
+	</bean>
+
+<!-- and configure the MailSender with the authenticated session -->
+	<bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+		<property name="host" value="smtp.gmail.com" />
+		<property name="session" ref="mailSession" />
+	</bean>
+	<bean id="leilaoMailService" class="com.adapit.portal.services.mail.LeilaoMailServiceImpl">
+		<property name="mailSender" ref="mailSender"/>		
+	</bean>
+	
+	<bean id="mailServiceRemote" class="org.springframework.remoting.httpinvoker.HttpInvokerServiceExporter">
+		<property name="service">
+			<ref bean="leilaoMailService"/>
+		</property>
+		<property name="serviceInterface">
+			<value>com.adapit.portal.services.mail.LeilaoMailService</value>
+		</property>
+	</bean>
+	
+	<bean id="novaSenhaMailMessage" class="org.springframework.mail.SimpleMailMessage">
+		<property name="from" value="adapitsys.gmail.com"/>
+		<property name="subject" value="Nova senha para acessar o site Adapit"/>
+	</bean>
+	<bean id="novaSenhaMailService" class="com.adapit.portal.services.mail.NovaSenhaMailServiceImpl">
+		<property name="mailSender" ref="mailSender"/>
+		<property name="message" ref="novaSenhaMailMessage"/>
+	</bean>
+	
+	<bean id="novaSenhaMailServiceRemote" class="org.springframework.remoting.httpinvoker.HttpInvokerServiceExporter">
+		<property name="service">
+			<ref bean="novaSenhaMailService"/>
+		</property>
+		<property name="serviceInterface">
+			<value>com.adapit.portal.services.mail.NovaSenhaMailService</value>
+		</property>
+	</bean>
+
+<bean id="checkAgendaLote" class="com.adapit.portal.sched.StatusAgendaTimerTask">
+    
+</bean>
+
+<bean id="scheduledTask" class="org.springframework.scheduling.timer.ScheduledTimerTask">
+    <!-- wait 10 seconds before starting repeated execution -->
+    <property name="delay" value="10000" />
+    <!-- run every 50 seconds -->
+    <property name="period" value="10000" />
+    <property name="timerTask" ref="checkAgendaLote" />
+</bean>
+
+  <bean
+      id="genericDAOHibernate"
+      class="com.adapit.portal.services.dao.hibernate.ProdutoServiceDAOHibernate"
+      singleton="true"
+  />
+	<!-- Url Mapping Generated Automatically ... Please, Review Such Mapping -->
+	<bean id="urlMapping"
+		class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="mappings">
+			<props>
+				<prop key="remoteGenericDAORemote.html">remoteGenericDAORemote</prop>
+				<prop key="remoteMailServiceRemote.html">mailServiceRemote</prop>
+				<prop key="remoteCategoriaServiceRemote.html">categoriaServiceRemote</prop>
+				<prop key="remoteProdutoServiceRemote.html">produtoServiceRemote</prop>
+				<prop key="remoteUserServiceRemote.html">userServiceRemote</prop>
+				<prop key="remoteLoteServiceRemote.html">loteServiceRemote</prop>
+			</props>
+		</property>
+	</bean>
+	<bean
+		class="org.springframework.remoting.httpinvoker.HttpInvokerServiceExporter"
+		id="remoteGenericDAORemote">
+		<property name="service">
+			<ref bean="genericDAOHibernate" />
+		</property>
+		<property name="serviceInterface">
+			<value>com.workcase.hibernate.GenericDAO</value>
+		</property>
+	</bean>
+	
+	<bean id="categoriaServiceRemote" class="org.springframework.remoting.httpinvoker.HttpInvokerServiceExporter">
+		<property name="service">
+			<ref bean="categoriaService"/>
+		</property>
+		<property name="serviceInterface">
+			<value>com.adapit.portal.services.CategoriaService</value>
+		</property>
+	</bean>
+	<bean id="produtoServiceRemote" class="org.springframework.remoting.httpinvoker.HttpInvokerServiceExporter">
+		<property name="service">
+			<ref bean="produtoService"/>
+		</property>
+		<property name="serviceInterface">
+			<value>com.adapit.portal.services.ProdutoService</value>
+		</property>
+	</bean>
+	<bean id="userServiceRemote" class="org.springframework.remoting.httpinvoker.HttpInvokerServiceExporter">
+		<property name="service">
+			<ref bean="userService"/>
+		</property>
+		<property name="serviceInterface">
+			<value>com.adapit.portal.services.UserService</value>
+		</property>
+	</bean>
+	<bean id="loteServiceRemote" class="org.springframework.remoting.httpinvoker.HttpInvokerServiceExporter">
+		<property name="service">
+			<ref bean="loteService"/>
+		</property>
+		<property name="serviceInterface">
+			<value>com.adapit.portal.services.LoteService</value>
+		</property>
+	</bean>
+	
+	  <bean
+      id="loteServiceDAOHibernate"
+      class="com.adapit.portal.services.dao.hibernate.LoteServiceDAOHibernate"
+      singleton="true"
+  >
+
+  </bean>
+</beans>

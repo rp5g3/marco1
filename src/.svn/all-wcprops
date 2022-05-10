@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/adapitsys/!svn/ver/392/AdapitFromServerJQuery/src
+END
+validation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/adapitsys/!svn/ver/255/AdapitFromServerJQuery/src/validation.xml
+END
+localServices.xml
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/adapitsys/!svn/ver/369/AdapitFromServerJQuery/src/localServices.xml
+END
+log4j.xml
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/adapitsys/!svn/ver/115/AdapitFromServerJQuery/src/log4j.xml
+END
+reportContext.xml
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/adapitsys/!svn/ver/115/AdapitFromServerJQuery/src/reportContext.xml
+END
+myAttributesContext.xml
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/adapitsys/!svn/ver/115/AdapitFromServerJQuery/src/myAttributesContext.xml
+END
+validator-rules.xml
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/adapitsys/!svn/ver/115/AdapitFromServerJQuery/src/validator-rules.xml
+END
+hibernateContext.xml
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/adapitsys/!svn/ver/369/AdapitFromServerJQuery/src/hibernateContext.xml
+END
+applicationContext.xml
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/adapitsys/!svn/ver/167/AdapitFromServerJQuery/src/applicationContext.xml
+END
+swingContext.xml
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/adapitsys/!svn/ver/375/AdapitFromServerJQuery/src/swingContext.xml
+END
+swingContextServer.xml
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/adapitsys/!svn/ver/382/AdapitFromServerJQuery/src/swingContextServer.xml
+END

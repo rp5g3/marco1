@@ -1,0 +1,22 @@
+<%@page import="com.adapit.portal.util.global.GlobalVariables"%>
+<%
+GlobalVariables.countApresentacaoTab++;
+%>
+
+<div style="padding-left: 10px; padding-right: 10px; padding-top: 20px;">
+
+<p><b>Endere&ccedil;o</b></p>
+<p><i><%=GlobalVariables.ADAPIT_ADDRESS%>. 
+Prefira o realizar o
+ contato por email clicando <a href="" onclick="jqueryOpen('institucional_contato_.html','institucionalContentDiv'); return false;">aqui</a>.</i></br>
+</p>
+
+
+
+<div id="googlemapsPanel" >
+				
+</div>
+	<script> jqueryOpen('institucional_localizacaogm.html','googlemapsPanel'); </script>
+
+</div>
+

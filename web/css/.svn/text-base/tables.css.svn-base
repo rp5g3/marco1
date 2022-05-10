@@ -1,0 +1,69 @@
+      <style type="text/css">
+        <!--
+        
+        td,th {
+			color:#000000;
+			font-family:Arial,'trebuchet ms',helvetica,sans-serif;
+			font-size:10px;
+			font-weight:bold; 
+		}
+	
+        table.presentation{           
+           border-width:0px;
+           border-spacing: 0px;
+           border-style: solid;
+           border-color: #414125;
+           border-collapse: collapse;
+           background-color: transparent;          
+        }
+        
+        table.presentation tr td {
+           border-width:0px;
+           border-style: solid;
+           border-color:  #414125;
+			background-color: transparent;
+           -moz-border-radius: 0px;
+           font-family:Arial,'trebuchet ms',helvetica,sans-serif;
+           height:25px;
+           font-size: 10px;
+          
+        }
+        
+        table.header tr tH {
+           border-width:0px;
+           border-style: solid;
+           border-color:  #414125;
+			background-color: transparent;
+           -moz-border-radius: 0px;
+           font-family:Arial,'trebuchet ms',helvetica,sans-serif;
+           font-size: 10px;
+           font-weight:bold;
+           color:#252;
+           background-image: url(../imgs/tablebackground.png);
+           padding: 0px;
+        }
+        
+        table.presentation tr tH {
+           border-width:0px;
+           border-style: solid;
+           border-color:  #414125;
+			background-color: transparent;
+           -moz-border-radius: 0px;
+           font-family:Arial,'trebuchet ms',helvetica,sans-serif;
+           font-size: 10px;
+           font-weight:bold;
+           color:#000000;
+           background-image: url(../imgs/tbheader.png);
+           padding: 0px;
+        }
+
+        table{
+        	   background-color:F3F2F3;
+        }
+        
+        table tr td {
+        	   padding: 0px;     	   
+        }
+		       
+        -->
+      </style>

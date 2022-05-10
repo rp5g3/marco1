@@ -1,0 +1,1086 @@
+<?xml version="1.0" encoding="UTF8" ?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans default-autowire="byName" default-lazy-init="false">
+
+	<!-- xmlns="http://www.springframework.org/schema/beans" xmlnssi="http://www.w3.org/2001/XMLSchema-instance"
+		xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+		xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd" -->
+	<bean id="context"
+		class="org.springframework.context.support.ClassPathXmlApplicationContext">
+		<constructor-arg>
+			<list>
+				<value>springAutogen.xml</value>
+				<value>myAttributesContext.xml</value>
+				<value>hibernateContext.xml</value>
+			</list>
+		</constructor-arg>
+	</bean>
+
+	<bean id="validatorFactory"
+		class="org.springmodules.validation.commons.DefaultValidatorFactory">
+		<property name="validationConfigLocations">
+			<list>
+				<value>/WEB-INF/validator-rules.xml</value>
+				<value>/WEB-INF/validation.xml</value>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="validator"
+		class="org.springmodules.validation.commons.DefaultBeanValidator">
+		<property name="validatorFactory">
+			<ref local="validatorFactory" />
+		</property>
+	</bean>
+	
+	<!-- 
+	<bean id="commonsAttributesHandlerMapping"
+		class="org.springframework.web.servlet.handler.metadata.CommonsPathMapHandlerMapping" />
+-->
+	<bean id="messageSource"
+		class="org.springframework.context.support.ResourceBundleMessageSource">
+		<property name="basename">
+			<value>com.workcase.i18n.application</value>
+		</property>
+	</bean>
+	<!-- Hibernate Data Base Access -->
+	<!--bean id="sessionFactory" class="org.springframework.orm.hibernate.LocalSessionFactoryBean">
+		<property name="configLocation">
+		<value>classpath:hibernate.cfg.xml</value>
+		</property>
+		</bean -->
+
+
+<!-- our Authenticator implementation -->
+	<bean id="smtpAuthenticator"
+		class="com.adapit.portal.services.mail.SmtpAuthenticator">
+		<constructor-arg value="adapitsys@gmail.com" />
+		<constructor-arg value="aJeC27RM" />
+	</bean>
+
+<!-- now setup an authenticated session -->
+	<bean id="mailSession" class="javax.mail.Session"
+		factory-method="getInstance">
+		<constructor-arg>
+			<props>
+				<prop key="mail.smtp.auth">true</prop>
+				<prop key="mail.smtp.socketFactory.port">465</prop>
+				<prop key="mail.smtp.socketFactory.class">javax.net.ssl.SSLSocketFactory</prop>
+				<prop key="mail.smtp.socketFactory.fallback">false</prop>
+			</props>
+		</constructor-arg>
+		<constructor-arg ref="smtpAuthenticator" />
+	</bean>
+
+<!-- and configure the MailSender with the authenticated session -->
+	<bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+		<property name="host" value="smtp.gmail.com" />
+		<property name="session" ref="mailSession" />
+	</bean>
+
+	<bean id="adapitAutenticateUserMailService" class="com.adapit.portal.services.mail.AdapitAutenticateUserMailServiceImpl">
+		<property name="mailSender" ref="mailSender"/>
+		<property name="velocityEngine" ref="velocityEngine"/>
+	</bean>
+	
+	<bean id="updateVersionMailSender" class="com.adapit.portal.services.mail.UpdateVersionMailSenderImpl">
+		<property name="mailSender" ref="mailSender"/>
+		<property name="velocityEngine" ref="velocityEngine"/>
+	</bean>
+	
+	<bean id="velocityEngine" class="org.springframework.ui.velocity.VelocityEngineFactoryBean">
+      <property name="velocityProperties">
+         <value>
+            resource.loader=class
+            class.resource.loader.class=org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+         </value>
+      </property>
+   </bean>
+	
+	
+	<bean id="mailServiceRemote" class="org.springframework.remoting.httpinvoker.HttpInvokerServiceExporter">
+		<property name="service">
+			<ref bean="adapitAutenticateUserMailService"/>
+		</property>
+		<property name="serviceInterface">
+			<value>com.adapit.portal.services.mail.AdapitAutenticateUserMailService</value>
+		</property>
+	</bean>
+
+	<bean id="updateVersionMailSenderRemote" class="org.springframework.remoting.httpinvoker.HttpInvokerServiceExporter">
+		<property name="service">
+			<ref bean="updateVersionMailSender"/>
+		</property>
+		<property name="serviceInterface">
+			<value>com.adapit.portal.services.mail.UpdateVersionMailSender</value>
+		</property>
+	</bean>
+
+	<bean id="novaSenhaMailMessage" class="org.springframework.mail.SimpleMailMessage">
+		<property name="from" value="adapitsys.gmail.com"/>
+		<property name="subject" value="Nova senha para acessar o site Adapit"/>
+	</bean>
+	<bean id="novaSenhaMailService" class="com.adapit.portal.services.mail.NovaSenhaMailServiceImpl">
+		<property name="mailSender" ref="mailSender"/>
+		<property name="message" ref="novaSenhaMailMessage"/>
+	</bean>
+	
+	<bean id="novaSenhaMailServiceRemote" class="org.springframework.remoting.httpinvoker.HttpInvokerServiceExporter">
+		<property name="service">
+			<ref bean="novaSenhaMailService"/>
+		</property>
+		<property name="serviceInterface">
+			<value>com.adapit.portal.services.mail.NovaSenhaMailService</value>
+		</property>
+	</bean>
+	
+	<bean id="genericMailService" class="com.adapit.portal.services.mail.GenericEmailSenderImpl">
+		<property name="mailSender" ref="mailSender"/>
+	</bean>
+	
+	<bean id="genericEmailServiceRemote" class="org.springframework.remoting.httpinvoker.HttpInvokerServiceExporter">
+		<property name="service">
+			<ref bean="genericMailService"/>
+		</property>
+		<property name="serviceInterface">
+			<value>com.adapit.portal.services.mail.GenericEmailSender</value>
+		</property>
+	</bean>
+
+<!-- Fim dos serviços de email -->
+
+<!-- Filtros Autenticação
+	<bean id="filterChainProxy"
+	        class="org.springframework.security.util.FilterChainProxy">
+	  <security:filter-chain-map path-type="ant">
+	    <security:filter-chain pattern="/**" filters="httpSessionContextIntegrationFilter,logoutFilter,authenticationProcessingFilter,basicProcessingFilter,securityContextHolderAwareRequestFilter,rememberMeProcessingFilter,anonymousProcessingFilter,exceptionTranslationFilter,filterInvocationInterceptor,switchUserProcessingFilter"/>
+	  </security:filter-chain-map>
+	</bean>
+	
+	<bean id="exceptionTranslationFilter"
+        class="org.springframework.security.ui.ExceptionTranslationFilter">
+	  <property name="authenticationEntryPoint" ref="authenticationProcessingFilterEntryPoint"/>
+	  <property name="accessDeniedHandler">
+	    <bean class="org.springframework.security.ui.AccessDeniedHandlerImpl">
+	      <property name="errorPage" value="logging.html"/>
+	    </bean>
+	  </property>
+	</bean>
+	
+	<bean id="authenticationProcessingFilterEntryPoint"
+	        class="org.springframework.security.ui.webapp.AuthenticationProcessingFilterEntryPoint">
+	  <property name="loginFormUrl" value="logging.html"/>
+	  <property name="forceHttps" value="false"/>
+	</bean>
+	-->
+<!-- Fim dos filtros -->
+<!-- 
+	<bean id="taskExecutorExample" class="com.adapit.portal.sched.StatusAgendaScheduler"/>
+ -->
+  <bean
+      id="genericDAOHibernate"
+      class="com.adapit.portal.services.dao.hibernate.ComercialSolutionServiceDAOHibernate"
+      singleton="true"/>
+  
+  <!-- Old user prop
+  <prop key="usuarioForm.html">usuarioForm</prop>
+				
+				<prop key="loginUsuario.html">manutencaoUsuario</prop>
+				<prop key="categoriasChange.html">manutencaoUsuario</prop>
+				<prop key="logging.html">manutencaoUsuario</prop>
+				<prop key="novoUsuario.html">manutencaoUsuario</prop>
+				<prop key="manutencaoUsuario.html">manutencaoUsuario</prop>
+				<prop key="cadastrepessoafisicaaction.html">manutencaoUsuario</prop>
+				<prop key="pessoaFisicaCadastreForm.html">manutencaoUsuario</prop>
+				<prop key="fisicaCadastreForm.html">manutencaoUsuario</prop>
+				<prop key="userCadastreForm.html">manutencaoUsuario</prop>
+				<prop key="enderecoCadastreForm.html">manutencaoUsuario</prop>
+				<prop key="outrasInformacoes.html">manutencaoUsuario</prop>	
+   -->
+  
+	<!-- Url Mapping Generated Automatically ... Please, Review Such Mapping -->
+	<bean id="urlMapping"
+		class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="mappings">
+			<props>
+			
+				<prop key="usuarioForm.html">usuarioForm</prop>
+				<prop key="recomendation.html">manutencaoUsuario</prop>
+				<prop key="recommendation.html">manutencaoUsuario</prop>
+				<prop key="loginUsuario.html">manutencaoUsuario</prop>
+				<prop key="categoriasChange.html">manutencaoUsuario</prop>
+				<prop key="logging.html">manutencaoUsuario</prop>
+				<prop key="loggingtermosuso.html">manutencaoUsuario</prop>
+				<prop key="loggingtermosuso_.html">manutencaoUsuario</prop>
+				<prop key="logging_.html">manutencaoUsuario</prop>
+				<prop key="esqueciMinhaSenha_.html">manutencaoUsuario</prop>
+				<prop key="esqueciMinhaSenha.html">manutencaoUsuario</prop>
+				<prop key="comoMeAutenticar_.html">manutencaoUsuario</prop>
+				<prop key="novoUsuario.html">manutencaoUsuario</prop>
+				<prop key="manutencaoUsuario.html">manutencaoUsuario</prop>
+				<prop key="cadastrepessoafisicaaction.html">manutencaoUsuario</prop>
+				<prop key="pessoaFisicaCadastreForm.html">manutencaoUsuario</prop>
+				<prop key="pessoaFisicaEstCadastreForm.html">manutencaoUsuario</prop>
+				<prop key="pessoaJuridicaCadastreForm.html">manutencaoUsuario</prop>
+				<prop key="pessoaJuridicaRepCadastreForm.html">manutencaoUsuario</prop>
+				<prop key="fisicaCadastreForm.html">manutencaoUsuario</prop>
+				<prop key="userCadastreForm.html">manutencaoUsuario</prop>
+				<prop key="enderecoCadastreForm.html">manutencaoUsuario</prop>
+				<prop key="outrasInformacoes.html">manutencaoUsuario</prop>
+				<prop key="trocar_senha_form.html">manutencaoUsuario</prop>
+				<prop key="trocar_senhausuario_form.html">manutencaoUsuario</prop>
+				<prop key="contaUsuarioTelaInicial.html">manutencaoUsuario</prop>
+				<prop key="contaUsuarioPessoaFisicaCadastreForm.html">manutencaoUsuario</prop>	
+				<prop key="contaUsuarioPessoaFisicaEstCadastreForm.html">manutencaoUsuario</prop>
+				<prop key="contaUsuarioPessoaJuridicaCadastreForm.html">manutencaoUsuario</prop>
+				<prop key="contaUsuarioPessoaJuridicaRepCadastreForm.html">manutencaoUsuario</prop>
+				<prop key="autenticateCadastre.html">manutencaoUsuario</prop>	
+								
+							
+				
+				<prop key="showCatalogoTurma.html">treinamentosListUrl</prop>
+				<prop key="listTreinamentosByCategoriaNome.html">treinamentosListUrl</prop>
+				<prop key="treinamentosEmTurma.html">treinamentosListUrl</prop>
+				<prop key="showDetalhesTreinamento.html">treinamentosListUrl</prop>
+				<prop key="showImagensComercialSolution.html">treinamentosListUrl</prop>
+				<prop key="comercialSolutionBigImage.html">treinamentosListUrl</prop>
+				<prop key="comercialSolutionSmallImage.html">treinamentosListUrl</prop>
+				<prop key="imageDetails.html">treinamentosListUrl</prop>
+				<prop key="listTreinamentoByDescricao.html">treinamentosListUrl</prop>
+				<prop key="participarTurmaTreinamento.html">treinamentosListUrl</prop>
+				<prop key="showEstadoAgendaTurmaTreinamento.html">treinamentosListUrl</prop>
+				<prop key="comercialSolutionMediumImage.html">treinamentosListUrl</prop>				
+				<prop key="imageDetailsSmall.html">treinamentosListUrl</prop>
+				<prop key="mediumImage.html">treinamentosListUrl</prop>
+				<prop key="largeImage.html">treinamentosListUrl</prop>
+				<prop key="fullImage.html">treinamentosListUrl</prop>
+				<prop key="comercialSolutionFullImage.html">treinamentosListUrl</prop>
+				<prop key="showImageById.html">treinamentosListUrl</prop>				
+				
+				<prop key="formCadastrePessoaFisica.html">cadastroPessoaUrl</prop>
+				<prop key="treinamentosQueParticipo.html">manutencaoUsuario</prop>
+				
+				<prop key="portal.html">apresentacaoFormUrl</prop>
+				<prop key="wct">apresentacaoFormUrl</prop>
+				<prop key="menu_horizontal.html">trainingPresentationFormUrl</prop>
+				<prop key="sair.html">apresentacaoFormUrl</prop>				
+				
+				<prop key="mainmenuintro.html">apresentacaoFormUrl</prop>
+				<prop key="bottomintro.html">apresentacaoFormUrl</prop>
+				<prop key="headerintro.html">apresentacaoFormUrl</prop>
+				<prop key="treinamentoResearchForm.html">apresentacaoFormUrl</prop>
+				<prop key="pesquisaComercialSolutionForm.html">apresentacaoFormUrl</prop>				
+				<prop key="comitenteImageView.html">apresentacaoFormUrl</prop>
+				<prop key="categoriaImageView.html">apresentacaoFormUrl</prop>
+				<prop key="conteudo_inicial.html">apresentacaoFormUrl</prop>
+				<prop key="conteudo_inicial_menu.html">apresentacaoFormUrl</prop>
+				
+				<prop key="historicoLeiloes_.html">apresentacaoFormUrl</prop>
+				<prop key="historicoLeiloes.html">apresentacaoFormUrl</prop>
+				<prop key="proximos_leiloes_intro.html">apresentacaoFormUrl</prop>				
+				<prop key="historico_leiloes_intro.html">apresentacaoFormUrl</prop>
+				
+				<prop key="showContatoSendEmail.html">apresentacaoFormUrl</prop>
+				<prop key="processContatoSendEmail.html">apresentacaoFormUrl</prop>
+				<prop key="showPesquisaInternaView.html">apresentacaoFormUrl</prop>
+				
+				<prop key="solucoesProducaoSoftware.html">wctFormUrl</prop>
+				<prop key="bom_uso_do_capital_investido.html">wctFormUrl</prop>
+				<prop key="wct_visao_global.html">wctFormUrl</prop>
+				<prop key="wct_diretor.html">wctFormUrl</prop>
+				<prop key="wctLowDescription.html">wctFormUrl</prop>
+				<prop key="wct_geracao_gui.html">wctFormUrl</prop>
+
+				<prop key="institucional.html">institucionalFormUrl</prop>
+				<prop key="institucional_empresa.html">institucionalFormUrl</prop>
+				<prop key="institucional_localizacao.html">institucionalFormUrl</prop>
+				<prop key="institucional_localizacaogm.html">institucionalFormUrl</prop>
+				<prop key="institucional_tecnologias.html">institucionalFormUrl</prop>
+				<prop key="institucional_processos.html">institucionalFormUrl</prop>
+				<prop key="institucional_equipe.html">institucionalFormUrl</prop>
+				<prop key="institucional_parcerias.html">institucionalFormUrl</prop>
+				<prop key="institucional_contato.html">institucionalFormUrl</prop>
+				<prop key="institucional_apresentacao.html">institucionalFormUrl</prop>
+				<prop key="institucional_historico.html">institucionalFormUrl</prop>
+				<prop key="institucional_solucoes.html">institucionalFormUrl</prop>
+				<prop key="institucional_diferenciacao.html">institucionalFormUrl</prop>				
+				<prop key="institucional_empresa_.html">institucionalFormUrl</prop>
+				<prop key="institucional_localizacao_.html">institucionalFormUrl</prop>
+				<prop key="institucional_tecnologias_.html">institucionalFormUrl</prop>
+				<prop key="institucional_processos_.html">institucionalFormUrl</prop>
+				<prop key="institucional_equipe_.html">institucionalFormUrl</prop>
+				<prop key="institucional_parcerias_.html">institucionalFormUrl</prop>
+				<prop key="institucional_contato_.html">institucionalFormUrl</prop>
+				<prop key="institucional_apresentacao_.html">institucionalFormUrl</prop>
+				<prop key="institucional_historico_.html">institucionalFormUrl</prop>
+				<prop key="institucional_solucoes_.html">institucionalFormUrl</prop>
+				<prop key="institucional_diferenciacao_.html">institucionalFormUrl</prop>
+				
+				<prop key="comercialSolutions_wct.html">comercialSolutionsFormUrl</prop>
+				<prop key="comercialSolutions_wct_.html">comercialSolutionsFormUrl</prop>
+				<prop key="comercialSolutions_wct_java.html">comercialSolutionsFormUrl</prop>
+				<prop key="comercialSolutions_wct_java_.html">comercialSolutionsFormUrl</prop>
+				<prop key="comercialSolutions_wct_bpmn.html">comercialSolutionsFormUrl</prop>
+				<prop key="comercialSolutions_wct_bpmn_.html">comercialSolutionsFormUrl</prop>
+				<prop key="comercialSolutions_wct_config_management.html">comercialSolutionsFormUrl</prop>
+				<prop key="comercialSolutions_wct_config_management_.html">comercialSolutionsFormUrl</prop>	
+				<prop key="comercialSolutions_ecommerce.html">comercialSolutionsFormUrl</prop>	
+				<prop key="comercialSolutions_ecommerce_.html">comercialSolutionsFormUrl</prop>
+				
+				<prop key="fabrica_software_servicos.html">fabsoftFormUrl</prop>	
+				<prop key="fabrica_software_servicos_.html">fabsoftFormUrl</prop>
+				<prop key="fabrica_software_consultoria.html">fabsoftFormUrl</prop>	
+				<prop key="fabrica_software_consultoria_.html">fabsoftFormUrl</prop>
+				<prop key="fabrica_software_dados.html">fabsoftFormUrl</prop>				
+				<prop key="fabrica_software_dados_.html">fabsoftFormUrl</prop>
+				<prop key="fabrica_software_nossafabrica.html">fabsoftFormUrl</prop>	
+				
+				<prop key="last_news.html">newsFormUrl</prop>
+				<prop key="larger_last_news.html">newsFormUrl</prop>
+				<prop key="news.html">newsFormUrl</prop>
+				<prop key="show_news_content.html">newsFormUrl</prop>
+				<prop key="news_ano.html">newsFormUrl</prop>
+				<prop key="news_big_image.html">newsFormUrl</prop>
+				<prop key="news_small_image.html">newsFormUrl</prop>
+				<prop key="show_news_image.html">newsFormUrl</prop>
+				<prop key="showNewsMaintenanceForm.html">newsFormUrl</prop>
+				<prop key="saveNewsAction_NewsMaintenanceForm.html">newsFormUrl</prop>
+				
+				<prop key="last_update.html">updateFormUrl</prop>
+				<prop key="larger_last_update.html">updateFormUrl</prop>
+				<prop key="update.html">updateFormUrl</prop>
+				<prop key="show_update_content.html">updateFormUrl</prop>
+				<prop key="update_ano.html">updateFormUrl</prop>
+				<prop key="update_big_image.html">updateFormUrl</prop>
+				<prop key="update_small_image.html">updateFormUrl</prop>
+				<prop key="download_dbfile.html">updateFormUrl</prop>
+				<prop key="showUpdateMaintenanceForm.html">updateFormUrl</prop>
+				<prop key="saveUpdateAction_NewsMaintenanceForm.html">updateFormUrl</prop>
+				
+				
+				<prop key="last_publication.html">publicationFormUrl</prop>
+				<prop key="larger_last_publication.html">publicationFormUrl</prop>
+				<prop key="publication.html">publicationFormUrl</prop>
+				<prop key="show_publication_content.html">publicationFormUrl</prop>
+				<prop key="publication_ano.html">publicationFormUrl</prop>
+				<prop key="publication_big_image.html">publicationFormUrl</prop>
+				<prop key="publication_small_image.html">publicationFormUrl</prop>
+				<prop key="show_publication_image.html">publicationFormUrl</prop>
+				
+				<prop key="remoteGenericDAORemote.html">remoteGenericDAORemote</prop>
+				<prop key="remoteMailServiceRemote.html">mailServiceRemote</prop>
+				<prop key="remoteUpdateVersionMailSenderRemote.html">updateVersionMailSenderRemote</prop>
+				<prop key="remoteCategoriaServiceRemote.html">categoriaServiceRemote</prop>
+				<prop key="remoteComercialSolutionServiceRemote.html">comercialSolutionServiceRemote</prop>
+				<prop key="remoteUserServiceRemote.html">userServiceRemote</prop>
+				<prop key="remoteTreinamentoServiceRemote.html">treinamentoServiceRemote</prop>
+				<prop key="remoteNovaSenhaMailServiceRemote.html">novaSenhaMailServiceRemote</prop>
+				<prop key="remotePessoaServiceRemote.html">pessoaServiceRemote</prop>
+				<prop key="remotePreferenciaServiceRemote.html">preferenciaServiceRemote</prop>
+				<prop key="remoteImagemServiceRemote.html">imagemServiceRemote</prop>
+				<prop key="remoteUtilityServiceRemote.html">utilityServiceRemote</prop>
+				<prop key="remoteContatoServiceRemote.html">contatoServiceRemote</prop>
+				<prop key="remoteNewsServiceRemote.html">newsServiceRemote</prop>
+				<prop key="remoteUpdateServiceRemote.html">updateServiceRemote</prop>
+				<prop key="remoteAgendaTreinamentoServiceRemote.html">agendaTreinamentoServiceRemote</prop>
+				<prop key="remoteTurmaServiceRemote.html">turmaServiceRemote</prop>
+				<prop key="remoteContaServiceRemote.html">contaServiceRemote</prop>
+				<prop key="remoteEnderecoServiceRemote.html">enderecoServiceRemote</prop>
+				<prop key="remotePublicationServiceRemote.html">publicationServiceRemote</prop>
+				<prop key="remoteFileServiceRemote.html">fileServiceRemote</prop>
+				
+				<prop key="contentintro.html">trainingPresentationFormUrl</prop>
+				<prop key="contentintro_.html">trainingPresentationFormUrl</prop>
+				<prop key="formacaoFilterPanel.html">trainingPresentationFormUrl</prop>
+				<prop key="showFormacoes.html">trainingPresentationFormUrl</prop>
+				<prop key="showFormacoes_.html">trainingPresentationFormUrl</prop>
+				<prop key="proximas_formacoes_intro.html">trainingPresentationFormUrl</prop>	
+				<prop key="schedtrainingcontentintro.html">trainingPresentationFormUrl</prop>
+				<prop key="schedtrainingcontentintro_.html">trainingPresentationFormUrl</prop>
+				<prop key="proximos_schedtraining_intro.html">trainingPresentationFormUrl</prop>
+				<prop key="minhasCompras.html">trainingPresentationFormUrl</prop>
+				<prop key="showCatalogoFormacao.html">trainingPresentationFormUrl</prop>
+				<prop key="showCatalogoFormacao_.html">trainingPresentationFormUrl</prop>
+				<prop key="showTreinamentosByTurma.html">trainingPresentationFormUrl</prop>
+				<prop key="showCatalogoTurmas.html">trainingPresentationFormUrl</prop>
+				<prop key="showImageByImageIdView.html">trainingPresentationFormUrl</prop>
+				<prop key="showAboutTrainings.html">trainingPresentationFormUrl</prop>
+				<prop key="showDetalhesInstrutor.html">trainingPresentationFormUrl</prop>
+				<prop key="showDetalhesEndereco.html">trainingPresentationFormUrl</prop>
+				
+				<prop key="showFormacoesByKeyword.html">trainingPresentationFormUrl</prop>
+				<prop key="showFormacoesByKeyword_.html">trainingPresentationFormUrl</prop>
+				
+				<prop key="produtos.html">softwareFormUrl</prop>		
+				<prop key="showSoftware.html">softwareFormUrl</prop>	
+				<prop key="showSoftwareSolutionDetail.html">softwareFormUrl</prop>
+				<prop key="showSoftwareSolutionUpdate.html">softwareFormUrl</prop>
+				
+				<prop key="showPersonListByAttributeType.html">rhActionUrl</prop>
+				
+				<prop key="showTechDefinitionMaintenanceForm.html">techDefFormUrl</prop>
+				<prop key="saveTechDefinitionAction_TechDefinitionMaintenanceForm.html">techDefFormUrl</prop>
+				<prop key="deleteTechDefinitionAction_TechDefinitionMaintenanceForm.html">techDefFormUrl</prop>
+				<prop key="filterTechDefinitionByKeyword_TechDefinitionMaintenanceForm.html">techDefFormUrl</prop>
+				<prop key="loadTechDefinitionAction_TechDefinitionMaintenanceForm.html">techDefFormUrl</prop>
+				<prop key="showListAllTechDefinitionView_TechDefinitionMaintenanceForm.html">techDefFormUrl</prop>
+				<prop key="loadTechDefinitionFromeditselectionTechDefinitionButtonAction_TechDefinitionMaintenanceForm.html">techDefFormUrl</prop>
+				<prop key="deleteManyTechDefinitionAction_TechDefinitionMaintenanceForm.html">techDefFormUrl</prop>
+				
+				<prop key="showParticipanteMaintenanceForm.html">participanteFormUrl</prop>		
+				<prop key="saveParticipanteAction_ParticipanteMaintenanceForm.html">participanteFormUrl</prop>
+	
+			</props>
+		</property>
+	</bean>
+	
+	<bean
+		class="com.adapit.portal.services.controllers.ParticipanteMultiActionController"
+		id="participanteFormUrl">
+		<property name="methodNameResolver"><ref local="participanteViewControllerResolver"/></property>
+		<property name="adapitAutenticateUserMailService"><ref local="adapitAutenticateUserMailService"/></property>
+		<property name="pessoaService"><ref bean="pessoaService"/></property>
+		<property name="imagemService"><ref bean="imagemService"/></property>
+	</bean>
+	
+	<bean id="participanteViewControllerResolver" class="org.springframework.web.servlet.mvc.multiaction.PropertiesMethodNameResolver">
+		<property name="mappings">
+			<props>								
+				<prop key="/showParticipanteMaintenanceForm.html">showParticipanteMaintenanceForm</prop>		
+				<prop key="/saveParticipanteAction_ParticipanteMaintenanceForm.html">saveParticipanteAction_ParticipanteMaintenanceForm</prop>
+			</props>
+		</property>
+	</bean>
+	
+	<bean
+		class="com.adapit.portal.services.controllers.SoftwareMultiActionController"
+		id="softwareFormUrl">
+		<property name="methodNameResolver"><ref local="softwareViewControllerResolver"/></property>
+		
+	</bean>
+	
+	<bean id="softwareViewControllerResolver" class="org.springframework.web.servlet.mvc.multiaction.PropertiesMethodNameResolver">
+		<property name="mappings">
+			<props>								
+				<prop key="/produtos.html">showProdutosView</prop>		
+				<prop key="/showSoftware.html">showSoftwareFormView</prop>	
+				<prop key="/showSoftwareSolutionDetail.html">showSoftwareSolutionDetailView</prop>
+				<prop key="/showSoftwareSolutionUpdate.html">showSoftwareSolutionUpdateView</prop>				
+			</props>
+		</property>
+	</bean>
+	
+	
+	
+	<bean
+		class="com.adapit.portal.services.controllers.RHMultiActionController"
+		id="rhActionUrl">
+		<property name="methodNameResolver"><ref local="rhViewControllerResolver"/></property>
+		
+	</bean>
+	
+	<bean id="rhViewControllerResolver" class="org.springframework.web.servlet.mvc.multiaction.PropertiesMethodNameResolver">
+		<property name="mappings">
+			<props>								
+				<prop key="/showPersonListByAttributeType.html">showPersonListByAttributeTypeView</prop>		
+								
+			</props>
+		</property>
+	</bean>
+		
+	<bean
+		class="com.adapit.portal.services.controllers.TrainingPresentationViewController"
+		id="trainingPresentationFormUrl">
+		<property name="methodNameResolver"><ref local="trainingPresentationViewControllerResolver"/></property>
+		
+	</bean>
+	
+	<bean id="trainingPresentationViewControllerResolver" class="org.springframework.web.servlet.mvc.multiaction.PropertiesMethodNameResolver">
+		<property name="mappings">
+			<props>
+								
+				<prop key="/pesquisaProdutoForm.html">showPesquisaProdutoFormView</prop>
+				<prop key="/proximosLeiloesForm.html">showProximosLeiloesFormView</prop>
+				<prop key="/comitenteImageView.html">showComitenteImageView</prop>
+				<prop key="/categoriaImageView.html">showCategoriaImageView</prop>
+				<prop key="/menu_horizontal.html">showMenuHorizontalView</prop>
+				<prop key="/conteudo_inicial.html">showInicioContentView</prop>
+				<prop key="/conteudo_inicial_menu.html">showInicioContentMenuView</prop>
+				
+				<prop key="/formacaoFilterPanel.html">showFormacaoFilterPanel</prop>
+				<prop key="/showFormacoes.html">showFormacoesFormView</prop>
+				<prop key="/showFormacoes_.html">showFormacoesForm_View</prop>
+				<prop key="/proximas_formacoes_intro.html">showFormacoesIndexFormView</prop>
+				<prop key="/showFormacoesByKeyword.html">showFormacoesByKeywordFormView</prop>
+				<prop key="/showFormacoesByKeyword_.html">showFormacoesByKeywordFormView_</prop>
+				
+				<prop key="/schedtrainingcontentintro.html">showScheduledTrainingsFormView</prop>
+				<prop key="/schedtrainingcontentintro_.html">showScheduledTrainingsForm_View</prop>
+				<prop key="/proximos_schedtraining_intro.html">showScheduledTrainingsIndexFormView</prop>
+				
+				<prop key="/minhasCompras.html">showShoppingCartFormView</prop>
+								
+				<prop key="/historicoLeiloes.html">showHistoricoLeiloesFormView</prop>
+				<prop key="/historicoLeiloes_.html">showHistoricoLeiloesForm_View</prop>
+				<prop key="/historico_leiloes_intro.html">showHistoricoLeiloesIndexFormView</prop>
+				
+				<prop key="/showCatalogoFormacao.html">showCatalogoFormacaoView</prop>
+				<prop key="/showCatalogoFormacao_.html">showCatalogoFormacao_View</prop>
+				<prop key="/showTreinamentosByTurma.html">showTreinamentosByTurmaView</prop>
+				<prop key="/showCatalogoTurmas.html">showCatalogoTurmasView</prop>
+				<prop key="/showImageByImageIdView.html">showImageByImageIdView</prop>
+				<prop key="/showAboutTrainings.html">showAboutTrainingsView</prop>	
+				
+				<prop key="/showDetalhesInstrutor.html">showDetalhesInstrutorView</prop>	
+				<prop key="/showDetalhesEndereco.html">showDetalhesEnderecoView</prop>	
+			</props>
+		</property>
+	</bean>
+	
+	<!-- 
+	<bean class="com.adapit.portal.services.controllers.NewsViewController"	id="newsFormUrl">
+		<property name="methodNameResolver"><ref local="newsViewControllerResolver"/></property>		
+	</bean>
+	
+	<bean id="newsViewControllerResolver" class="org.springframework.web.servlet.mvc.multiaction.PropertiesMethodNameResolver">
+		<property name="mappings">
+			<props>
+				<prop key="/last_news.html">showLastNewsView</prop>		
+				<prop key="/larger_last_news.html">showLargerLastNewsView</prop>	
+				<prop key="/news.html">showNewsFormView</prop>	
+				<prop key="/show_news_content.html">showNewsContentView</prop>	
+				<prop key="/news_ano.html">showNewsAnoView</prop>	
+				<prop key="/news_big_image.html">showNewsBigImageView</prop>
+				<prop key="/news_small_image.html">showNewsSmallImageView</prop>
+				<prop key="/show_news_image.html">showNewsImageView</prop>
+			</props>
+		</property>
+	</bean> -->
+	
+	<bean class="com.adapit.portal.services.controllers.FabricaSoftwareViewController"
+		id="fabsoftFormUrl">
+		<property name="methodNameResolver"><ref local="fabsoftViewControllerResolver"/></property>		
+	</bean>
+	
+	<bean id="fabsoftViewControllerResolver" class="org.springframework.web.servlet.mvc.multiaction.PropertiesMethodNameResolver">
+		<property name="mappings">
+			<props>
+				<prop key="/fabrica_software_servicos.html">showFabricaSoftwareServicosView</prop>
+				<prop key="/fabrica_software_servicos_.html">showFabricaSoftwareServicos_View</prop>
+				<prop key="/fabrica_software_consultoria.html">showFabricaSoftwareConsultoriaView</prop>
+				<prop key="/fabrica_software_consultoria_.html">showFabricaSoftwareConsultoria_View</prop>
+				<prop key="/fabrica_software_dados.html">showFabricaSoftwareDadosView</prop>
+				<prop key="/fabrica_software_dados_.html">showFabricaSoftwareDados_View</prop>
+				<prop key="/fabrica_software_nossafabrica.html">showFabricaSoftwareDadosView</prop>
+			</props>
+		</property>
+	</bean>
+	
+	<bean class="com.adapit.portal.services.controllers.ComercialSolutionsViewController"
+		id="comercialSolutionsFormUrl">
+		<property name="methodNameResolver"><ref local="comercialSolutionsViewControllerResolver"/></property>		
+	</bean>
+	
+	<bean id="comercialSolutionsViewControllerResolver" class="org.springframework.web.servlet.mvc.multiaction.PropertiesMethodNameResolver">
+		<property name="mappings">
+			<props>
+				<prop key="/comercialSolutions_wct.html">showWctView</prop>
+				<prop key="/comercialSolutions_wct_.html">showWct_View</prop>
+				<prop key="/comercialSolutions_wct_java.html">showWctJavaView</prop>
+				<prop key="/comercialSolutions_wct_java_.html">showWctJava_View</prop>
+				<prop key="/comercialSolutions_wct_bpmn.html">showWctBpmnView</prop>
+				<prop key="/comercialSolutions_wct_bpmn_.html">showWctBpmn_View</prop>
+				<prop key="/comercialSolutions_wct_config_management.html">showWctConfigManagementView</prop>
+				<prop key="/comercialSolutions_wct_config_management_.html">showWctConfigManagement_View</prop>	
+				<prop key="/comercialSolutions_ecommerce.html">showEcommerceView</prop>	
+				<prop key="/comercialSolutions_ecommerce_.html">showEcommerce_View</prop>
+									
+			</props>
+		</property>
+	</bean>
+
+	<bean class="com.adapit.portal.services.controllers.InstitucionalViewController"
+		id="institucionalFormUrl">
+		<property name="methodNameResolver"><ref local="institucionalViewControllerResolver"/></property>		
+	</bean>
+	
+	<bean id="institucionalViewControllerResolver" class="org.springframework.web.servlet.mvc.multiaction.PropertiesMethodNameResolver">
+		<property name="mappings">
+			<props>
+				<prop key="/institucional.html">showInstitucionalView</prop>
+				<prop key="/institucional_empresa.html">showEmpresaView</prop>
+				<prop key="/institucional_localizacao.html">showLocalizacaoView</prop>
+				<prop key="/institucional_localizacaogm.html">showLocalizacaoGmView</prop>
+				<prop key="/institucional_tecnologias.html">showTecnologiasView</prop>
+				<prop key="/institucional_processos.html">showProcessosView</prop>
+				<prop key="/institucional_equipe.html">showEquipeView</prop>
+				<prop key="/institucional_parcerias.html">showParceriasView</prop>
+				<prop key="/institucional_contato.html">showContatoView</prop>	
+				<prop key="/institucional_apresentacao.html">showApresentacaoView</prop>	
+				<prop key="/institucional_historico.html">showHistoricoView</prop>	
+				<prop key="/institucional_solucoes.html">showSolucoesView</prop>
+				<prop key="/institucional_diferenciacao.html">showDiferenciacaoView</prop>
+				<prop key="/institucional_empresa_.html">showEmpresa_View</prop>
+				<prop key="/institucional_localizacao_.html">showLocalizacao_View</prop>
+				<prop key="/institucional_tecnologias_.html">showTecnologias_View</prop>
+				<prop key="/institucional_processos_.html">showProcessos_View</prop>
+				<prop key="/institucional_equipe_.html">showEquipe_View</prop>
+				<prop key="/institucional_parcerias_.html">showParcerias_View</prop>
+				<prop key="/institucional_contato_.html">showContato_View</prop>	
+				<prop key="/institucional_apresentacao_.html">showApresentacao_View</prop>	
+				<prop key="/institucional_historico_.html">showHistorico_View</prop>	
+				<prop key="/institucional_solucoes_.html">showSolucoes_View</prop>
+				<prop key="/institucional_diferenciacao_.html">showDiferenciacao_View</prop>					
+			</props>
+		</property>
+	</bean>
+
+	<bean	class="com.adapit.portal.services.controllers.WCTViewController"
+		id="wctFormUrl">
+		<property name="methodNameResolver"><ref local="wctViewControllerResolver"/></property>		
+	</bean>
+	
+	<bean id="wctViewControllerResolver" class="org.springframework.web.servlet.mvc.multiaction.PropertiesMethodNameResolver">
+		<property name="mappings">
+			<props>
+				
+				<prop key="/solucoesProducaoSoftware.html">showSolucoesProducaoSoftwareView</prop>
+				<prop key="/bom_uso_do_capital_investido.html">showBomUsoFerramentasView</prop>
+				<prop key="/wct_visao_global.html">showWctVisaoGlobalView</prop>				
+				<prop key="/wctLowDescription.html">showWctLowDescriptionView</prop>
+				<prop key="/wct_diretor.html">showWctDiretorView</prop>
+				<prop key="/wct_geracao_gui.html">showWctGeracaoGuiView</prop>
+				
+			</props>
+		</property>
+	</bean>
+
+	
+	<bean	class="com.adapit.portal.services.controllers.ApresentacaoViewController"
+		id="apresentacaoFormUrl">
+		<property name="methodNameResolver"><ref local="apresentacaoViewControllerResolver"/></property>		
+	</bean>
+	<bean id="apresentacaoViewControllerResolver" class="org.springframework.web.servlet.mvc.multiaction.PropertiesMethodNameResolver">
+		<property name="mappings">
+			<props>
+				<prop key="/apresentacao.html">showApresentacaoView</prop>
+				<prop key="/abertura.html">showAberturaView</prop>
+				<prop key="/portal.html">showPortalView</prop>
+				<prop key="/wct">showWct</prop>
+				<prop key="/sair.html">loggoff</prop>
+				<prop key="/mainmenuintro.html">showMainMenuView</prop>
+				<prop key="/headerintro.html">showHeaderView</prop>
+				<prop key="/bottomintro.html">showBottomView</prop>
+				
+				<prop key="/treinamentoResearchForm.html">showTreinamentoResearchFormView</prop>		
+				<prop key="/pesquisaComercialSolutionForm.html">showPesquisaComercialSolutionFormView</prop>
+				
+				<prop key="/pesquisaProdutoForm.html">showPesquisaComercialSolutionFormView</prop>
+				<prop key="/proximosLeiloesForm.html">showProximosTurmasFormView</prop>
+				<prop key="/comitenteImageView.html">showComitenteImageView</prop>
+				<prop key="/categoriaImageView.html">showCategoriaImageView</prop>
+				<prop key="/menu_horizontal.html">showMenuHorizontalView</prop>
+				<prop key="/conteudo_inicial.html">showInicioContentView</prop>
+				<prop key="/conteudo_inicial_menu.html">showInicioContentMenuView</prop>
+				
+				<prop key="/contentintro.html">showProximosTurmasFormView</prop>
+				<prop key="/contentintro_.html">showProximosTurmasForm_View</prop>
+				<prop key="/proximas_turmas_intro.html">showProximosTurmasIndexFormView</prop>					
+				
+				<prop key="/showContatoSendEmail.html">showContatoSendEmailView</prop>
+				<prop key="/processContatoSendEmail.html">processContatoSendEmailView</prop>
+				
+				<prop key="/showPesquisaInternaView.html">showPesquisaInternaView</prop>
+				
+			</props>
+		</property>
+	</bean>
+
+<!-- ##########################Definições Tecnicas -->
+	<bean	class="com.adapit.portal.services.controllers.TechDefinitionMultiActionController"
+		id="techDefFormUrl">
+		<property name="methodNameResolver"><ref local="tecDefViewControllerResolver"/></property>		
+	</bean>
+	<bean id="tecDefViewControllerResolver" class="org.springframework.web.servlet.mvc.multiaction.PropertiesMethodNameResolver">
+		<property name="mappings">
+			<props>
+				<prop key="/showTechDefinitionMaintenanceForm.html">showTechDefinitionMaintenanceForm</prop>
+				<prop key="/saveTechDefinitionAction_TechDefinitionMaintenanceForm.html">saveTechDefinitionAction_TechDefinitionMaintenanceForm</prop>
+				<prop key="/deleteTechDefinitionAction_TechDefinitionMaintenanceForm.html">deleteTechDefinitionAction_TechDefinitionMaintenanceForm</prop>
+				<prop key="/filterTechDefinitionByKeyword_TechDefinitionMaintenanceForm.html">filterTechDefinitionByKeyword_TechDefinitionMaintenanceForm</prop>
+				<prop key="/loadTechDefinitionAction_TechDefinitionMaintenanceForm.html">loadTechDefinitionAction_TechDefinitionMaintenanceForm</prop>
+				<prop key="/showListAllTechDefinitionView_TechDefinitionMaintenanceForm.html">showListAllTechDefinitionView_TechDefinitionMaintenanceForm</prop>
+				<prop key="/loadTechDefinitionFromeditselectionTechDefinitionButtonAction_TechDefinitionMaintenanceForm.html">loadTechDefinitionFromeditselectionTechDefinitionButtonAction_TechDefinitionMaintenanceForm</prop>
+				<prop key="/deleteManyTechDefinitionAction_TechDefinitionMaintenanceForm.html">deleteManyTechDefinitionAction_TechDefinitionMaintenanceForm</prop>
+			</props>
+		</property>
+	</bean>
+
+
+
+
+	<bean class="com.adapit.portal.services.controllers.PublicationViewController"	id="publicationFormUrl">
+		<property name="methodNameResolver"><ref local="publicationViewControllerResolver"/></property>		
+	</bean>
+	
+	<bean id="publicationViewControllerResolver" class="org.springframework.web.servlet.mvc.multiaction.PropertiesMethodNameResolver">
+		<property name="mappings">
+			<props>
+				<prop key="/last_publication.html">showLastPublicationView</prop>		
+				<prop key="/larger_last_publication.html">showLargerLastPublicationView</prop>	
+				<prop key="/publication.html">showPublicationFormView</prop>	
+				<prop key="/show_publication_content.html">showPublicationContentView</prop>	
+				<prop key="/publication_ano.html">showPublicationAnoView</prop>	
+				<prop key="/publication_big_image.html">showPublicationBigImageView</prop>
+				<prop key="/publication_small_image.html">showPublicationSmallImageView</prop>
+				<prop key="/show_publication_image.html">showPublicationImageView</prop>
+			</props>
+		</property>
+	</bean>
+	
+	<bean class="com.adapit.portal.services.controllers.UpdateViewController"	id="updateFormUrl">
+		<property name="methodNameResolver"><ref local="updateViewControllerResolver"/></property>		
+	</bean>
+	
+	<bean id="updateViewControllerResolver" class="org.springframework.web.servlet.mvc.multiaction.PropertiesMethodNameResolver">
+		<property name="mappings">
+			<props>
+				<prop key="/last_update.html">showLastUpdateView</prop>		
+				<prop key="/larger_last_update.html">showLargerLastUpdateView</prop>	
+				<prop key="/update.html">showUpdateFormView</prop>	
+				<prop key="/show_update_content.html">showUpdateContentView</prop>	
+				<prop key="/update_ano.html">showUpdateAnoView</prop>	
+				<prop key="/update_big_image.html">showUpdateBigImageView</prop>
+				<prop key="/update_small_image.html">showUpdateSmallImageView</prop>
+				<prop key="/download_dbfile.html">downloadDbFileView</prop>
+				<prop key="/showUpdateMaintenanceForm.html">showUpdateMaintenanceForm</prop>
+				<prop key="/saveUpdateAction_NewsMaintenanceForm.html">saveUpdateAction_NewsMaintenanceForm</prop>
+			</props>
+		</property>
+	</bean>
+	
+	<bean class="com.adapit.portal.services.controllers.NewsViewController"	id="newsFormUrl">
+		<property name="methodNameResolver"><ref local="newsViewControllerResolver"/></property>		
+	</bean>
+	
+	<bean id="newsViewControllerResolver" class="org.springframework.web.servlet.mvc.multiaction.PropertiesMethodNameResolver">
+		<property name="mappings">
+			<props>
+				<prop key="/last_news.html">showLastNewsView</prop>		
+				<prop key="/larger_last_news.html">showLargerLastNewsView</prop>	
+				<prop key="/news.html">showNewsFormView</prop>	
+				<prop key="/show_news_content.html">showNewsContentView</prop>	
+				<prop key="/news_ano.html">showNewsAnoView</prop>	
+				<prop key="/news_big_image.html">showNewsBigImageView</prop>
+				<prop key="/news_small_image.html">showNewsSmallImageView</prop>
+				<prop key="/show_news_image.html">showNewsImageView</prop>
+				<prop key="/showNewsMaintenanceForm.html">showNewsMaintenanceForm</prop>
+				<prop key="/saveNewsAction_NewsMaintenanceForm.html">saveNewsAction_NewsMaintenanceForm</prop>
+			</props>
+		</property>
+	</bean>
+	
+	<bean
+		class="org.springframework.remoting.httpinvoker.HttpInvokerServiceExporter"
+		id="remoteGenericDAORemote">
+		<property name="service">
+			<ref bean="genericDAOHibernate" />
+		</property>
+		<property name="serviceInterface">
+			<value>com.workcase.hibernate.GenericDAO</value>
+		</property>
+	</bean>
+	
+	<bean
+		class="com.adapit.portal.services.controllers.TreinamentosMultiActionController"
+		id="treinamentosListUrl">
+		<property name="methodNameResolver"><ref local="treinamentosListViewControllerResolver"/></property>
+		
+	</bean>
+	
+	<bean id="treinamentosListViewControllerResolver" class="org.springframework.web.servlet.mvc.multiaction.PropertiesMethodNameResolver">
+		<property name="mappings">
+			<props>
+				<prop key="/showCatalogoTurma.html">showCatalogoTurmaView</prop>
+				<prop key="/showCatalogoTurma_.html">showCatalogoTurma_View</prop>	
+				
+				
+					
+				<prop key="/listTreinamentoByDescricao.html">showTreinamentoLikeDescView</prop>	
+				<prop key="/listTreinamentosByCategoriaNome.html">showTreinamentosByCategoriaNomeView</prop>	
+				<prop key="/treinamentosEmTurma.html">showTreinamentosTurmaView</prop>
+				<prop key="/showDetalhesTreinamento.html">showDetalhesTrainingSolutionView</prop>
+				<prop key="/showImagensComercialSolution.html">showImagensCommercialSolutionView</prop>
+				<prop key="/showImageById.html">showImageByIdView</prop>
+				<prop key="/comercialSolutionBigImage.html">showCommercialSolutionBigImageView</prop>
+				<prop key="/comercialSolutionSmallImage.html">showCommercialSolutionSmallImageView</prop>
+				<prop key="/imageDetails.html">showCommercialSolutionImageDetailsView</prop>
+				<prop key="/comercialSolutionMediumImage.html">showCommercialSolutionMediumImageView</prop>
+				<prop key="/comercialSolutionFullImage.html">showCommercialSolutionFullImageView</prop>					
+				<prop key="/imageDetailsSmall.html">showCommercialSolutionImageDetailsSmallView</prop>
+				<prop key="/participarTurmaTreinamento.html">participarTurmaTreinamentoView</prop>
+				<prop key="/showEstadoAgendaTurmaTreinamento.html">showEstadoAgendaTurmaTreinamentoView</prop>
+				
+				<prop key="/mediumImage.html">showMediumImageView</prop>
+				<prop key="/largeImage.html">showLargeImageView</prop>
+				<prop key="/fullImage.html">showFullImageView</prop>				
+			</props>
+		</property>
+	</bean>
+
+<!-- Usuario old 
+	<bean
+		class="com.adapit.portal.services.controllers.UsuarioViewController"
+		id="manutencaoUsuario">
+		<property name="methodNameResolver"><ref local="usuarioViewControllerResolver"/></property>
+		
+	</bean>
+	
+	<bean id="usuarioViewControllerResolver" class="org.springframework.web.servlet.mvc.multiaction.PropertiesMethodNameResolver">
+		<property name="mappings">
+			<props>
+				<prop key="/loginUsuario.html">showLoginUsuarioView</prop>
+				<prop key="/logging.html">logging</prop>
+				<prop key="/categoriasChange.html">changeCategoriaView</prop>
+				<prop key="/novoUsuario.html">showPessoaFisicaCadastreFormView</prop>
+				<prop key="/manutencaoUsuario.html">showFormularioCadastroPessoaFisicaView</prop>
+				<prop key="/cadastrepessoafisicaaction.html">cadastrarPessoaFisica</prop>
+				<prop key="/pessoaFisicaCadastreForm.html">showPessoaFisicaCadastreFormView</prop>	
+				<prop key="/fisicaCadastreForm.html">showFisicaCadastreFormView</prop>
+				<prop key="/userCadastreForm.html">showUserCadastreFormView</prop>
+				<prop key="/enderecoCadastreForm.html">showEnderecoCadastreFormView</prop>
+				<prop key="/outrasInformacoes.html">showOutrasInformacoesView</prop>
+				
+				<prop key="/treinamentosQueParticipo.html">showTreinamentosParticipacaoView</prop>			
+			</props>
+		</property>
+	</bean>
+
+ -->
+
+	<bean
+		class="com.adapit.portal.services.controllers.UsuarioViewController"
+		id="manutencaoUsuario">
+		<property name="methodNameResolver"><ref local="usuarioViewControllerResolver"/></property>
+		<property name="adapitAutenticateUserMailService"><ref local="adapitAutenticateUserMailService"/></property>	
+	</bean>
+	
+	<bean id="usuarioViewControllerResolver" class="org.springframework.web.servlet.mvc.multiaction.PropertiesMethodNameResolver">
+		<property name="mappings">
+			<props>
+				<prop key="/recomendation.html">showRecommendationView</prop>
+				<prop key="/recommendation.html">showRecommendationView</prop>
+				<prop key="/loginUsuario.html">showLoginUsuarioView</prop>
+				<prop key="/logging.html">logging</prop>
+				<prop key="/loggingtermosuso.html">loggingTermosUso</prop>
+				<prop key="/loggingtermosuso_.html">loggingTermosUso_</prop>
+				<prop key="/logging_.html">logging_</prop>
+				<prop key="/esqueciMinhaSenha_.html">esqueciMinhaSenha_</prop>
+				<prop key="/esqueciMinhaSenha.html">esqueciMinhaSenha</prop>
+				<prop key="/comoMeAutenticar_.html">comoAutenticarConta</prop>
+				<prop key="/categoriasChange.html">changeCategoriaView</prop>
+				<prop key="/novoUsuario.html">showPessoaCadastreFormView</prop>
+				<prop key="/manutencaoUsuario.html">showFormularioCadastroPessoaFisicaView</prop>
+				<prop key="/cadastrepessoafisicaaction.html">cadastrarPessoaFisica</prop>
+				<prop key="/pessoaFisicaCadastreForm.html">showPessoaFisicaCadastreFormView</prop>	
+				<prop key="/pessoaFisicaEstCadastreForm.html">showPessoaFisicaEstCadastreFormView</prop>
+				<prop key="/pessoaJuridicaCadastreForm.html">showPessoaJuridicaCadastreFormView</prop>
+				<prop key="/pessoaJuridicaRepCadastreForm.html">showPessoaJuridicaRepCadastreFormView</prop>
+				<prop key="/fisicaCadastreForm.html">showFisicaCadastreFormView</prop>
+				<prop key="/userCadastreForm.html">showUserCadastreFormView</prop>
+				<prop key="/enderecoCadastreForm.html">showEnderecoCadastreFormView</prop>
+				<prop key="/outrasInformacoes.html">showOutrasInformacoesView</prop>
+				<prop key="/trocar_senha_form.html">trocarSenha</prop>
+				<prop key="/trocar_senhausuario_form.html">trocarSenhaUsuario</prop>
+				
+				<prop key="/contaUsuarioTelaInicial.html">showContaUsuarioTelaInicialView</prop>
+				<prop key="/contaUsuarioPessoaFisicaCadastreForm.html">showContaUsuarioPessoaFisicaCadastreFormView</prop>	
+				<prop key="/contaUsuarioPessoaFisicaEstCadastreForm.html">showContaUsuarioPessoaFisicaEstCadastreFormView</prop>
+				<prop key="/contaUsuarioPessoaJuridicaCadastreForm.html">showContaUsuarioPessoaJuridicaCadastreFormView</prop>
+				<prop key="/contaUsuarioPessoaJuridicaRepCadastreForm.html">showContaUsuarioPessoaJuridicaRepCadastreFormView</prop>
+				
+				<prop key="/autenticateCadastre.html">showAutenticarUsuarioView</prop>	
+			</props>
+		</property>
+	</bean>
+
+	<bean
+		class="com.adapit.portal.services.controllers.usuario.CadastroPessoaMultiActionController"
+		id="cadastroPessoaUrl">
+		<property name="methodNameResolver"><ref local="pessoaFormControllerResolver"/></property>
+		<property name="adapitAutenticateUserMailService"><ref local="adapitAutenticateUserMailService"/></property>
+		<property name="validator"><ref local="validator"/></property>
+	</bean>
+	
+	<bean id="pessoaFormControllerResolver" class="org.springframework.web.servlet.mvc.multiaction.PropertiesMethodNameResolver">
+		<property name="mappings">
+			<props>
+				<prop key="/formCadastrePessoaFisica.html">formCadastrePessoaFisicaView</prop>						
+			</props>
+		</property>
+	</bean> 
+	
+
+
+	<bean
+		class="com.adapit.portal.services.controllers.usuario.CadastroPjMultiActionController"
+		id="cadastroPjUrl">
+		<property name="methodNameResolver"><ref local="pjFormControllerResolver"/></property>
+		<property name="adapitAutenticateUserMailService"><ref local="adapitAutenticateUserMailService"/></property>
+		<property name="validator"><ref local="validator"/></property>
+	</bean>
+	
+	<bean id="pjFormControllerResolver" class="org.springframework.web.servlet.mvc.multiaction.PropertiesMethodNameResolver">
+		<property name="mappings">
+			<props>
+				<prop key="/formCadastrePessoaJuridica.html">formCadastrePessoaJuridicaView</prop>
+				<prop key="/formCadastrePessoaJuridica.html">formCadastreRepresentanteLegalView</prop>							
+			</props>
+		</property>
+	</bean> 
+
+	
+	<bean id="categoriaServiceRemote" class="org.springframework.remoting.httpinvoker.HttpInvokerServiceExporter">
+		<property name="service">
+			<ref bean="categoriaService"/>
+		</property>
+		<property name="serviceInterface">
+			<value>com.adapit.portal.services.CategoriaService</value>
+		</property>
+	</bean>
+	<bean id="comercialSolutionServiceRemote" class="org.springframework.remoting.httpinvoker.HttpInvokerServiceExporter">
+		<property name="service">
+			<ref bean="comercialSolutionService"/>
+		</property>
+		<property name="serviceInterface">
+			<value>com.adapit.portal.services.ComercialSolutionService</value>
+		</property>
+	</bean>
+	<bean id="userServiceRemote" class="org.springframework.remoting.httpinvoker.HttpInvokerServiceExporter">
+		<property name="service">
+			<ref bean="userService"/>
+		</property>
+		<property name="serviceInterface">
+			<value>com.adapit.portal.services.UserService</value>
+		</property>
+	</bean>
+	<bean id="treinamentoServiceRemote" class="org.springframework.remoting.httpinvoker.HttpInvokerServiceExporter">
+		<property name="service">
+			<ref bean="treinamentoService"/>
+		</property>
+		<property name="serviceInterface">
+			<value>com.adapit.portal.services.TreinamentoService</value>
+		</property>
+	</bean>
+	<bean id="pessoaServiceRemote" class="org.springframework.remoting.httpinvoker.HttpInvokerServiceExporter">
+		<property name="service">
+			<ref bean="pessoaService"/>
+		</property>
+		<property name="serviceInterface">
+			<value>com.adapit.portal.services.PessoaService</value>
+		</property>
+	</bean>
+	<bean id="preferenciaServiceRemote" class="org.springframework.remoting.httpinvoker.HttpInvokerServiceExporter">
+		<property name="service">
+			<ref bean="preferenciaService"/>
+		</property>
+		<property name="serviceInterface">
+			<value>com.adapit.portal.services.PreferenciaService</value>
+		</property>
+	</bean>
+	<bean id="imagemServiceRemote" class="org.springframework.remoting.httpinvoker.HttpInvokerServiceExporter">
+		<property name="service">
+			<ref bean="imagemService"/>
+		</property>
+		<property name="serviceInterface">
+			<value>com.adapit.portal.services.ImagemService</value>
+		</property>
+	</bean>	
+	<bean id="contatoServiceRemote" class="org.springframework.remoting.httpinvoker.HttpInvokerServiceExporter">
+		<property name="service">
+			<ref bean="contatoService"/>
+		</property>
+		<property name="serviceInterface">
+			<value>com.adapit.portal.services.ContatoTreinamentoService</value>
+		</property>
+	</bean>	
+	<bean id="newsServiceRemote" class="org.springframework.remoting.httpinvoker.HttpInvokerServiceExporter">
+		<property name="service">
+			<ref bean="newsService"/>
+		</property>
+		<property name="serviceInterface">
+			<value>com.adapit.portal.services.NewsService</value>
+		</property>
+	</bean>
+	<bean id="updateServiceRemote" class="org.springframework.remoting.httpinvoker.HttpInvokerServiceExporter">
+		<property name="service">
+			<ref bean="updateService"/>
+		</property>
+		<property name="serviceInterface">
+			<value>com.adapit.portal.services.UpdateService</value>
+		</property>
+	</bean>
+	<bean id="agendaTreinamentoServiceRemote" class="org.springframework.remoting.httpinvoker.HttpInvokerServiceExporter">
+		<property name="service">
+			<ref bean="agendaTreinamentoService"/>
+		</property>
+		<property name="serviceInterface">
+			<value>com.adapit.portal.services.AgendaTreinamentoService</value>
+		</property>
+	</bean>	
+	
+	<bean id="turmaServiceRemote" class="org.springframework.remoting.httpinvoker.HttpInvokerServiceExporter">
+		<property name="service">
+			<ref bean="turmaService"/>
+		</property>
+		<property name="serviceInterface">
+			<value>com.adapit.portal.services.TurmaService</value>
+		</property>
+	</bean>	
+	
+	<bean id="contaServiceRemote" class="org.springframework.remoting.httpinvoker.HttpInvokerServiceExporter">
+		<property name="service">
+			<ref bean="contaService"/>
+		</property>
+		<property name="serviceInterface">
+			<value>com.adapit.portal.services.ContaService</value>
+		</property>
+	</bean>	
+	
+	<bean id="utilityServiceRemote" class="org.springframework.remoting.httpinvoker.HttpInvokerServiceExporter">
+		<property name="service">
+			<ref bean="utilityService"/>
+		</property>
+		<property name="serviceInterface">
+			<value>com.adapit.portal.services.UtilityService</value>
+		</property>
+	</bean>
+	
+	<bean id="enderecoServiceRemote" class="org.springframework.remoting.httpinvoker.HttpInvokerServiceExporter">
+		<property name="service">
+			<ref bean="enderecoService"/>
+		</property>
+		<property name="serviceInterface">
+			<value>com.adapit.portal.services.EnderecoService</value>
+		</property>
+	</bean>
+	
+	<bean id="fileServiceRemote" class="org.springframework.remoting.httpinvoker.HttpInvokerServiceExporter">
+		<property name="service">
+			<ref bean="fileService"/>
+		</property>
+		<property name="serviceInterface">
+			<value>com.adapit.portal.services.FileService</value>
+		</property>
+	</bean>
+		<bean id="publicationServiceRemote" class="org.springframework.remoting.httpinvoker.HttpInvokerServiceExporter">
+		<property name="service">
+			<ref bean="publicationService"/>
+		</property>
+		<property name="serviceInterface">
+			<value>com.adapit.portal.services.PublicationService</value>
+		</property>
+	</bean>
+</beans>

@@ -1,0 +1,953 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE form-validation PUBLIC "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.1//EN" "http://jakarta.apache.org/commons/dtds/validator_1_1.dtd">
+
+<form-validation>
+  <!--
+    Define global validation config in validation-global.xml
+  -->
+  <formset>
+      <form name="participante">
+              <field property="nome"
+                     depends="required">
+
+                  <arg0 key="participante.nome"/>
+                  <arg0
+                      name="required"
+                    key="participante.nome"
+                  />
+              </field>
+              <field property="email"
+                     depends="email">
+
+                  <arg0 key="participante.email"/>
+                  <arg0
+                      name="email"
+                    key="participante.email"
+                  />
+              </field>
+      </form>
+      <form name="comentarioCliente">
+              <field property="dataHora"
+                     depends="date">
+
+                  <arg0 key="comentarioCliente.dataHora"/>
+                  <arg0
+                      name="date"
+                    key="access.data"
+                  />
+              </field>
+      </form>
+      <form name="commercialSolutionDetailTab">
+              <field property="detail"
+                     depends="required">
+
+                  <arg0 key="commercialSolutionDetailTab.detail"/>
+                  <arg0
+                      name="required"
+                    key="commercialSolutionDetailTab.detail"
+                  />
+              </field>
+      </form>
+      <form name="funcionario">
+              <field property="nome"
+                     depends="required">
+
+                  <arg0 key="funcionario.nome"/>
+                  <arg0
+                      name="required"
+                    key="funcionario.nome"
+                  />
+              </field>
+              <field property="email"
+                     depends="required,email">
+
+                  <arg0 key="funcionario.email"/>
+                  <arg0
+                      name="required,email"
+                    key="funcionario.email"
+                  />
+              </field>
+              <field property="telefone"
+                     depends="required">
+
+                  <arg0 key="funcionario.telefone"/>
+                  <arg0
+                      name="required"
+                    key="funcionario.telefone"
+                  />
+              </field>
+      </form>
+      <form name="usuario">
+              <field property="login"
+                     depends="required">
+
+                  <arg0 key="usuario.login"/>
+                  <arg0
+                      name="required"
+                    key="usuario.login"
+                  />
+              </field>
+              <field property="password"
+                     depends="required">
+
+                  <arg0 key="usuario.password"/>
+                  <arg0
+                      name="required"
+                    key="usuario.password"
+                  />
+              </field>
+              <field property="passwordConf"
+                     depends="required">
+
+                  <arg0 key="usuario.passwordConf"/>
+                  <arg0
+                      name="required"
+                    key="usuario.passwordConf"
+                  />
+              </field>
+      </form>
+      <form name="agendaTreinamento">
+              <field property="inicioPrevisto"
+                     depends="required,date">
+
+                  <arg0 key="agendaTreinamento.inicioPrevisto"/>
+                  <arg0
+                      name="required,date"
+                    key="agendaTreinamento.inicioPrevisto"
+                  />
+              </field>
+              <field property="terminoPrevisto"
+                     depends="required,date">
+
+                  <arg0 key="agendaTreinamento.terminoPrevisto"/>
+                  <arg0
+                      name="required,date"
+                    key="agendaTreinamento.terminoPrevisto"
+                  />
+              </field>
+      </form>
+      <form name="agendaProjeto">
+              <field property="inicioPrevisto"
+                     depends="required,date">
+
+                  <arg0 key="agendaProjeto.inicioPrevisto"/>
+                  <arg0
+                      name="required,date"
+                    key="agendaProjeto.inicioPrevisto"
+                  />
+              </field>
+              <field property="lanceInicial"
+                     depends="double">
+
+                  <arg0 key="agendaProjeto.lanceInicial"/>
+                  <arg0
+                      name="double"
+                    key="agendaProjeto.lanceInicial"
+                  />
+              </field>
+              <field property="lanceMinimo"
+                     depends="double">
+
+                  <arg0 key="agendaProjeto.lanceMinimo"/>
+                  <arg0
+                      name="double"
+                    key="agendaProjeto.lanceMinimo"
+                  />
+              </field>
+              <field property="terminoPrevisto"
+                     depends="required,date">
+
+                  <arg0 key="agendaProjeto.terminoPrevisto"/>
+                  <arg0
+                      name="required,date"
+                    key="agendaProjeto.terminoPrevisto"
+                  />
+              </field>
+              <field property="incremento"
+                     depends="double">
+
+                  <arg0 key="agendaProjeto.incremento"/>
+                  <arg0
+                      name="double"
+                    key="agendaProjeto.incremento"
+                  />
+              </field>
+      </form>
+      <form name="contatoProcessoTreinamento">
+              <field property="tecnologias"
+                     depends="required">
+
+                  <arg0 key="contatoProcessoTreinamento.tecnologias"/>
+                  <arg0
+                      name="required"
+                    key="contatoProcessoTreinamento.tecnologias"
+                  />
+              </field>
+              <field property="requerente"
+                     depends="required">
+
+                  <arg0 key="contatoProcessoTreinamento.requerente"/>
+                  <arg0
+                      name="required"
+                    key="contatoProcessoTreinamento.requerente"
+                  />
+              </field>
+              <field property="localRealizacao"
+                     depends="required">
+
+                  <arg0 key="contatoProcessoTreinamento.localRealizacao"/>
+                  <arg0
+                      name="required"
+                    key="contatoProcessoTreinamento.localRealizacao"
+                  />
+              </field>
+              <field property="numeroAlunos"
+                     depends="required,integer">
+
+                  <arg0 key="contatoProcessoTreinamento.numeroAlunos"/>
+                  <arg0
+                      name="required,integer"
+                    key="contatoProcessoTreinamento.numeroAlunos"
+                  />
+              </field>
+      </form>
+      <form name="fornecedor">
+              <field property="nome"
+                     depends="required">
+
+                  <arg0 key="fornecedor.nome"/>
+                  <arg0
+                      name="required"
+                    key="pessoaEmDivulgacao.nome"
+                  />
+              </field>
+              <field property="email"
+                     depends="required,email">
+
+                  <arg0 key="fornecedor.email"/>
+                  <arg0
+                      name="required,email"
+                    key="pessoaEmDivulgacao.email"
+                  />
+              </field>
+              <field property="telefone"
+                     depends="required">
+
+                  <arg0 key="fornecedor.telefone"/>
+                  <arg0
+                      name="required"
+                    key="pessoaEmDivulgacao.telefone"
+                  />
+              </field>
+      </form>
+      <form name="contatoTreinamento">
+              <field property="nome"
+                     depends="required">
+
+                  <arg0 key="contatoTreinamento.nome"/>
+                  <arg0
+                      name="required"
+                    key="contatoTreinamento.nome"
+                  />
+              </field>
+      </form>
+      <form name="update">
+              <field property="titulo"
+                     depends="required">
+
+                  <arg0 key="update.titulo"/>
+                  <arg0
+                      name="required"
+                    key="update.titulo"
+                  />
+              </field>
+              <field property="descricao"
+                     depends="required">
+
+                  <arg0 key="update.descricao"/>
+                  <arg0
+                      name="required"
+                    key="update.descricao"
+                  />
+              </field>
+              <field property="dataPublicacao"
+                     depends="required">
+
+                  <arg0 key="update.dataPublicacao"/>
+                  <arg0
+                      name="required"
+                    key="update.dataPublicacao"
+                  />
+              </field>
+      </form>
+      <form name="comercialSolution">
+              <field property="descricao"
+                     depends="required">
+
+                  <arg0 key="comercialSolution.descricao"/>
+                  <arg0
+                      name="required"
+                    key="comercialSolution.descricao"
+                  />
+              </field>
+              <field property="avaliacao"
+                     depends="float">
+
+                  <arg0 key="comercialSolution.avaliacao"/>
+                  <arg0
+                      name="float"
+                    key="comercialSolution.avaliacao"
+                  />
+              </field>
+              <field property="nome"
+                     depends="required">
+
+                  <arg0 key="comercialSolution.nome"/>
+                  <arg0
+                      name="required"
+                    key="comercialSolution.nome"
+                  />
+              </field>
+              <field property="resumo"
+                     depends="required">
+
+                  <arg0 key="comercialSolution.resumo"/>
+                  <arg0
+                      name="required"
+                    key="comercialSolution.resumo"
+                  />
+              </field>
+              <field property="keyWords"
+                     depends="required">
+
+                  <arg0 key="comercialSolution.keyWords"/>
+                  <arg0
+                      name="required"
+                    key="comercialSolution.keyWords"
+                  />
+              </field>
+      </form>
+      <form name="participacaoTurma">
+              <field property="horaIngresso"
+                     depends="date">
+
+                  <arg0 key="participacaoTurma.horaIngresso"/>
+                  <arg0
+                      name="date"
+                    key="participacaoTurma.horaIngresso"
+                  />
+              </field>
+      </form>
+      <form name="pessoaEmDivulgacao">
+              <field property="nome"
+                     depends="required">
+
+                  <arg0 key="pessoaEmDivulgacao.nome"/>
+                  <arg0
+                      name="required"
+                    key="pessoaEmDivulgacao.nome"
+                  />
+              </field>
+              <field property="email"
+                     depends="email">
+
+                  <arg0 key="pessoaEmDivulgacao.email"/>
+                  <arg0
+                      name="email"
+                    key="pessoaEmDivulgacao.email"
+                  />
+              </field>
+      </form>
+      <form name="trainingFormationItem">
+              <field property="itemOrder"
+                     depends="required,integer">
+
+                  <arg0 key="trainingFormationItem.itemOrder"/>
+                  <arg0
+                      name="required,integer"
+                    key="comercialSolutionItem.qtd"
+                  />
+              </field>
+      </form>
+      <form name="userImpl">
+              <field property="username"
+                     depends="required">
+
+                  <arg0 key="userImpl.username"/>
+                  <arg0
+                      name="required"
+                    key="userImpl.username"
+                  />
+              </field>
+              <field property="password"
+                     depends="required">
+
+                  <arg0 key="userImpl.password"/>
+                  <arg0
+                      name="required"
+                    key="userImpl.password"
+                  />
+              </field>
+      </form>
+      <form name="deactivationReason">
+              <field property="reason"
+                     depends="required">
+
+                  <arg0 key="deactivationReason.reason"/>
+                  <arg0
+                      name="required"
+                    key="deactivationReason.reason"
+                  />
+              </field>
+      </form>
+      <form name="representanteLegal">
+              <field property="nome"
+                     depends="required">
+
+                  <arg0 key="representanteLegal.nome"/>
+                  <arg0
+                      name="required"
+                    key="participante.nome"
+                  />
+              </field>
+              <field property="email"
+                     depends="email">
+
+                  <arg0 key="representanteLegal.email"/>
+                  <arg0
+                      name="email"
+                    key="participante.email"
+                  />
+              </field>
+      </form>
+      <form name="role">
+              <field property="name"
+                     depends="required">
+
+                  <arg0 key="role.name"/>
+                  <arg0
+                      name="required"
+                    key="role.name"
+                  />
+              </field>
+              <field property="description"
+                     depends="required">
+
+                  <arg0 key="role.description"/>
+                  <arg0
+                      name="required"
+                    key="role.description"
+                  />
+              </field>
+      </form>
+      <form name="comercialSolutionItem">
+              <field property="desconto"
+                     depends="required,integer">
+
+                  <arg0 key="comercialSolutionItem.desconto"/>
+                  <arg0
+                      name="required,integer"
+                    key="comercialSolutionItem.qtd"
+                  />
+              </field>
+              <field property="valorAcertado"
+                     depends="required,float">
+
+                  <arg0 key="comercialSolutionItem.valorAcertado"/>
+                  <arg0
+                      name="required,float"
+                    key="comercialSolutionItem.valorTotal"
+                  />
+              </field>
+      </form>
+      <form name="publication">
+              <field property="titulo"
+                     depends="required">
+
+                  <arg0 key="publication.titulo"/>
+                  <arg0
+                      name="required"
+                    key="publication.titulo"
+                  />
+              </field>
+              <field property="descricao"
+                     depends="required">
+
+                  <arg0 key="publication.descricao"/>
+                  <arg0
+                      name="required"
+                    key="publication.descricao"
+                  />
+              </field>
+              <field property="dataPublicacao"
+                     depends="required">
+
+                  <arg0 key="publication.dataPublicacao"/>
+                  <arg0
+                      name="required"
+                    key="news.dataPublicacao"
+                  />
+              </field>
+      </form>
+      <form name="condicaoParticipacaoTreinamento">
+              <field property="texto"
+                     depends="required">
+
+                  <arg0 key="condicaoParticipacaoTreinamento.texto"/>
+                  <arg0
+                      name="required"
+                    key="condicaoParticipacaoTreinamento.texto"
+                  />
+              </field>
+              <field property="descricao"
+                     depends="required">
+
+                  <arg0 key="condicaoParticipacaoTreinamento.descricao"/>
+                  <arg0
+                      name="required"
+                    key="condicaoParticipacaoTreinamento.descricao"
+                  />
+              </field>
+      </form>
+      <form name="softwareSolution">
+              <field property="sigla"
+                     depends="required">
+
+                  <arg0 key="softwareSolution.sigla"/>
+                  <arg0
+                      name="required"
+                    key="softwareSolution.sigla"
+                  />
+              </field>
+              <field property="funcionalidades"
+                     depends="required">
+
+                  <arg0 key="softwareSolution.funcionalidades"/>
+                  <arg0
+                      name="required"
+                    key="softwareSolution.funcionalidades"
+                  />
+              </field>
+              <field property="licencaUso"
+                     depends="required">
+
+                  <arg0 key="softwareSolution.licencaUso"/>
+                  <arg0
+                      name="required"
+                    key="softwareSolution.licensaUso"
+                  />
+              </field>
+              <field property="urlProjeto"
+                     depends="required">
+
+                  <arg0 key="softwareSolution.urlProjeto"/>
+                  <arg0
+                      name="required"
+                    key="softwareSolution.urlProjeto"
+                  />
+              </field>
+              <field property="versao"
+                     depends="required">
+
+                  <arg0 key="softwareSolution.versao"/>
+                  <arg0
+                      name="required"
+                    key="softwareSolution.versao"
+                  />
+              </field>
+              <field property="plataforma"
+                     depends="required">
+
+                  <arg0 key="softwareSolution.plataforma"/>
+                  <arg0
+                      name="required"
+                    key="softwareSolution.plataforma"
+                  />
+              </field>
+              <field property="sistemasOperacionais"
+                     depends="required">
+
+                  <arg0 key="softwareSolution.sistemasOperacionais"/>
+                  <arg0
+                      name="required"
+                    key="softwareSolution.sistemasOperacionais"
+                  />
+              </field>
+              <field property="descricao"
+                     depends="required">
+
+                  <arg0 key="softwareSolution.descricao"/>
+                  <arg0
+                      name="required"
+                    key="softwareSolution.descricao"
+                  />
+              </field>
+              <field property="avaliacao"
+                     depends="float">
+
+                  <arg0 key="softwareSolution.avaliacao"/>
+                  <arg0
+                      name="float"
+                    key="softwareSolution.avaliacao"
+                  />
+              </field>
+              <field property="nome"
+                     depends="required">
+
+                  <arg0 key="softwareSolution.nome"/>
+                  <arg0
+                      name="required"
+                    key="softwareSolution.nome"
+                  />
+              </field>
+              <field property="resumo"
+                     depends="required">
+
+                  <arg0 key="softwareSolution.resumo"/>
+                  <arg0
+                      name="required"
+                    key="softwareSolution.resumo"
+                  />
+              </field>
+              <field property="keyWords"
+                     depends="required">
+
+                  <arg0 key="softwareSolution.keyWords"/>
+                  <arg0
+                      name="required"
+                    key="softwareSolution.keyWords"
+                  />
+              </field>
+      </form>
+      <form name="projeto">
+              <field property="codigoProjeto"
+                     depends="required">
+
+                  <arg0 key="projeto.codigoProjeto"/>
+                  <arg0
+                      name="required"
+                    key="projeto.codigoProjeto"
+                  />
+              </field>
+      </form>
+      <form name="paper">
+              <field property="titulo"
+                     depends="required">
+
+                  <arg0 key="paper.titulo"/>
+                  <arg0
+                      name="required"
+                    key="paper.titulo"
+                  />
+              </field>
+              <field property="descricao"
+                     depends="required">
+
+                  <arg0 key="paper.descricao"/>
+                  <arg0
+                      name="required"
+                    key="paper.descricao"
+                  />
+              </field>
+              <field property="dataPublicacao"
+                     depends="required">
+
+                  <arg0 key="paper.dataPublicacao"/>
+                  <arg0
+                      name="required"
+                    key="paper.dataPublicacao"
+                  />
+              </field>
+      </form>
+      <form name="access">
+              <field property="dataHora"
+                     depends="date">
+
+                  <arg0 key="access.dataHora"/>
+                  <arg0
+                      name="date"
+                    key="access.data"
+                  />
+              </field>
+      </form>
+      <form name="trainingSolution">
+              <field property="codigo"
+                     depends="required">
+
+                  <arg0 key="trainingSolution.codigo"/>
+                  <arg0
+                      name="required"
+                    key="trainingSolution.codigo"
+                  />
+              </field>
+              <field property="conteudoProgramatico"
+                     depends="required">
+
+                  <arg0 key="trainingSolution.conteudoProgramatico"/>
+                  <arg0
+                      name="required"
+                    key="trainingSolution.conteudoProgramatico"
+                  />
+              </field>
+              <field property="cargaHoraria"
+                     depends="required,integer">
+
+                  <arg0 key="trainingSolution.cargaHoraria"/>
+                  <arg0
+                      name="required,integer"
+                    key="trainingSolution.conteudoProgramatico"
+                  />
+              </field>
+              <field property="tecnologias"
+                     depends="required">
+
+                  <arg0 key="trainingSolution.tecnologias"/>
+                  <arg0
+                      name="required"
+                    key="trainingSolution.tecnologias"
+                  />
+              </field>
+              <field property="materialApoio"
+                     depends="required">
+
+                  <arg0 key="trainingSolution.materialApoio"/>
+                  <arg0
+                      name="required"
+                    key="trainingSolution.materialApoio"
+                  />
+              </field>
+              <field property="softwares"
+                     depends="required">
+
+                  <arg0 key="trainingSolution.softwares"/>
+                  <arg0
+                      name="required"
+                    key="trainingSolution.softwares"
+                  />
+              </field>
+              <field property="objetivos"
+                     depends="required">
+
+                  <arg0 key="trainingSolution.objetivos"/>
+                  <arg0
+                      name="required"
+                    key="trainingSolution.objetivos"
+                  />
+              </field>
+              <field property="descricao"
+                     depends="required">
+
+                  <arg0 key="trainingSolution.descricao"/>
+                  <arg0
+                      name="required"
+                    key="traningSolution.descricao"
+                  />
+              </field>
+              <field property="avaliacao"
+                     depends="float">
+
+                  <arg0 key="trainingSolution.avaliacao"/>
+                  <arg0
+                      name="float"
+                    key="traningSolution.avaliacao"
+                  />
+              </field>
+              <field property="nome"
+                     depends="required">
+
+                  <arg0 key="trainingSolution.nome"/>
+                  <arg0
+                      name="required"
+                    key="traningSolution.nome"
+                  />
+              </field>
+              <field property="resumo"
+                     depends="required">
+
+                  <arg0 key="trainingSolution.resumo"/>
+                  <arg0
+                      name="required"
+                    key="traningSolution.resumo"
+                  />
+              </field>
+              <field property="keyWords"
+                     depends="required">
+
+                  <arg0 key="trainingSolution.keyWords"/>
+                  <arg0
+                      name="required"
+                    key="traningSolution.keyWords"
+                  />
+              </field>
+      </form>
+      <form name="itemProjeto">
+              <field property="qtd"
+                     depends="required,integer">
+
+                  <arg0 key="itemProjeto.qtd"/>
+                  <arg0
+                      name="required,integer"
+                    key="itemProduto.qtd"
+                  />
+              </field>
+              <field property="valorTotal"
+                     depends="required,float">
+
+                  <arg0 key="itemProjeto.valorTotal"/>
+                  <arg0
+                      name="required,float"
+                    key="itemProduto.valorTotal"
+                  />
+              </field>
+      </form>
+      <form name="news">
+              <field property="titulo"
+                     depends="required">
+
+                  <arg0 key="news.titulo"/>
+                  <arg0
+                      name="required"
+                    key="news.titulo"
+                  />
+              </field>
+              <field property="descricao"
+                     depends="required">
+
+                  <arg0 key="news.descricao"/>
+                  <arg0
+                      name="required"
+                    key="news.descricao"
+                  />
+              </field>
+              <field property="dataPublicacao"
+                     depends="required">
+
+                  <arg0 key="news.dataPublicacao"/>
+                  <arg0
+                      name="required"
+                    key="news.dataPublicacao"
+                  />
+              </field>
+      </form>
+      <form name="comitenteSimples">
+              <field property="nome"
+                     depends="required">
+
+                  <arg0 key="comitenteSimples.nome"/>
+                  <arg0
+                      name="required"
+                    key="pessoaEmDivulgacao.nome"
+                  />
+              </field>
+              <field property="email"
+                     depends="email">
+
+                  <arg0 key="comitenteSimples.email"/>
+                  <arg0
+                      name="email"
+                    key="pessoaEmDivulgacao.email"
+                  />
+              </field>
+      </form>
+      <form name="instrutor">
+              <field property="nome"
+                     depends="required">
+
+                  <arg0 key="instrutor.nome"/>
+                  <arg0
+                      name="required"
+                    key="instrutor.nome"
+                  />
+              </field>
+              <field property="email"
+                     depends="required,email">
+
+                  <arg0 key="instrutor.email"/>
+                  <arg0
+                      name="required,email"
+                    key="instrutor.email"
+                  />
+              </field>
+              <field property="telefone"
+                     depends="required">
+
+                  <arg0 key="instrutor.telefone"/>
+                  <arg0
+                      name="required"
+                    key="instrutor.telefone"
+                  />
+              </field>
+      </form>
+      <form name="treinamento">
+              <field property="codigo"
+                     depends="required">
+
+                  <arg0 key="treinamento.codigo"/>
+                  <arg0
+                      name="required"
+                    key="treinamento.codigo"
+                  />
+              </field>
+      </form>
+      <form name="categoria">
+              <field property="nome"
+                     depends="required">
+
+                  <arg0 key="categoria.nome"/>
+                  <arg0
+                      name="required"
+                    key="categoria.nome"
+                  />
+              </field>
+      </form>
+      <form name="formacaoTreinamento">
+              <field property="codigo"
+                     depends="required">
+
+                  <arg0 key="formacaoTreinamento.codigo"/>
+                  <arg0
+                      name="required"
+                    key="formacaoTreinamento.codigo"
+                  />
+              </field>
+              <field property="cargaHorariaTotal"
+                     depends="required,integer">
+
+                  <arg0 key="formacaoTreinamento.cargaHorariaTotal"/>
+                  <arg0
+                      name="required,integer"
+                    key="formacaoTreinamento.cargaHorariaTotal"
+                  />
+              </field>
+      </form>
+      <form name="cliente">
+              <field property="nome"
+                     depends="required">
+
+                  <arg0 key="cliente.nome"/>
+                  <arg0
+                      name="required"
+                    key="pessoaEmDivulgacao.nome"
+                  />
+              </field>
+              <field property="email"
+                     depends="required,email">
+
+                  <arg0 key="cliente.email"/>
+                  <arg0
+                      name="required,email"
+                    key="pessoaEmDivulgacao.email"
+                  />
+              </field>
+              <field property="telefone"
+                     depends="required">
+
+                  <arg0 key="cliente.telefone"/>
+                  <arg0
+                      name="required"
+                    key="pessoaEmDivulgacao.telefone"
+                  />
+              </field>
+      </form>
+  </formset>
+</form-validation>

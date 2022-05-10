@@ -1,0 +1,154 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+		<title>Email Informativo Adapit Soluções em TI</title>
+<LINK rel="stylesheet" type="text/css" href="http://${adapitsite}/css/main.css"/>
+
+<script type="text/javascript" src="http://${adapitsite}/js/jquery/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="http://${adapitsite}/js/jquery/jquery-ui-1.8.4.custom.min.js"></script>
+<script type="text/javascript" src="http://${adapitsite}/js/jquery/jquery.bgiframe-2.1.1.js"></script>
+<link href="http://${adapitsite}/css/jquery/ticker-style.css" rel="stylesheet" type="text/css" />
+<script src="http://${adapitsite}/js/jquery/jquery.ticker.js" type="text/javascript"></script>
+<script src="http://${adapitsite}/js/jquery/jquery.min.js" type="text/javascript"></script>
+		<style type="text/css">	
+			.dates_vig{
+				margin-top: 5px;
+				border: 2px solid #DF1E29;	
+			}
+			
+			.default_titled_pane{
+				font-weight: bold;
+				color: #FFFFFF;
+				font-family:Arial,verdana,'trebuchet ms',helvetica,sans-serif;
+				font-size:13px;
+				background-color: #595959;
+				height: 30px;
+				line-height: 28px;
+			}
+			
+			.default_titled_pane span{
+				margin-left: 15px;
+				margin-top:-5px;
+			}
+			.default_div_title{
+				font-weight: bold;
+				color: #DF1E29;
+				font-family:Arial,verdana,'trebuchet ms',helvetica,sans-serif;
+				font-size:15px;
+				background-color: #292929;
+				height: 30px;
+				line-height: 28px;
+			}
+			
+			.default_div_title span{
+				margin-left: 15px;
+			}
+			p{
+				font-family:Arial,verdana,'trebuchet ms',helvetica,sans-serif;
+				font-size:12px;
+			}
+			li{
+				font-family:Arial,verdana,'trebuchet ms',helvetica,sans-serif;
+				font-size:12px;
+			}
+		</style>	
+	</head>
+	<body>
+		
+		<img src="http://${URL}/imgs/adapit_logo_1.png"/>
+		<br>
+		<div class="dates_vig"  style="margin-top: 5px; border: 2px solid #DF1E29;
+		 width:600px; padding:10px;" >
+			<div class="default_titled_pane  ui-corner-bottom " style="
+					font-weight: bold;
+					color: #FFFFFF;
+					font-family:Arial,verdana,'trebuchet ms',helvetica,sans-serif;
+					font-size:13px;
+					background-color: #595959;
+					height: 30px;
+					line-height: 28px;
+					width:100%; height:30px;">
+				<span style="margin-left:15px;">Adapit Soluções em TI - Autenticação de Cadastro</span>
+			</div>
+			<div  style=" left:15px; position:relative;  top:33px; " >
+				<div style="padding-right:30px;">
+					<p>${welcome_message}</p>
+					<p>Nosso sistema foi desenvolvido para oferecer maior
+					interação de nossos usuários com as novidades da empresa.
+					O cadastro lhe permite selecionar e receber as seguintes
+					informações por email:</p>
+					<ul>
+					<li>Notícias da empresa.</li>
+					<li>Notificações sobre as atualizações dos sistemas e downloads.</li>
+					<li>Informações sobre os artigos publicados.</li>
+					<li>Material digital de produtos e serviços.</li>
+					</ul>
+					
+					<hr style="width: 550"></hr>
+					<p>Para ativar o seu cadastro clique 
+						<a class="red_link" href="http://${URL}/autenticateCadastre.html?id=${usuario.login}&ticket=${usuario.ticket}&aut=true" target="_blank"><b>aqui</b></a>
+					</p>
+					<p>Para desativar o seu cadastro clique
+						<a class="red_link" href="http://${URL}/autenticateCadastre.html?id=${usuario.login}&ticket=${usuario.ticket}&aut=false" target="_blank"><b>aqui</b></a>
+					</p>
+					<p>Para mais informações acesse o nosso site em 
+					<a class="red_link" href="http://www.adapit.com.br" target="_blank" >
+					<b>www.adapit.com.br</b></a>.
+					</p>
+					
+					<hr style="width: 550"></hr>
+					<p>Siga-nos no 
+					<a class="red_link" href="http://twitter.com/Adapit" target="_blank"><b>twitter</b></a>.
+				</div>
+			</div>
+		
+		</div>
+		<br></br>
+		<div class="dates_vig"  style="margin-top: 5px; border: 2px solid #DF1E29;
+		 width:600px; padding:10px; margin-top:20px;" >
+			<div class="default_titled_pane  ui-corner-bottom " style="
+					font-weight: bold;
+					color: #FFFFFF;
+					font-family:Arial,verdana,'trebuchet ms',helvetica,sans-serif;
+					font-size:13px;
+					background-color: #595959;
+					height: 30px;
+					line-height: 28px;
+					width:100%; height:30px;">
+				<span  style="margin-left:15px;">Gostou? Então nos recomende para seus contatos</span>
+			</div>
+			<div  style=" width:100%; left:15px; position:relative;  top:33px; " >
+				<p>Para nos recomendar para seus contatos clique 
+				<b><a class="red_link" href="http://${URL}/recommendation.html?part_id=${part_id}">aqui</a></b>. 
+				</p>
+				<br></br>				
+			</div>
+		
+		</div>
+		<br></br>
+		<div class="dates_vig"  style="margin-top: 5px; border: 2px solid #DF1E29;
+		 width:600px; padding:10px; margin-top:20px;" >
+			<div class="default_titled_pane  ui-corner-bottom " style="
+					font-weight: bold;
+					color: #FFFFFF;
+					font-family:Arial,verdana,'trebuchet ms',helvetica,sans-serif;
+					font-size:13px;
+					background-color: #595959;
+					height: 30px;
+					line-height: 28px;
+					width:100%; height:30px;">
+				<span  style="margin-left:15px;">Contato</span>
+			</div>
+			<div  style=" width:100%; left:15px; position:relative;  top:33px; " >
+				<center>
+				<font style="font-family: 'Arial',sans-serif; font-size: 13px; line-height: normal; font-weight: bold; color: red;">
+					${address}
+					<br>${phone}. www.adapit.com.br</br>		
+				</font>
+				</center>
+				<br></br>				
+			</div>
+		
+		</div>
+	</body>
+</html>

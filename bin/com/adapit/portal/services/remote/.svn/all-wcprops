@@ -1,0 +1,149 @@
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/adapitsys/!svn/ver/375/AdapitFromServerJQuery/src/com/adapit/portal/services/remote
+END
+RemoteContaService.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/services/remote/RemoteContaService.java
+END
+RemoteContatoService.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/services/remote/RemoteContatoService.java
+END
+RemotePublicationService.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/services/remote/RemotePublicationService.java
+END
+GenericEmailSenderImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/services/remote/GenericEmailSenderImpl.java
+END
+RemoteChangePasswordMailService.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/services/remote/RemoteChangePasswordMailService.java
+END
+RemoteNewsService.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/services/remote/RemoteNewsService.java
+END
+RemoteUserService.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/adapitsys/!svn/ver/375/AdapitFromServerJQuery/src/com/adapit/portal/services/remote/RemoteUserService.java
+END
+RemoteGenericMailService.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/services/remote/RemoteGenericMailService.java
+END
+RemoteFileService.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/adapitsys/!svn/ver/274/AdapitFromServerJQuery/src/com/adapit/portal/services/remote/RemoteFileService.java
+END
+RemoteProjetoService.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/adapitsys/!svn/ver/171/AdapitFromServerJQuery/src/com/adapit/portal/services/remote/RemoteProjetoService.java
+END
+RemoteUpdateService.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/adapitsys/!svn/ver/350/AdapitFromServerJQuery/src/com/adapit/portal/services/remote/RemoteUpdateService.java
+END
+RemotePreferenciaService.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/adapitsys/!svn/ver/274/AdapitFromServerJQuery/src/com/adapit/portal/services/remote/RemotePreferenciaService.java
+END
+RemoteEnderecoService.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/services/remote/RemoteEnderecoService.java
+END
+RemoteTreinamentoService.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/services/remote/RemoteTreinamentoService.java
+END
+RemoteAgendaTreinamentoService.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/services/remote/RemoteAgendaTreinamentoService.java
+END
+RemoteServicesUtility.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/services/remote/RemoteServicesUtility.java
+END
+GenericEmailSender.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/services/remote/GenericEmailSender.java
+END
+RemoteTurmaService.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/adapitsys/!svn/ver/171/AdapitFromServerJQuery/src/com/adapit/portal/services/remote/RemoteTurmaService.java
+END
+RemoteUpdateVersionService.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/adapitsys/!svn/ver/274/AdapitFromServerJQuery/src/com/adapit/portal/services/remote/RemoteUpdateVersionService.java
+END
+RemoteAdapitAutenticateUserService.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/adapitsys/!svn/ver/284/AdapitFromServerJQuery/src/com/adapit/portal/services/remote/RemoteAdapitAutenticateUserService.java
+END
+RemotePessoaService.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/adapitsys/!svn/ver/274/AdapitFromServerJQuery/src/com/adapit/portal/services/remote/RemotePessoaService.java
+END
+RemoteComercialSolutionService.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/adapitsys/!svn/ver/349/AdapitFromServerJQuery/src/com/adapit/portal/services/remote/RemoteComercialSolutionService.java
+END
+RemoteCategoriaService.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/services/remote/RemoteCategoriaService.java
+END
+RemoteImagemService.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/services/remote/RemoteImagemService.java
+END

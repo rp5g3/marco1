@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF8" ?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans default-autowire="byName" default-lazy-init="false">
+
+	<bean id="autoproxy" 
+	    class="org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator">
+	</bean>
+	
+	<bean id="transactionAttributeSource"
+	    class="org.springframework.transaction.interceptor.AttributesTransactionAttributeSource"
+	    autowire="constructor">
+	</bean>
+	
+	<bean id="transactionInterceptor"
+	    class="org.springframework.transaction.interceptor.TransactionInterceptor"
+	    autowire="byType">
+	</bean>
+	
+	<bean id="transactionAdvisor"
+	    class="org.springframework.transaction.interceptor.TransactionAttributeSourceAdvisor"
+	    autowire="constructor" >
+	</bean>
+	
+	<bean id="cattributes"
+   	 class="org.springframework.metadata.commons.CommonsAttributes"
+	/>
+	
+	<bean id="commonsAttributesHandlerMapping"      
+	    class="org.springframework.web.servlet.handler.metadata.CommonsPathMapHandlerMapping"
+	/>
+<!-- 
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver" />
+
+	
+
+	<bean id="comattributes"
+		class="org.springframework.metadata.commons.CommonsAttributes"
+		singleton="true" />
+	
+	<bean id="transactionInterceptor" class="org.springframework.transaction.interceptor.TransactionInterceptor" autowire="byType" singleton="true"/>
+	<bean id="transactionAdvisor" class="org.springframework.transaction.interceptor.TransactionAttributeSourceAdvisor" autowire="constructor" singleton="true"/>
+	
+	<bean id="autoproxy" class="org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator">
+		<property name="interceptorNames">
+			<list><value>transactionInterceptor</value></list>
+		</property>		
+	</bean>
+	
+	<bean id="transactionAttributeSource" class="org.springframework.transaction.interceptor.AttributesTransactionAttributeSource" autowire="constructor" singleton="true"/>
+-->
+</beans>

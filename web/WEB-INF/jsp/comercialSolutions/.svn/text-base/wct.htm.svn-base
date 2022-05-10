@@ -1,0 +1,98 @@
+<%@page import="com.adapit.portal.util.global.GlobalVariables"%>
+<style>
+<!--
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:Arial;}
+p.MsoBodyText2, li.MsoBodyText2, div.MsoBodyText2
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	font-size:10.0pt;
+	font-family:Arial;}
+	-->
+</style>
+     <LINK rel="stylesheet" type="text/css" href="css/default.css"/>
+     <LINK rel="stylesheet" type="text/css" href="css/jt_DialogBox.css"/>
+     <script type="text/javascript" src="js/jt_DialogBox.js"></script>
+   	 <script type="text/javascript" src="js/MyApp_dialogs.js"></script>
+
+   	 <script type="text/javascript" src="js/leilao.js"></script>   
+     <script type="text/javascript" src="js/wz_tooltip.js"></script>
+
+
+<div style="padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;">
+
+<div dojoType="dijit.layout.TabContainer" tabPosition="top" sizeShare="40" style="width:100%; height:300px;" cacheContent="false">
+	<div dojoType="dijit.layout.ContentPane" title="Descri��o" style="padding-left:10px;padding-right:10px;padding-bottom:10px;padding-top:20px;display:none;" cacheContent="false">		
+		<%@include file="../wct/descricao.htm"%>
+	</div>
+	<div dojoType="dijit.layout.ContentPane" title="Benef�cios" style="padding-left:10px;padding-right:10px;padding-bottom:10px;padding-top:10px;display:none;" cacheContent="false">		
+		<%@include file="../wct/beneficios.htm"%>
+	</div>
+	<div dojoType="dijit.layout.ContentPane" title="Comercializa��o" style="padding-left:10px;padding-right:10px;padding-bottom:10px;padding-top:20px;display:none;border-top-width:0px;" cacheContent="false">
+		<%@include file="../wct/comercializacao.htm"%>
+	</div>
+	
+	<div dojoType="dijit.layout.ContentPane" title="Detalhes" style="padding-left:10px;padding-right:10px;padding-bottom:10px;padding-top:40px;display:none;" cacheContent="false">		
+		<p class=MsoNormal style='text-align:justify;text-indent:15pt'></p>
+		<p>&nbsp;</p>
+	</div>
+<!-- 
+	<div dojoType="dijit.layout.ContentPane" title="Clientes" style="padding-left:10px;padding-right:10px;padding-bottom:10px;padding-top:40px;display:none;" cacheContent="false">		
+		<p class=MsoNormal style='text-align:justify;text-indent:15pt'></p>	
+	</div>
+ -->
+	<div dojoType="dijit.layout.ContentPane" title="Investimento" style="padding-left:10px;padding-right:10px;padding-bottom:10px;padding-top:40px;display:none;" cacheContent="false">		
+	<p class=MsoNormal style='text-align:justify;text-indent:15pt'>Veja as vantajens:</p>
+	
+	<p>
+	 <table border="0" width="100%" cellspacing="5" cellpadding="0" style="background-color: transparent;">
+		 <tr>
+		 	<td width="20px"><img src="imgs/setamenu.gif"></td>
+		 	<td width>�rea que concentra empresas principalmente do setor de produ��o software.</td>
+		 </tr>
+		 <tr>
+		 	<td width="20px"><img src="imgs/setamenu.gif"></td>
+		 	<td width>Localizada em um dos centros de pesquisa e desenvolvimento de Porto Alegre.</td>
+		 </tr> 
+		 <tr>
+		 	<td width="20px"><img src="imgs/setamenu.gif"></td>
+		 	<td width>�rea de f�cil acesso, pr�xima a bancos e lojas.</td>
+		 </tr>
+	 </table>
+	</p>
+	</div>
+<!-- 
+	<div dojoType="dijit.layout.ContentPane" title="Faq" style="padding-left:10px;padding-right:10px;padding-bottom:10px;padding-top:40px;display:none;" cacheContent="false">		
+	<p class=MsoNormal style='text-align:justify;text-indent:15pt'>Perguntas frequentes:</p>
+	
+	<p>
+	 <table border="0" width="100%" cellspacing="5" cellpadding="0" style="background-color: transparent;">
+		 <tr>
+		 	<td width="20px"><img src="imgs/setamenu.gif"></td>
+		 	<td width>�rea que concentra empresas principalmente do setor de produ��o software.</td>
+		 </tr>
+		 <tr>
+		 	<td width="20px"><img src="imgs/setamenu.gif"></td>
+		 	<td width>Localizada em um dos centros de pesquisa e desenvolvimento de Porto Alegre.</td>
+		 </tr> 
+		 <tr>
+		 	<td width="20px"><img src="imgs/setamenu.gif"></td>
+		 	<td width>�rea de f�cil acesso, pr�xima a bancos e lojas.</td>
+		 </tr>
+	 </table>
+	</p>
+	</div>
+ -->
+	<div dojoType="dijit.layout.ContentPane" title="Contato" style="padding-left:10px;padding-right:10px;padding-bottom:10px;padding-top:10px;display:none;" cacheContent="false">		
+		<%@include file="../institucional/contato.htm"%>
+	</div>		
+ 
+</div>
+
+	
+</div>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans default-autowire="byName" default-lazy-init="true"
+	default-dependency-check="none">
+	<!-- Carrega os beans definidos por annotations -->
+	<bean id="commonsAttributesHandlerMapping"
+		class="org.springframework.web.servlet.handler.metadata.CommonsPathMapHandlerMapping"
+		singleton="true">
+		<property name="dependencyCheck">
+			<value>false</value>
+		</property>
+		<property name="autowireModeName">
+			<value>AUTOWIRE_BY_NAME</value>
+		</property>
+	</bean>
+	<!--
+		View resolvers can be configured with ResourceBundles or XML files.  If you need
+		different view resolving based on Locale, you have to use the resource bundle resolver, 
+		otherwise it makes no difference.  I simply prefer to keep the Spring configs and 
+		contexts in XML.  See Spring documentation for more info.
+	-->
+	<bean id="viewResolverConfig"
+		class="org.springframework.web.servlet.view.XmlViewResolver">
+		<property name="cache">
+			<value>true</value>
+		</property>
+		<property name="order">
+			<value>10</value>
+		</property>
+		<property name="location">
+			<value>/WEB-INF/site-views.xml</value>
+		</property>
+	</bean>
+	<!--bean id="viewResolverVelocity"
+		class="org.springframework.web.servlet.view.UrlBasedViewResolver">
+		<property name="viewClass">
+			<value>com.workcase.sample.utils.CustomVelocityView</value>
+		</property>
+		<property name="suffix">
+			<value>.vm</value>
+		</property>
+	</bean-->
+	<bean id="viewResolver"
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">		
+		<property name="prefix" value="/WEB-INF/jsp/"/>
+	    <property name="suffix" value=".jsp"/>		
+	</bean>
+
+</beans>

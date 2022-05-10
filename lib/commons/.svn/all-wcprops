@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/adapitsys/!svn/ver/115/AdapitFromServerJQuery/lib/commons
+END
+commons-codec.jar
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/adapitsys/!svn/ver/115/AdapitFromServerJQuery/lib/commons/commons-codec.jar
+END
+commons-attributes-compiler.jar
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/adapitsys/!svn/ver/115/AdapitFromServerJQuery/lib/commons/commons-attributes-compiler.jar
+END
+commons-httpclient.jar
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/adapitsys/!svn/ver/115/AdapitFromServerJQuery/lib/commons/commons-httpclient.jar
+END
+commons-lang.jar
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/adapitsys/!svn/ver/115/AdapitFromServerJQuery/lib/commons/commons-lang.jar
+END
+commons-fileupload.jar
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/adapitsys/!svn/ver/115/AdapitFromServerJQuery/lib/commons/commons-fileupload.jar
+END
+spring-sandbox-1.4.jar
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/adapitsys/!svn/ver/115/AdapitFromServerJQuery/lib/commons/spring-sandbox-1.4.jar
+END
+commons-beanutils.jar
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/adapitsys/!svn/ver/115/AdapitFromServerJQuery/lib/commons/commons-beanutils.jar
+END
+commons-digester.jar
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/adapitsys/!svn/ver/115/AdapitFromServerJQuery/lib/commons/commons-digester.jar
+END
+commons-discovery.jar
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/adapitsys/!svn/ver/115/AdapitFromServerJQuery/lib/commons/commons-discovery.jar
+END
+commons-io.jar
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/adapitsys/!svn/ver/115/AdapitFromServerJQuery/lib/commons/commons-io.jar
+END
+commons-dbcp.jar
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/adapitsys/!svn/ver/115/AdapitFromServerJQuery/lib/commons/commons-dbcp.jar
+END
+commons-javaflow.jar
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/adapitsys/!svn/ver/115/AdapitFromServerJQuery/lib/commons/commons-javaflow.jar
+END
+commons-pool.jar
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/adapitsys/!svn/ver/115/AdapitFromServerJQuery/lib/commons/commons-pool.jar
+END

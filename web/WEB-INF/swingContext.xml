@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans default-autowire="byName" default-lazy-init="false"><!-- Code Generated Automatically By Work CASE Toolkit Mon Feb 05 03:08:15 BRST 2007 -->
+
+
+
+	<bean id="messageSource"
+		class="org.springframework.context.support.ResourceBundleMessageSource">
+		<property name="basename">
+			<value>com.workcase.i18n.application</value>
+		</property>
+	</bean>
+	<bean id="remoteGenericDAOHttpInvokerProxy"
+		class="org.springframework.remoting.httpinvoker.HttpInvokerProxyFactoryBean">
+		<property name="serviceUrl">
+			<value>http://server:8082/adapit/remoteGenericDAORemote.html</value>
+		</property>
+		<property name="serviceInterface">
+			<value>com.workcase.hibernate.GenericDAO</value>
+		</property>
+	</bean>
+	<bean id="remoteAdapitAutenticateUserMailServiceHttpInvokerProxy" class="org.springframework.remoting.httpinvoker.HttpInvokerProxyFactoryBean">
+		<property name="serviceUrl">
+			<value>http://server:8082/adapit/remoteMailServiceRemote.html</value>
+		</property>
+		<property name="serviceInterface">
+			<value>com.adapit.projmanager.services.mail.AdapitAutenticateUserMailService</value>
+		</property>
+	</bean>
+
+<!-- Real service class =com.adapit.projmanager.services.CategoriaService -->
+	<bean id="remoteCategoriaServiceHttpInvokerProxy" class="org.springframework.remoting.httpinvoker.HttpInvokerProxyFactoryBean">
+		<property name="serviceUrl">
+			<value>http://server:8082/adapit/remoteCategoriaServiceRemote.html</value>
+		</property>
+		<property name="serviceInterface">
+			<value>com.adapit.projmanager.services.CategoriaService</value>
+		</property>
+	</bean>
+
+<!-- Real service class =com.adapit.projmanager.services.ComercialSolutionService -->
+	<bean id="remoteComercialSolutionServiceHttpInvokerProxy" class="org.springframework.remoting.httpinvoker.HttpInvokerProxyFactoryBean">
+		<property name="serviceUrl">
+			<value>http://server:8082/adapit/remoteComercialSolutionServiceRemote.html</value>
+		</property>
+		<property name="serviceInterface">
+			<value>com.adapit.projmanager.services.ComercialSolutionService</value>
+		</property>
+	</bean>
+	
+<!-- Real service class =com.adapit.projmanager.services.UserService -->
+	<bean id="remoteUserServiceHttpInvokerProxy" class="org.springframework.remoting.httpinvoker.HttpInvokerProxyFactoryBean">
+		<property name="serviceUrl">
+			<value>http://server:8082/adapit/remoteUserServiceRemote.html</value>
+		</property>
+		<property name="serviceInterface">
+			<value>com.adapit.projmanager.services.UserService</value>
+		</property>
+	</bean>
+	
+	<bean id="remoteLoteServiceHttpInvokerProxy" class="org.springframework.remoting.httpinvoker.HttpInvokerProxyFactoryBean">
+		<property name="serviceUrl">
+			<value>http://server:8082/adapit/remoteLoteServiceRemote.html</value>
+		</property>
+		<property name="serviceInterface">
+			<value>com.adapit.projmanager.services.LoteService</value>
+		</property>
+	</bean>
+</beans>

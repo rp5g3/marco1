@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans default-autowire="byType" default-lazy-init="true">
+	
+	<!--<bean id="userReportJasper" class="org.springframework.web.servlet.view.jasperreports.JasperReportsMultiFormatView">
+		<property name="url"><value>/WEB-INF/jasper/UserReport.jasper</value></property>
+		<property name="reportDataKey"><value>data</value></property>
+	</bean>	
+	-->
+	
+	<bean id="userReportJasperPdfView" class="org.springframework.web.servlet.view.jasperreports.JasperReportsPdfView">
+		<property name="url"><value>/WEB-INF/jasper/UserReport.jasper</value></property>
+		<property name="reportDataKey"><value>data</value></property>
+	</bean>	
+	
+	
+	 <!-- Classes que geram os dados dos relatorios -->
+<!--	 <bean id="userReport" class="com.workcase.sample.report.server.reports.UserReportFactory">
+		 <property name="reportView"><value>userReportJasperPdfView</value></property>
+	 </bean>-->
+</beans>

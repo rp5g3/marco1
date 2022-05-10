@@ -1,0 +1,94 @@
+<%@page import="com.adapit.portal.util.global.GlobalVariables"%>
+<%@page import="com.adapit.portal.entidades.*"%>
+<LINK rel="stylesheet" type="text/css" href="css/main.css"/>
+
+
+<div style="padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;">
+
+	<div >
+		<br>
+		<div style="padding-left: 45px; padding-right: 50px; padding-bottom: 20px;">
+		<p><b>Empresa Graduada pela </b>
+		<a href="http://www.pucrs.br/agt/raiar/" target="blanck_">Incubadora 
+		Multisetorial de empresas de
+		Base Tecnol&oacute;gica da PUCRS - RAIAR</a>, no Parque Cient&iacute;fico e Tecnol&oacute;gico da 
+		<a href="http://www.pucrs.br" target="blanck_">Pontif&iacute;cia Universidade
+		Cat&oacute;lica do Rio Grande do Sul (PUCRS)</a>,
+		o <a href="http://www.pucrs.br/agt/tecnopuc/" target="blanck_">Tecnopuc</a>.
+		Somos uma empresa de Pesquisa e Desenvolvimento (P&D) para Engenharia de Software e nossa
+		meta &eacute; desenvolver aplicativos que facilitem o desenvolvimvneto de software.
+		</p>
+		</div>
+		<div class="panel_title_lev2 ui-corner-top">
+			<font class="font_title">
+			<b>&nbsp;&nbsp;Depoimento dos Empreendedores</b>
+			</font>
+		</div>
+		<div class="panel_content ui-corner-bottom" style="padding-left:10px;padding-right:10px;padding-bottom:10px;padding-top:10px;">
+		
+				<p>Concebemos uma empresa com o objetivo de prover para os nossos clientes servi&ccedil;os de desenvolvimento de
+				software por valores mais acess&iacute;veis, mantendo o padr&atilde;o de qualidade exigido. Buscamos nos posicionar &agrave; 
+				frente no mercado, inovando os meios de produ&ccedil;&atilde;o da pr&oacute;pria empresa. Nesse sentido, investimos fortemente 
+				em Pesquisa e Desenvolvimento (P&D) e criamos ferramentas pr&oacute;prias para produzir muito al&eacute;m da capacidade 
+				do nosso time de desenvolvedores.</p>
+								
+				<p>Os sistemas dispon&iacute;veis para melhoria de produtividade n&atilde;o satisfaziam as nossas expectativas de produ&ccedil;&atilde;o.
+				 Ent&atilde;o trabalhamos durante anos no desenvolvimento de um sistema que simplificasse a fabrica&ccedil;&atilde;o de software
+				 sem nos limitar a tecnologias de produ&ccedil;&atilde;o propriet&aacute;rias. Conseguimos com que esse sistema oferecesse diversos
+				 benef&iacute;cios como maior agilidade na produ&ccedil;&atilde;o, maior facilidade na comunica&ccedil;&atilde;o com o nosso cliente e a gera&ccedil;&atilde;o
+				 de c&oacute;digo usado pelo nosso time. Nosso sistema, denominado Work CASE Toolkit (WCT), utiliza um padr&atilde;o aberto
+				 e tamb&eacute;m &eacute; open source. Ele est&aacute; dispon&iacute;vel para download na p&aacute;gina da Adapit. Esperamos que voc&ecirc; goste.</p>
+			
+				<p>Produzimos, al&eacute;m do WCT, outros dois sistemas: ambos s&atilde;o classificados como Sistemas de Informa&ccedil;&atilde;o, rodam
+				nas plataformas web e desktop, s&atilde;o independentes de sistema operacional e de sistema gerenciador de banco de
+				dados. O primeiro serve para realizar leil&atilde;o virtual enquanto o segundo &eacute; utilizado para controle de treinamentos
+				(parte dele &eacute; a p&aacute;gina que voc&ecirc; est&aacute; acessando). Detalhe: utilizamos o WCT para nos auxiliar na produ&ccedil;&atilde;o desses
+				dois sistemas.</p>
+				
+				<p>Desde a forma&ccedil;&atilde;o da empresa, n&oacute;s contribu&iacute;mos em atividades de P&D nos temas engenharia de software e sistemas
+				de informa&ccedil;&atilde;o (<a href="" onclick="jqueryOpen('institucional_historico_.html','institucionalContentDiv'); return false;">consulte o nosso hist&oacute;rico para mais informa&ccedil;&otilde;es</a>). Al&eacute;m de produzirmos sistemas para atender as
+				necessidades de nossos clientes, melhoramos a nossa forma de trabalho. O mais importante disso &eacute; que compartilhamos
+				nossos aprendizados com a comunidade, publicando trabalhos em eventos e revistas nacionais. Tamb&eacute;m patrocinamos
+				e ajudamos na organiza&ccedil;&atilde;o de workshops sobre os temas Model Driven Development e sobre Qualidade de Software.</p>	
+				
+				<p>Nosso esfor&ccedil;o nesse empreendimento mostra que n&atilde;o &eacute; preciso ser uma mega empresa para realizar grandes feitos.
+				Basta ter vontade.</p>
+				
+				<p>Conte conosco.</p>
+		</div>
+	</div>	
+	
+	
+	<%
+	java.util.List<Participante> representantes = (java.util.List<Participante>) request.getAttribute("representantes");
+	if(representantes != null){
+	%>
+	<center><font style="font-family: 'Comic Sans MS',sans-serif; font-style: italic; font-variant: small-caps; font-weight: bold; font-size: 14px; line-height: normal; font-size-adjust: none; font-stretch: normal; -x-system-font: none;">
+	Empreendedores</font></center><br>
+	<%
+	for(Participante p: representantes){
+	Imagem im = p.getLogotipo();
+	%>
+	<table cellpadding="0" cellspacing="0" style="background-color:transparent;" width="100%">
+		<tr>
+			<th align="left" style="font-family: arial; font-size: 13;  background-color:#969696; height:25px; valign:center; padding-left:10px;" colspan="2">
+			<b><%=p.getNomeFormatado()%></b>
+			</th>
+		</tr>
+		<tr>
+			<td width="90px;" height="90px;" style="valign:top; align:center;">
+				
+					<%if (im != null){ %>
+					<img style="padding: 0pt 10px 10px 0pt;" src="comercialSolutionSmallImage.html?image_id=<%=im.getId()%>" alt="Carregando a Imagem ... Por favor, espere.">
+					<%} else{%>
+					<img style="padding: 0pt 10px 10px 0pt;" src="imgs/customers.png" alt="Carregando a Imagem ... Por favor, espere.">
+					<%} %>				
+				
+			</td>	
+			<td style="padding-left: 10px; text-align: justify">
+				<%=p.getApresentacao()%>
+			</td>
+		</tr>								
+	</table><hr>
+	<%}}%>
+</div>

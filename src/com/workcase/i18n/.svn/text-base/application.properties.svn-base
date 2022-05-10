@@ -1,0 +1,235 @@
+está repetida em outro registro. Não pode haver valores repetidos.=está repetida em outro registro. Não pode haver valores repetidos.
+filesurl=webapps/adapitfiles/files/
+webfilesurl=adapitfiles/files/
+boletosurl=webapps/adapitfiles/boletos/
+webboletosurl=adapitfiles/boletos/
+nomesistema=Adapit Soluções em Tecnologia da Informação
+#Error Messages
+errors.required={0} is required.
+errors.minlength={0} can not be less than {1} characters.
+errors.maxlength={0} can not be greater than {1} characters.
+errors.invalid={0} is invalid.
+
+errors.byte={0} must be a byte.
+errors.short={0} must be a short.
+errors.integer={0} must be an integer.
+errors.long={0} must be a long.
+errors.float={0} must be a float.
+errors.double={0} must be a double.
+
+errors.date={0} is not a date.
+errors.range={0} is not in the range {1} through {2}.
+errors.creditcard={0} is an invalid credit card number.
+errors.email=The field {0} contains an invalid e-mail address.
+
+errors.cpf=O campo {0} é um número de cpf inválido.
+
+#VOs properties
+personVO.id=Code
+personVO.name=Name
+personVO.email=E-Mail
+personVO.personType=Type
+personVO.dtDeactivated=Date Deactivated
+
+person.find=Person's Find
+person.list=Person's List
+person.crud=Person's Maintennance
+person.crudSucessfull=Operation successful completed.
+person.crudError=Error on person's maintennace.
+
+personType.crudError.typeNotFound=The specified person type wasn't found in data base
+personType.crudError.typeListNotFound=There's not any person type in our data base
+
+titles.applicationName=Exemplo de Arquitetura Work CASE
+titles.personFilter=Person Filter
+titles.personForm=Person Form
+
+labels.all=All
+
+buttons.new=New
+buttons.save=Save
+buttons.cancel=Cancel
+buttons.close=Fechar
+buttons.search=Search
+buttons.delete=Delete
+buttons.edit=Edit
+buttons.clear=Clear
+buttons.report=Report
+
+checkbox.hideDeactivated=Hide deactivated
+
+exceptions.invalidFields=The fields was'nt filed with valid values
+exceptions.insertionFail=The informed data content exists in our system ... try Update
+exceptions.loadFail=Doesn't exists a register with informed data content
+exceptions.connection=Unnable to connect with data base
+exceptions.updateFail=Could not update this register
+exceptions.saveOrUpdate=Not abble to save not update register content
+exceptions.loadAllFail=Doesen't exists registers with informed data content
+exceptions.deleteFail=Not abble to delete informed register ... unexistent register
+exceptions.local.BussinessNull=The bussiness tier wasn't correctly setted 
+
+formats.date MM/dd/yyyy
+formats.time hh\:mm a
+format.date={0,date,MM/dd/yyyy}
+
+# msgs de erro q o servidor gera na hora de gerar relatorio, poderia usar poucas msgs com alguns parametros
+# mas como nao esta definido ainda como vou passar os parametros do servidor para o cliente, por enquanto
+# vou listar todas aqui
+reports.invalidParameters=Invalid parameter
+reports.fillError=Report fill error
+reports.convertError=Report convert error
+reports.loadError=Report load error
+reports.exportError=Report export error
+reports.displayError=Report display error
+reports.reportError=Report error
+reports.reportNotFound=Report not found
+reports.page=Page
+
+Nome=Nome:
+Observação=Observação:
+Buscar=Buscar...
+Caminho=Caminho:
+ContémSub-Categorias=Contém Sub-Categorias
+Adicionar=Adicionar
+Remover=Remover
+Editar=Editar
+Cadastrar=Cadastrar
+
+email=A propriedade email
+cpf=A propriedade cpf
+rg=A propriedade rg
+cnpj=A propriedade cnpj
+inscricaoEstadual=A propriedade inscrição estadual
+
+categoria.nome=A propriedade Nome
+categoria.obs=A propriedade Observação
+
+Descrição=Descrição:
+Avaliação=Avaliação (R$):
+Imagem=Imagem:
+Categoria=Categoria:
+Atualizar=Atualizar
+Novo=Novo
+Cancelar=Cancelar
+FecharTela=Fechar Tela
+produto.avaliacao=A propriedade Avaliação
+produto.descricao=A propriedade Descri\u00E7\u00E3o
+Leilão=Leilão
+
+Formulário_de_Cadastro_de_News=Formulário de Cadastro de News
+Título=Título
+Data_da_Publicação=Data da Publicação
+Resumo_da_News_em_formato_HTML=Resumo da News em formato HTML
+Texto_da_News_em_formato_HTML=Texto da News em formato HTML
+Novo=Novo
+Salvar=Salvar
+SucessDialogMessage=Operação Realizada com Sucesso
+SucessDialogTitle=Status da Operação
+ErrorDialogMessage=Operação não foi realizada
+ErrorDialogTitle=Status da Operação
+dojoformats.date={0,date,dd/MM/yyyy}
+Manutenção_de_Definições_Técnicas=Manutenção de Definições Técnicas
+techDefinition=techDefinition
+techDefinition.id=A propriedade id
+id=A propriedade id
+techDefinition.keywords=A propriedade keywords
+keywords=A propriedade keywords
+Keywords=Keywords:
+Conteúdo_Textual=Conteúdo Textual:
+techDefinition.content=A propriedade content
+content=A propriedade content
+Desfazer=Desfazer
+Filtrar_Definição_Técnica=Filtrar Definição Técnica
+Keyword=Keyword:
+Filtrar_...=Filtrar ...
+Lista_de_Definições_Técnicas=Lista de Definições Técnicas
+IdCellHeader=Id
+KeywordsCellHeader=Keywords
+RemoveTableRow_ConfirmationDialog_Title=RemoveTableRow_ConfirmationDialog_Title
+RemoveTableRow_ConfirmationDialog_Message=RemoveTableRow_ConfirmationDialog_Message
+Listar_Todos=Listar Todos
+Editar_Registro=Editar Registro
+Remover_Registros=Remover Registros
+Registro_de_Novo_Usuário=Registro de Novo Usuário
+Informe_os_Dados_Pessoais=Informe os Dados Pessoais
+usuario=usuario
+login=A propriedade login
+Login=Login:
+password=A propriedade password
+Senha=Senha:
+passwordConf=A propriedade passwordConf
+Confirme_a_Senha=Confirme a Senha:
+pessoaEmDivulgacao=pessoaEmDivulgacao
+pessoaEmDivulgacao.id=A propriedade id
+pessoaEmDivulgacao.nome=A propriedade nome
+nome=A propriedade nome
+pessoaEmDivulgacao.email=A propriedade email
+Email=Email:
+pessoaEmDivulgacao.telefone=A propriedade telefone
+telefone=A propriedade telefone
+Telefone=Telefone:
+pessoaEmDivulgacao.fax=A propriedade fax
+fax=A propriedade fax
+Fax=Fax:
+pessoaEmDivulgacao.logotipo=A propriedade logotipo
+logotipo=A propriedade logotipo
+Fotografia=Fotografia:
+fisica=fisica
+fisica.id=A propriedade id
+sobrenome=A propriedade sobrenome
+Apelido=Apelido:
+profissao=A propriedade profissao
+Profissão=Profissão:
+dataNascimento=A propriedade dataNascimento
+Data_de_Nascimento=Data de Nascimento:
+Yes=Yes
+No=No
+Sexo=Sexo:
+Detalhe_as_Suas_Preferências=Detalhe as Suas Preferências
+preferenciaCategoria=preferenciaCategoria
+preferenciaCategoria.id=A propriedade id
+Quero_receber_emails_de_atualizações_dos_softwares=Quero receber emails de atualizações dos softwares
+preferenciaCategoria.receberEmailAtualizacoesSoftware=A propriedade receberEmailAtualizacoesSoftware
+receberEmailAtualizacoesSoftware=A propriedade receberEmailAtualizacoesSoftware
+Quero_receber_emails_sobre_novos_produtos=Quero receber emails sobre novos produtos
+preferenciaCategoria.receberEmailNovosProdutos=A propriedade receberEmailNovosProdutos
+receberEmailNovosProdutos=A propriedade receberEmailNovosProdutos
+Quero_receber_emails_de_divulgação_de_eventos=Quero receber emails de divulgação de eventos
+preferenciaCategoria.receberEmailSobreEventos=A propriedade receberEmailSobreEventos
+receberEmailSobreEventos=A propriedade receberEmailSobreEventos
+Quero_receber_emails_das_notícias_da_Adapit=Quero receber emails das notícias da Adapit
+Quero_receber_emails_sobre_publicações=Quero receber emails sobre publicações
+preferenciaCategoria.receberNotificacaoNewsByEmail=A propriedade receberNotificacaoNewsByEmail
+receberNotificacaoNewsByEmail=A propriedade receberNotificacaoNewsByEmail
+Tenho_interesse_nas_consultorias=Tenho interesse nas consultorias
+preferenciaCategoria.interesseEmConsultoria=A propriedade interesseEmConsultoria
+interesseEmConsultoria=A propriedade interesseEmConsultoria
+Tenho_interesse_nos_treinamentos=Tenho interesse nos treinamentos
+preferenciaCategoria.interesseEmTreinamentos=A propriedade interesseEmTreinamentos
+interesseEmTreinamentos=A propriedade interesseEmTreinamentos
+Especifique_aqui_as_suas_preferências=Especifique aqui as suas preferências:
+preferenciaCategoria.preferencias=A propriedade preferencias
+preferencias=A propriedade preferencias
+Endereço_(Preenchimento_Opcional)=Endereço (Preenchimento Opcional)
+endereco=endereco
+endereco.id=A propriedade id
+Pais=Pais:
+estado=A propriedade estado
+Estado=Estado:
+cidade=A propriedade cidade
+Cidade=Cidade:
+bairro=A propriedade bairro
+Bairro=Bairro:
+rua=A propriedade rua
+Rua=Rua:
+Complemento=Complemento:
+complemento=A propriedade complemento
+numero=A propriedade numero
+Número=Número:
+endereco.caixaPostal=A propriedade caixaPostal
+caixaPostal=A propriedade caixaPostal
+Caixa_Postal=Caixa Postal:
+cep=A propriedade cep
+Cep=Cep:
+Masculino=Masculino
+Feminino=Feminino

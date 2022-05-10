@@ -1,0 +1,31 @@
+<style>
+<!--
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:Arial;}
+	-->
+</style>
+     <LINK rel="stylesheet" type="text/css" href="css/default.css"/>
+     <LINK rel="stylesheet" type="text/css" href="css/jt_DialogBox.css"/>
+     <script type="text/javascript" src="js/jt_DialogBox.js"></script>
+   	 <script type="text/javascript" src="js/MyApp_dialogs.js"></script>
+
+   	 <script type="text/javascript" src="js/leilao.js"></script>   
+     <script type="text/javascript" src="js/wz_tooltip.js"></script>
+
+
+<div style="padding-left: 10px; padding-right: 10px; padding-top: 20px;">
+<p class=MsoNormal>Desenvolvimento de Software por Demanda</p>
+<p class=MsoNormal>&nbsp;</p>
+
+
+<p class=MsoNormal>Telefone Comercial: <b>(51) 3320-3673 - ramal 31</b></p>
+<p class=MsoNormal>Tratar com: <b>F&aacute;bio Paulo Basso</b></p>
+<p class=MsoNormal>E-mail: <b>fabio@adapit.com.br</b></p>
+<p class=MsoNormal>Celular: <b>(51) 9735-3454</b></p>
+<p class=MsoNormal>&nbsp;</p>
+
+</div>

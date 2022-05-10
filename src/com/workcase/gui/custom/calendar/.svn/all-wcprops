@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/adapitsys/!svn/ver/115/AdapitFromServerJQuery/src/com/workcase/gui/custom/calendar
+END
+DateChooser.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/adapitsys/!svn/ver/115/AdapitFromServerJQuery/src/com/workcase/gui/custom/calendar/DateChooser.java
+END
+DayChooser.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/adapitsys/!svn/ver/115/AdapitFromServerJQuery/src/com/workcase/gui/custom/calendar/DayChooser.java
+END
+HourChooser.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/adapitsys/!svn/ver/115/AdapitFromServerJQuery/src/com/workcase/gui/custom/calendar/HourChooser.java
+END
+PDSCalendar.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/adapitsys/!svn/ver/115/AdapitFromServerJQuery/src/com/workcase/gui/custom/calendar/PDSCalendar.java
+END
+DateHourChooser.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/adapitsys/!svn/ver/115/AdapitFromServerJQuery/src/com/workcase/gui/custom/calendar/DateHourChooser.java
+END

@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/adapitsys/!svn/ver/389/AdapitFromServerJQuery/src/com/adapit/portal/ui/forms/software
+END
+SoftwareDescriptionPanel.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/adapitsys/!svn/ver/173/AdapitFromServerJQuery/src/com/adapit/portal/ui/forms/software/SoftwareDescriptionPanel.java
+END
+SoftwareImageManagementPanel.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/adapitsys/!svn/ver/284/AdapitFromServerJQuery/src/com/adapit/portal/ui/forms/software/SoftwareImageManagementPanel.java
+END
+SoftwareDadosGeraisPanel.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/adapitsys/!svn/ver/389/AdapitFromServerJQuery/src/com/adapit/portal/ui/forms/software/SoftwareDadosGeraisPanel.java
+END
+SoftwareDetalhesPanel.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/adapitsys/!svn/ver/352/AdapitFromServerJQuery/src/com/adapit/portal/ui/forms/software/SoftwareDetalhesPanel.java
+END
+SoftwareSolutionCadastreForm.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/adapitsys/!svn/ver/389/AdapitFromServerJQuery/src/com/adapit/portal/ui/forms/software/SoftwareSolutionCadastreForm.java
+END
+SoftwareSolutionListForm.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/adapitsys/!svn/ver/375/AdapitFromServerJQuery/src/com/adapit/portal/ui/forms/software/SoftwareSolutionListForm.java
+END

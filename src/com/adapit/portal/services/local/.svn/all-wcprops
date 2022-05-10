@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/adapitsys/!svn/ver/375/AdapitFromServerJQuery/src/com/adapit/portal/services/local
+END
+LocalPreferenciaService.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/adapitsys/!svn/ver/274/AdapitFromServerJQuery/src/com/adapit/portal/services/local/LocalPreferenciaService.java
+END
+LocalParticipanteService.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/adapitsys/!svn/ver/274/AdapitFromServerJQuery/src/com/adapit/portal/services/local/LocalParticipanteService.java
+END
+LocalTreinamentoService.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/services/local/LocalTreinamentoService.java
+END
+LocalServicesUtility.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/services/local/LocalServicesUtility.java
+END
+LocalPessoaService.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/adapitsys/!svn/ver/274/AdapitFromServerJQuery/src/com/adapit/portal/services/local/LocalPessoaService.java
+END
+LocalComercialSolutionService.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/adapitsys/!svn/ver/349/AdapitFromServerJQuery/src/com/adapit/portal/services/local/LocalComercialSolutionService.java
+END
+LocalNewsService.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/services/local/LocalNewsService.java
+END
+LocalTechDefinitionService.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/adapitsys/!svn/ver/274/AdapitFromServerJQuery/src/com/adapit/portal/services/local/LocalTechDefinitionService.java
+END
+LocalCategoriaService.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/services/local/LocalCategoriaService.java
+END
+LocalUserService.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/adapitsys/!svn/ver/375/AdapitFromServerJQuery/src/com/adapit/portal/services/local/LocalUserService.java
+END
+LocalImagemService.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/services/local/LocalImagemService.java
+END
+LocalFileService.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/adapitsys/!svn/ver/274/AdapitFromServerJQuery/src/com/adapit/portal/services/local/LocalFileService.java
+END
+LocalProjetoService.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/adapitsys/!svn/ver/171/AdapitFromServerJQuery/src/com/adapit/portal/services/local/LocalProjetoService.java
+END
+LocalUpdateService.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/adapitsys/!svn/ver/350/AdapitFromServerJQuery/src/com/adapit/portal/services/local/LocalUpdateService.java
+END

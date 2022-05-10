@@ -1,0 +1,149 @@
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/adapitsys/!svn/ver/375/AdapitFromServerJQuery/src/com/adapit/portal/services/validation
+END
+PublicationServiceValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/services/validation/PublicationServiceValidator.java
+END
+NewsServiceValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/services/validation/NewsServiceValidator.java
+END
+UserServiceValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/adapitsys/!svn/ver/375/AdapitFromServerJQuery/src/com/adapit/portal/services/validation/UserServiceValidator.java
+END
+FieldMsgValidation.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/services/validation/FieldMsgValidation.java
+END
+FileServiceValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/adapitsys/!svn/ver/274/AdapitFromServerJQuery/src/com/adapit/portal/services/validation/FileServiceValidator.java
+END
+UpdateServiceValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/adapitsys/!svn/ver/350/AdapitFromServerJQuery/src/com/adapit/portal/services/validation/UpdateServiceValidator.java
+END
+ValidationException.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/services/validation/ValidationException.java
+END
+AbstractValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/services/validation/AbstractValidator.java
+END
+ProjetoServiceValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/adapitsys/!svn/ver/171/AdapitFromServerJQuery/src/com/adapit/portal/services/validation/ProjetoServiceValidator.java
+END
+ParticipanteServiceValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/adapitsys/!svn/ver/274/AdapitFromServerJQuery/src/com/adapit/portal/services/validation/ParticipanteServiceValidator.java
+END
+PreferenciaServiceValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/adapitsys/!svn/ver/274/AdapitFromServerJQuery/src/com/adapit/portal/services/validation/PreferenciaServiceValidator.java
+END
+EnderecoServiceValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/services/validation/EnderecoServiceValidator.java
+END
+TreinamentoServiceValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/services/validation/TreinamentoServiceValidator.java
+END
+AgendaTreinamentoServiceValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/services/validation/AgendaTreinamentoServiceValidator.java
+END
+TurmaServiceValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/adapitsys/!svn/ver/171/AdapitFromServerJQuery/src/com/adapit/portal/services/validation/TurmaServiceValidator.java
+END
+PessoaServiceValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/adapitsys/!svn/ver/274/AdapitFromServerJQuery/src/com/adapit/portal/services/validation/PessoaServiceValidator.java
+END
+ComercialSolutionServiceValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/adapitsys/!svn/ver/349/AdapitFromServerJQuery/src/com/adapit/portal/services/validation/ComercialSolutionServiceValidator.java
+END
+TechDefinitionServiceValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/adapitsys/!svn/ver/274/AdapitFromServerJQuery/src/com/adapit/portal/services/validation/TechDefinitionServiceValidator.java
+END
+FieldMsgValidationException.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/adapitsys/!svn/ver/274/AdapitFromServerJQuery/src/com/adapit/portal/services/validation/FieldMsgValidationException.java
+END
+CategoriaServiceValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/services/validation/CategoriaServiceValidator.java
+END
+ImagemServiceValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/services/validation/ImagemServiceValidator.java
+END
+UtilityServiceValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/services/validation/UtilityServiceValidator.java
+END
+ContaServiceValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/services/validation/ContaServiceValidator.java
+END
+ContatoServiceValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/services/validation/ContatoServiceValidator.java
+END

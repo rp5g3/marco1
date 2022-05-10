@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!DOCTYPE beans PUBLIC
+    "-//SPRING//DTD BEAN//EN"
+    "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans default-autowire="byName" default-lazy-init="true"
+	default-dependency-check="none">
+
+	<bean id="fakeDateEditor"
+		class="com.workcase.utils.DatePropertyEditor" />
+
+	<bean id="comercialSolutionService"
+		class="com.adapit.portal.services.validation.ComercialSolutionServiceValidator"
+		singleton="true">
+		<property name="comercialSolutionService">
+			<ref bean="comercialSolutionServiceDAOHibernate" />
+		</property>
+	</bean>
+
+	<bean id="treinamentoService"
+		class="com.adapit.portal.services.validation.TreinamentoServiceValidator"
+		singleton="true">
+		<property name="treinamentoService">
+			<ref bean="treinamentoServiceDAOHibernate" />
+		</property>
+	</bean>
+
+  <bean
+      id="updateServiceDAOHibernate"
+      class="com.adapit.portal.services.dao.hibernate.UpdateServiceDAOHibernate"
+      singleton="true"
+  >
+
+  </bean>
+  
+	<bean id="comercialSolutionServiceDAOHibernate"
+		class="com.adapit.portal.services.dao.hibernate.ComercialSolutionServiceDAOHibernate"
+		singleton="true" />
+
+	<bean id="categoriaService"
+		class="com.adapit.portal.services.validation.CategoriaServiceValidator"
+		singleton="true">
+		<property name="categoriaService">
+			<ref bean="categoriaServiceDAOHibernate" />
+		</property>
+	</bean>
+
+	<bean id="userService"
+		class="com.adapit.portal.services.validation.UserServiceValidator"
+		singleton="true">
+		<property name="userService">
+			<ref bean="userServiceDAOHibernate" />
+		</property>
+	</bean>
+	
+	<bean id="utilityService"
+		class="com.adapit.portal.services.validation.UtilityServiceValidator"
+		singleton="true">
+		<property name="utilityService">
+			<ref bean="utilityServiceDAOHibernate" />
+		</property>
+	</bean>
+
+	<bean id="categoriaServiceDAOHibernate"
+		class="com.adapit.portal.services.dao.hibernate.CategoriaServiceDAOHibernate"
+		singleton="true" />
+
+	<bean name="report" class="com.workcase.report.ReportImpl"
+		singleton="true" />
+
+	<bean id="userServiceDAOHibernate"
+		class="com.adapit.portal.services.dao.hibernate.UserServiceDAOHibernate"
+		singleton="true" />
+		
+	<bean id="pessoaServiceDAOHibernate"
+		class="com.adapit.portal.services.dao.hibernate.PessoaServiceDAOHibernate"
+		singleton="true">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+
+	<bean id="treinamentoServiceDAOHibernate"
+		class="com.adapit.portal.services.dao.hibernate.TreinamentoServiceDAOHibernate"
+		singleton="true">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+
+	<bean id="utilityDAOHibernate"
+		class="com.adapit.portal.services.dao.hibernate.UtilityDAOHibernate"
+		singleton="true">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	
+	<bean
+      id="newsServiceDAOHibernate"
+      class="com.adapit.portal.services.dao.hibernate.NewsServiceDAOHibernate"
+      singleton="true"/>
+      
+	<bean id="imagemServiceDAOHibernate"
+      class="com.adapit.portal.services.dao.hibernate.ImagemServiceDAOHibernate"
+      singleton="true"/>
+    
+      <bean id="preferenciaServiceDAOHibernate"
+      class="com.adapit.portal.services.dao.hibernate.PreferenciaServiceDAOHibernate"
+      singleton="true"/>
+
+	<bean id="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="org.postgresql.Driver" />
+		<property name="url" value="jdbc:postgresql://localhost:5432/adapitdb"/>  
+       <property name="username" value="adapit_user"/>  
+       <property name="password" value="4W5F03J"/>  
+	</bean>
+
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+		<property name="dataSource">
+			<ref local="dataSource" />
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">com.workcase.hibernate.WCPostgreeSQLDialect</prop>
+				<prop key="hibernate.show_sql">true</prop>
+				<prop key="hibernate.connection.release_mode">after_statement</prop>
+				<prop key="hibernate.transaction.flush_before_completion">false</prop>
+				<prop key="hibernate.transaction.auto_close_session">false</prop>
+				<prop key="hibernate.cglib.use_reflection_optimizer">true</prop>
+				<prop key="hibernate.query.substitutions">yes 'Y', no 'N'</prop>
+				<prop key="hibernate.hbm2ddl.auto">update</prop>
+			</props>
+		</property>
+		<property name="annotatedClasses">
+			<value>
+				com.adapit.portal.entidades.Categoria,
+				com.adapit.portal.entidades.CategoriaImagem,
+				com.adapit.portal.entidades.Imagem,
+				com.adapit.portal.entidades.Arquivo,
+				com.adapit.portal.entidades.CssDefinition,
+				com.adapit.portal.entidades.ComercialSolution,
+				com.adapit.portal.entidades.TrainingSolution,
+				com.adapit.portal.entidades.SoftwareSolution,
+				com.adapit.portal.entidades.SoftwareDomainInterest,
+				com.adapit.portal.entidades.Access,
+				com.adapit.portal.entidades.DeactivationReason,
+				com.adapit.portal.entidades.Endereco,
+				com.adapit.portal.entidades.TipoPessoa,
+				com.adapit.portal.entidades.Pessoa,
+				com.adapit.portal.entidades.Usuario,
+				com.adapit.portal.entidades.Funcionario,
+				com.adapit.portal.entidades.PessoaEmDivulgacao,
+				com.adapit.portal.entidades.ComitenteSimples,
+				com.adapit.portal.entidades.Participante,
+				com.adapit.portal.entidades.Instrutor,
+				com.adapit.portal.entidades.RepresentanteLegal,
+				com.adapit.portal.entidades.Juridica,
+				com.adapit.portal.entidades.Fisica,
+				com.adapit.portal.entidades.ComercialSolutionItem,
+				com.adapit.portal.entidades.TrainingFormationItem,
+				com.adapit.portal.entidades.FormacaoTreinamento,
+				com.adapit.portal.entidades.Treinamento,
+				com.adapit.portal.entidades.CondicaoParticipacaoTreinamento,
+				com.adapit.portal.entidades.ParticipacaoTurma,
+				com.adapit.portal.entidades.TurmaTreinamento,
+				com.adapit.portal.entidades.EncerramentoCondicionado,
+				com.adapit.portal.entidades.ParticipanteContaPagar,
+				com.adapit.portal.entidades.CondicaoPagamento,
+				com.adapit.portal.entidades.Encerramento,
+				com.adapit.portal.entidades.AgendaTreinamento,
+   				com.adapit.portal.entidades.PreferenciaCategoria,
+   				com.adapit.portal.entidades.ComercialSolutionHistory,
+   				com.adapit.portal.entidades.ContatoProcessoTreinamento,
+   				com.adapit.portal.entidades.ContatoTreinamento,
+   				com.adapit.portal.entidades.News,   				
+   				com.adapit.portal.entidades.Paper,
+   				com.adapit.portal.entidades.Publication,
+   				com.adapit.portal.entidades.UserLayoutPreferences,
+   				com.adapit.portal.entidades.CommercialSolutionDetailTab,
+   				com.adapit.portal.entidades.ComentarioCliente,
+   				com.adapit.portal.entidades.AtributoPessoa,
+   				com.adapit.portal.entidades.Destaque,
+   				com.adapit.portal.entidades.SystemCounter,
+   				com.adapit.portal.entidades.TechDefinition,
+   				com.adapit.portal.entidades.Update,
+   				com.adapit.portal.entidades.UpdateFile,
+   				com.adapit.portal.entidades.MessageFeedbackCounter
+   				
+			</value>
+		</property>
+	</bean>
+	<!-- <prop key="hibernate.hbm2ddl.auto">validate</prop> -->
+	<!-- <prop key="hibernate.hbm2ddl.auto">update</prop> -->
+	<!-- <prop key="hibernate.hbm2ddl.auto">create</prop> -->
+	<!-- <prop key="hibernate.hbm2ddl.auto">create-drop</prop> -->
+	<!-- tx:annotation-driven transaction-manager="transactionManager"/ -->
+
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory">
+			<ref local="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="transactionAttributeSource"
+		class="org.springframework.transaction.interceptor.AttributesTransactionAttributeSource"
+		autowire="constructor" singleton="true" />
+	<bean id="transactionInterceptor"
+		class="org.springframework.transaction.interceptor.TransactionInterceptor"
+		autowire="byType" singleton="true" />
+	<bean id="transactionAdvisor"
+		class="org.springframework.transaction.interceptor.TransactionAttributeSourceAdvisor"
+		autowire="constructor" singleton="true" />
+	<bean id="commonsAttributesHandlerMapping"
+		class="org.springframework.web.servlet.handler.metadata.CommonsPathMapHandlerMapping"
+		singleton="true" />
+	<bean id="autoproxy"
+		class="org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator">
+		<property name="interceptorNames">
+			<list>
+				<value>transactionInterceptor</value>
+			</list>
+		</property>
+	</bean>
+
+</beans>

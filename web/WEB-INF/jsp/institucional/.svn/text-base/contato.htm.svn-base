@@ -1,0 +1,66 @@
+<%@page import="com.adapit.portal.util.global.GlobalVariables"%>
+<%
+GlobalVariables.countApresentacaoTab++;
+%>
+	<script type="text/javascript">
+	// increase the default animation speed to exaggerate the effect
+	$.fx.speeds._default = 1000;
+	$(function() {
+		$('#localizacaogm_Dialog<%=GlobalVariables.countApresentacaoTab%>').dialog({
+			autoOpen: false,
+			show: 'blind',
+			hide: 'explode',
+			minWidth: 500,
+			minHeight: 450
+		});
+		
+		$('#opener').click(function() {
+			$('#localizacaogm_Dialog<%=GlobalVariables.countApresentacaoTab%>').dialog('open');
+			return false;
+		});
+	});
+	</script>
+
+
+<div style="padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;">
+<table style="background-color:transparent;">
+<tr>
+<td width="60%" valign="top">
+	<div class="panel_title_lev2 ui-corner-top">
+		<font class="font_title"><b>&nbsp;&nbsp;Envie o seu email</b></font>							
+	</div>						
+	<div id="envieSeuEmailPanel" class="panel_content ui-corner-bottom">
+				
+	</div>
+	<script> jqueryOpen('showContatoSendEmail.html','envieSeuEmailPanel'); </script>
+</td>
+<td width="40%" valign="top">
+	<div class="panel_title_lev2 ui-corner-top">
+		<font class="font_title"><b>&nbsp;&nbsp;Endere&ccedil;o</b></font>							
+	</div>						
+	<div class="panel_content ui-corner-bottom">
+		<br></br><center><b><%=GlobalVariables.ADAPIT_ADDRESS%></b></center>
+		<br></br>
+	</div>
+	<br>
+	<div class="panel_title_lev2 ui-corner-top">
+		<font class="font_title"><b>&nbsp;&nbsp;Telefone</b></font>							
+	</div>						
+	<div class="panel_content ui-corner-bottom">
+		<br></br><center><b><%=GlobalVariables.ADAPIT_PHONE%></b></center>
+		<br></br>
+	</div>
+	<br>
+	<div class="panel_title_lev2 ui-corner-top">
+		<font class="font_title"><b>&nbsp;&nbsp;Twitter</b></font>							
+	</div>						
+	<div class="panel_content ui-corner-bottom">
+		<div style="padding: 10px;">
+		<br><center><b>@adapit</b></center></br>
+		<br></br>
+ 		</div>
+	</div>
+
+</td>
+</tr>
+</table>

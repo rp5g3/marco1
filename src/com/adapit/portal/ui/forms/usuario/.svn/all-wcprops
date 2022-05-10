@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/adapitsys/!svn/ver/389/AdapitFromServerJQuery/src/com/adapit/portal/ui/forms/usuario
+END
+UsuarioListForm.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/adapitsys/!svn/ver/389/AdapitFromServerJQuery/src/com/adapit/portal/ui/forms/usuario/UsuarioListForm.java
+END
+DeactivationReasonCadastreForm.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/adapitsys/!svn/ver/173/AdapitFromServerJQuery/src/com/adapit/portal/ui/forms/usuario/DeactivationReasonCadastreForm.java
+END
+TimerMessageFrame.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/adapitsys/!svn/ver/173/AdapitFromServerJQuery/src/com/adapit/portal/ui/forms/usuario/TimerMessageFrame.java
+END
+TelaLoginUsuario.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/adapitsys/!svn/ver/173/AdapitFromServerJQuery/src/com/adapit/portal/ui/forms/usuario/TelaLoginUsuario.java
+END
+AdminEnderecoCadastreForm.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/adapitsys/!svn/ver/173/AdapitFromServerJQuery/src/com/adapit/portal/ui/forms/usuario/AdminEnderecoCadastreForm.java
+END
+HelpLoginUsuarioForm.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/adapitsys/!svn/ver/173/AdapitFromServerJQuery/src/com/adapit/portal/ui/forms/usuario/HelpLoginUsuarioForm.java
+END
+UserDataChangeListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/adapitsys/!svn/ver/173/AdapitFromServerJQuery/src/com/adapit/portal/ui/forms/usuario/UserDataChangeListener.java
+END
+AdminUserDataForm.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/adapitsys/!svn/ver/382/AdapitFromServerJQuery/src/com/adapit/portal/ui/forms/usuario/AdminUserDataForm.java
+END
+AdvancedPersonSearchDialog.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/adapitsys/!svn/ver/173/AdapitFromServerJQuery/src/com/adapit/portal/ui/forms/usuario/AdvancedPersonSearchDialog.java
+END
+ManutencaoUsuarioForm.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/adapitsys/!svn/ver/173/AdapitFromServerJQuery/src/com/adapit/portal/ui/forms/usuario/ManutencaoUsuarioForm.java
+END
+DesativarUsuarioDialog.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/adapitsys/!svn/ver/173/AdapitFromServerJQuery/src/com/adapit/portal/ui/forms/usuario/DesativarUsuarioDialog.java
+END
+TimerMessagePanel.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/adapitsys/!svn/ver/173/AdapitFromServerJQuery/src/com/adapit/portal/ui/forms/usuario/TimerMessagePanel.java
+END
+WelcomeDesktopPane.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/adapitsys/!svn/ver/173/AdapitFromServerJQuery/src/com/adapit/portal/ui/forms/usuario/WelcomeDesktopPane.java
+END

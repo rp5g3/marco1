@@ -1,0 +1,515 @@
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/adapitsys/!svn/ver/375/AdapitFromServerJQuery/src/com/adapit/portal/entidades
+END
+Access.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/entidades/Access.java
+END
+Paper.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/entidades/Paper.java
+END
+ParticipacaoTurma.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/entidades/ParticipacaoTurma.java
+END
+TrainingFormationItem.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/entidades/TrainingFormationItem.java
+END
+ClassificacaoComentarioCliente.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/entidades/ClassificacaoComentarioCliente.java
+END
+BrasilEstado.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/entidades/BrasilEstado.java
+END
+Funcionario.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/entidades/Funcionario.java
+END
+TipoPacoteTreinamento.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/entidades/TipoPacoteTreinamento.java
+END
+CommercialSolutionDetailTab.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/adapitsys/!svn/ver/274/AdapitFromServerJQuery/src/com/adapit/portal/entidades/CommercialSolutionDetailTab.java
+END
+Projeto.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/entidades/Projeto.java
+END
+Participante.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/adapitsys/!svn/ver/274/AdapitFromServerJQuery/src/com/adapit/portal/entidades/Participante.java
+END
+Technologies.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/entidades/Technologies.java
+END
+Endereco.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/adapitsys/!svn/ver/255/AdapitFromServerJQuery/src/com/adapit/portal/entidades/Endereco.java
+END
+ComitenteSimples.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/adapitsys/!svn/ver/171/AdapitFromServerJQuery/src/com/adapit/portal/entidades/ComitenteSimples.java
+END
+SystemCounter.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/adapitsys/!svn/ver/255/AdapitFromServerJQuery/src/com/adapit/portal/entidades/SystemCounter.java
+END
+Usuario.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/adapitsys/!svn/ver/375/AdapitFromServerJQuery/src/com/adapit/portal/entidades/Usuario.java
+END
+UpdateFileKind.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/adapitsys/!svn/ver/274/AdapitFromServerJQuery/src/com/adapit/portal/entidades/UpdateFileKind.java
+END
+Pessoa.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/adapitsys/!svn/ver/274/AdapitFromServerJQuery/src/com/adapit/portal/entidades/Pessoa.java
+END
+Pais.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/entidades/Pais.java
+END
+FormacaoTreinamento.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/entidades/FormacaoTreinamento.java
+END
+ComentarioClientePk.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/entidades/ComentarioClientePk.java
+END
+SoftwareDomainInterest.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/adapitsys/!svn/ver/349/AdapitFromServerJQuery/src/com/adapit/portal/entidades/SoftwareDomainInterest.java
+END
+ItemProjeto.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/entidades/ItemProjeto.java
+END
+EstadoCivil.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/entidades/EstadoCivil.java
+END
+TipoPagamento.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/entidades/TipoPagamento.java
+END
+TrainingSolution.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/entidades/TrainingSolution.java
+END
+Publication.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/entidades/Publication.java
+END
+Destaque.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/entidades/Destaque.java
+END
+News.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/entidades/News.java
+END
+ContatoTreinamento.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/entidades/ContatoTreinamento.java
+END
+TurnoTreinamento.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/entidades/TurnoTreinamento.java
+END
+CategoriaImagem.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/entidades/CategoriaImagem.java
+END
+UpdateFile.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/adapitsys/!svn/ver/274/AdapitFromServerJQuery/src/com/adapit/portal/entidades/UpdateFile.java
+END
+Update.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/adapitsys/!svn/ver/274/AdapitFromServerJQuery/src/com/adapit/portal/entidades/Update.java
+END
+TipoFornecedor.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/entidades/TipoFornecedor.java
+END
+DeactivationReason.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/entidades/DeactivationReason.java
+END
+StatusAgenda.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/entidades/StatusAgenda.java
+END
+AgendaTreinamento.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/entidades/AgendaTreinamento.java
+END
+Arquivo.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/adapitsys/!svn/ver/349/AdapitFromServerJQuery/src/com/adapit/portal/entidades/Arquivo.java
+END
+UserCadastreType.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/adapitsys/!svn/ver/375/AdapitFromServerJQuery/src/com/adapit/portal/entidades/UserCadastreType.java
+END
+TechDefinition.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/adapitsys/!svn/ver/274/AdapitFromServerJQuery/src/com/adapit/portal/entidades/TechDefinition.java
+END
+EncerramentoCondicionado.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/entidades/EncerramentoCondicionado.java
+END
+PersonAttributeType.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/adapitsys/!svn/ver/274/AdapitFromServerJQuery/src/com/adapit/portal/entidades/PersonAttributeType.java
+END
+UserLayoutPreferences.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/entidades/UserLayoutPreferences.java
+END
+Categoria.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/entidades/Categoria.java
+END
+Fisica.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/adapitsys/!svn/ver/255/AdapitFromServerJQuery/src/com/adapit/portal/entidades/Fisica.java
+END
+TipoExecucaoTreinamento.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/entidades/TipoExecucaoTreinamento.java
+END
+Imagem.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/adapitsys/!svn/ver/274/AdapitFromServerJQuery/src/com/adapit/portal/entidades/Imagem.java
+END
+FormaPagamento.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/entidades/FormaPagamento.java
+END
+ScheduledTrainingStatus.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/entidades/ScheduledTrainingStatus.java
+END
+CssDefinition.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/adapitsys/!svn/ver/284/AdapitFromServerJQuery/src/com/adapit/portal/entidades/CssDefinition.java
+END
+PreferenciaCategoria.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/adapitsys/!svn/ver/274/AdapitFromServerJQuery/src/com/adapit/portal/entidades/PreferenciaCategoria.java
+END
+AtributoPessoa.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/adapitsys/!svn/ver/255/AdapitFromServerJQuery/src/com/adapit/portal/entidades/AtributoPessoa.java
+END
+ComentarioCliente.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/entidades/ComentarioCliente.java
+END
+CondicaoParticipacaoTreinamento.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/entidades/CondicaoParticipacaoTreinamento.java
+END
+CommercialSolutionType.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/entidades/CommercialSolutionType.java
+END
+CondicaoPagamento.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/entidades/CondicaoPagamento.java
+END
+PessoaEmDivulgacao.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/adapitsys/!svn/ver/274/AdapitFromServerJQuery/src/com/adapit/portal/entidades/PessoaEmDivulgacao.java
+END
+CommercialSolutionDetailTabPK.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/entidades/CommercialSolutionDetailTabPK.java
+END
+ComercialSolutionHistory.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/adapitsys/!svn/ver/171/AdapitFromServerJQuery/src/com/adapit/portal/entidades/ComercialSolutionHistory.java
+END
+PrimeiroContatoIniciado.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/adapitsys/!svn/ver/274/AdapitFromServerJQuery/src/com/adapit/portal/entidades/PrimeiroContatoIniciado.java
+END
+Encerramento.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/entidades/Encerramento.java
+END
+AgendaProjeto.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/entidades/AgendaProjeto.java
+END
+ClienteContaPagar.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/entidades/ClienteContaPagar.java
+END
+RepresentanteLegal.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/entidades/RepresentanteLegal.java
+END
+Fornecedor.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/adapitsys/!svn/ver/171/AdapitFromServerJQuery/src/com/adapit/portal/entidades/Fornecedor.java
+END
+AddressType.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/entidades/AddressType.java
+END
+MessageFeedbackCounter.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/adapitsys/!svn/ver/274/AdapitFromServerJQuery/src/com/adapit/portal/entidades/MessageFeedbackCounter.java
+END
+ContatoProcessoTreinamento.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/entidades/ContatoProcessoTreinamento.java
+END
+CategoriaPreferidaEnum.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/adapitsys/!svn/ver/274/AdapitFromServerJQuery/src/com/adapit/portal/entidades/CategoriaPreferidaEnum.java
+END
+Instrutor.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/entidades/Instrutor.java
+END
+ComercialSolutionItem.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/entidades/ComercialSolutionItem.java
+END
+Sexo.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/entidades/Sexo.java
+END
+TipoComitente.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/entidades/TipoComitente.java
+END
+ParticipanteContaPagar.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/entidades/ParticipanteContaPagar.java
+END
+Cliente.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/entidades/Cliente.java
+END
+ChamadaAgendaTreinamento.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/entidades/ChamadaAgendaTreinamento.java
+END
+PersonAttributePk.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/entidades/PersonAttributePk.java
+END
+Treinamento.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/entidades/Treinamento.java
+END
+TipoPessoa.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/entidades/TipoPessoa.java
+END
+SoftwareSolution.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/adapitsys/!svn/ver/353/AdapitFromServerJQuery/src/com/adapit/portal/entidades/SoftwareSolution.java
+END
+Juridica.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/adapitsys/!svn/ver/255/AdapitFromServerJQuery/src/com/adapit/portal/entidades/Juridica.java
+END
+ClassificacaoTreinamento.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/entidades/ClassificacaoTreinamento.java
+END
+ComercialSolution.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/adapitsys/!svn/ver/349/AdapitFromServerJQuery/src/com/adapit/portal/entidades/ComercialSolution.java
+END
+TurmaTreinamento.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/entidades/TurmaTreinamento.java
+END

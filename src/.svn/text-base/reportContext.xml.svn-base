@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<!--
+  - Reports Handler context
+-->
+<beans>
+
+  <bean id="viewerImpl" class="com.quantiza.sample.report.client.ViewerImpl">
+  <property name="formats">
+      <map>
+        <entry key="PDF">
+          <ref bean="pdfHandler"/>
+        </entry>
+        <entry key="CSV">
+          <ref bean="csvHandler"/>
+        </entry>
+        <entry key="HTML">
+          <ref bean="htmlHandler"/>
+        </entry>
+        <entry key="XLS">
+          <ref bean="xlsHandler"/>
+        </entry>        
+        <entry key="VIEWER">
+          <ref bean="viewerHandler"/>
+        </entry>           
+        <entry key="XML">
+          <ref bean="xmlHandler"/>
+        </entry>            
+      </map>      
+  </property>
+  </bean>
+ 
+  <bean id="reportGenerator" class="com.quantiza.sample.report.server.jasper.JasperGeneratorImpl">
+      <property name="reportOutput">
+      <map>
+        <entry key="PDF">
+          <ref bean="pdfFormat"/>
+        </entry>
+        <entry key="CSV">
+          <ref bean="csvFormat"/>
+        </entry>
+        <entry key="HTML">
+          <ref bean="htmlFormat"/>
+        </entry>
+        <entry key="XLS">
+          <ref bean="xlsFormat"/>
+        </entry>        
+        <entry key="VIEWER">
+          <ref bean="viewerFormat"/>
+        </entry>           
+        <entry key="XML">
+          <ref bean="xmlFormat"/>
+        </entry>     
+      </map>
+    </property>
+ </bean>
+ 
+ <bean id="pdfFormat" class="com.quantiza.sample.report.server.jasper.rendering.ReportToPdf"/>
+ <bean id="csvFormat" class="com.quantiza.sample.report.server.jasper.rendering.ReportToCsv"/>
+ <bean id="htmlFormat" class="com.quantiza.sample.report.server.jasper.rendering.ReportToHtml"/>
+ <bean id="xlsFormat" class="com.quantiza.sample.report.server.jasper.rendering.ReportToXls"/>
+ <bean id="viewerFormat" class="com.quantiza.sample.report.server.jasper.rendering.ReportToViewer"/>
+ <bean id="xmlFormat" class="com.quantiza.sample.report.server.jasper.rendering.ReportToXml"/>
+     
+ <bean id="pdfHandler" class="com.quantiza.sample.report.client.handler.PdfHandler"/>
+ <bean id="csvHandler" class="com.quantiza.sample.report.client.handler.CsvHandler"/>
+ <bean id="htmlHandler" class="com.quantiza.sample.report.client.handler.HtmlHandler"/>
+ <bean id="xlsHandler" class="com.quantiza.sample.report.client.handler.XlsHandler"/>   
+ <bean id="viewerHandler" class="com.quantiza.sample.report.client.handler.ViewerHandler"/>
+ <bean id="xmlHandler" class="com.quantiza.sample.report.client.handler.XmlHandler"/>  
+
+
+ <!-- Relatorios -->
+ <bean id="UserReport" class="com.quantiza.sample.report.server.reports.UserReportFactory"/>
+</beans>

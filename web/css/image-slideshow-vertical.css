@@ -1,0 +1,100 @@
+	body{
+		background-image:url(imgs/heading3.gif);
+		background-repeat:no-repeat;
+		padding-top:10px;
+	}
+	#dhtmlgoodies_slideshow{
+		width:680px;	/* Total width of slideshow */
+
+
+	}
+	
+	#previewPane{
+		border:0px solid #000;
+		margin-left:5px;	
+		text-align:center;
+		vertical-align:middle;
+		padding-top:0px;
+		
+		
+		/* CSS HACK */
+		height: 450px;	/* IE 5.x */
+		height/* */:/**/450px;	/* Other browsers */
+		height: /**/525px;
+		
+		width:450px;		
+		float:right;
+				
+	}
+	#waitMessage{
+		display:none;
+		position:absolute;
+		left:140px;
+		top:250px;
+		background-color:#FFF;
+		border:3px double #000;
+		padding:4px;
+		color:#555;
+		font-size:0.9em;
+		font-family:Arial;
+			
+	}	
+	#galleryContainer{	/* Big Div surrounding up image, list of images and down image */
+		float:right;	/* Floating */
+		
+		/* CSS HACK */
+		height: 448px;	/* IE 5.x - 120 px + 2 px for borders and 2px for padding*/
+		height/* */:/**/448px;	/* Other browsers */
+		height: /**/400px;
+		
+		/* CSS HACK */
+		width: 80px;	/* IE 5.x - 120 px + 2 px for borders and 2px for padding*/
+		width/* */:/**/80px;	/* Other browsers */
+		width: /**/80px;
+				
+		border:1px solid #000;	/* Black border */		
+		padding:1px;	/* A little space between the black border and the content inside */
+		
+	}
+	#galleryContainer #arrow_down{	/* Arrow down image */
+		height:35px;
+		
+	}
+	#galleryContainer #arrow_up{
+		height:35px;	/* Arrow up image */
+	}
+	
+	#theImages{	/* DIV where the images are located */
+		position:relative;
+		overflow:hidden;
+		height:327px;	/* Height of boxes for the images */
+	}
+	#theImages div{	
+		position:relative;	/* Don't change this */
+		height:1500px;	/* Higher than total height of thumbnails */
+		vertical-align: middle;
+	}
+	#theImages img{
+		border:0px;	/* No border */
+		filter:alpha(opacity=85);	/* Transparency - IE */
+		opacity:0.5; /* Transparency - Firefox */
+		padding-top:1px;	/* Space between images */
+	}
+	#previewPane #largeImageCaption{	/* CSS styling of image caption below large image */
+		font-style:bold;
+		text-align:center;
+		font-family: Arial, Trebuchet MS, Lucida Sans Unicode, Verdana, sans-serif;	/* Font to use */
+		font-size:0.9em;
+	}
+	#previewPane #largeImageDescription{	/* CSS styling of image caption below large image */
+		font-style:normal;
+		text-align:justify;
+		font-family: Arial, Trebuchet MS, Lucida Sans Unicode, Verdana, sans-serif;	/* Font to use */
+		font-size:0.9em;
+	}
+	#theImages .imageCaption{
+		display:none;
+	}
+	#theImages .imageDescription{
+		display:none;
+	}

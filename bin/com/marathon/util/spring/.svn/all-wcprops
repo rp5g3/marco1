@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/adapitsys/!svn/ver/115/AdapitFromServerJQuery/src/com/marathon/util/spring
+END
+StreamSupportingHttpInvokerProxyFactoryBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/adapitsys/!svn/ver/115/AdapitFromServerJQuery/src/com/marathon/util/spring/StreamSupportingHttpInvokerProxyFactoryBean.java
+END
+StreamSupportingRemoteInvocationFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/adapitsys/!svn/ver/115/AdapitFromServerJQuery/src/com/marathon/util/spring/StreamSupportingRemoteInvocationFactory.java
+END
+RemoteInvocationDecorator.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/adapitsys/!svn/ver/115/AdapitFromServerJQuery/src/com/marathon/util/spring/RemoteInvocationDecorator.java
+END
+StreamSupportingRemoteInvocationResult.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/adapitsys/!svn/ver/115/AdapitFromServerJQuery/src/com/marathon/util/spring/StreamSupportingRemoteInvocationResult.java
+END
+StreamSupportingHttpInvokerRequestExecutor.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/adapitsys/!svn/ver/115/AdapitFromServerJQuery/src/com/marathon/util/spring/StreamSupportingHttpInvokerRequestExecutor.java
+END
+StreamSupportingRemoteInvocation.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/adapitsys/!svn/ver/115/AdapitFromServerJQuery/src/com/marathon/util/spring/StreamSupportingRemoteInvocation.java
+END
+StreamSupportingHttpInvokerServiceExporter.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/adapitsys/!svn/ver/115/AdapitFromServerJQuery/src/com/marathon/util/spring/StreamSupportingHttpInvokerServiceExporter.java
+END

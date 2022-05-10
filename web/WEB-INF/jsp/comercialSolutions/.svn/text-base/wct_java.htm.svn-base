@@ -1,0 +1,224 @@
+<%@page import="com.adapit.portal.util.global.GlobalVariables"%>
+<style>
+<!--
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:Arial;}
+p.MsoBodyText2, li.MsoBodyText2, div.MsoBodyText2
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	font-size:10.0pt;
+	font-family:Arial;}
+	-->
+</style>
+     <LINK rel="stylesheet" type="text/css" href="css/default.css"/>
+     <LINK rel="stylesheet" type="text/css" href="css/jt_DialogBox.css"/>
+     <script type="text/javascript" src="js/jt_DialogBox.js"></script>
+   	 <script type="text/javascript" src="js/MyApp_dialogs.js"></script>
+
+   	 <script type="text/javascript" src="js/leilao.js"></script>   
+     <script type="text/javascript" src="js/wz_tooltip.js"></script>
+
+
+<div style="padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;">
+
+<div dojoType="dijit.layout.TabContainer" tabPosition="top" sizeShare="40" style="width:100%; height:300px;" cacheContent="false">
+	<div dojoType="dijit.layout.ContentPane" title="Descri��o" style="padding-left:10px;padding-right:10px;padding-bottom:10px;padding-top:40px;display:none;" cacheContent="false">		
+<p class=MsoNormal style='text-align:justify;text-indent:15pt'>O setor da adapit � o desenvolvimento de
+software. Este setor tem crescido muito nos recentes anos.</p>
+<p class=MsoNormal style='text-align:justify;text-indent:15pt'>O crescimento desse setor
+implicou em uma alta procura por programadores de sistemas pelas f�bricas de software. Um consenso destas � que
+n�o existe um n�mero suficiente de profissionais qualificados para atender a demanda.
+Essa car�ncia freia o crescimento do volume de neg�cios no setor de software,
+transformando-se num grande problema para as empresas desse setor.</p>
+<p class=MsoNormal style='text-align:justify;text-indent:15pt'>Solu��es para isso
+podem implicar em um <b>aumento do volume de neg�cios</b>
+para as f�bricas de software. O objetivo da Adapit � prover estas solu��es</p>
+
+<p>&nbsp;</p>
+
+</div>
+
+<div dojoType="dijit.layout.ContentPane" title="Benef�cios" style="padding-left:10px;padding-right:10px;padding-bottom:10px;padding-top:40px;display:none;" cacheContent="false">		
+<p class=MsoNormal style='text-align:justify;text-indent:15pt'>Solu��es
+criativas e eficientes para f�bricas de software encontram um mercado com um potencial
+muito grande, em plena expans�o no Brasil e no exterior.</p>
+<p>
+ <table border="0" width="100%" cellspacing="5" cellpadding="0" style="background-color: transparent;">
+	 <tr>
+	 	<td width="20px"><img src="imgs/setamenu.gif"></td>
+	 	<td width>
+		 	A primeira solu��o � forma��o de profissionais
+qualificados num ritmo mais acelerado, oferecendo treinamentos adaptados para as tecnologias usadas pela
+f�brica.
+	 	</td>
+	 </tr>
+	 <tr>
+	 	<td width="20px"><img src="imgs/setamenu.gif"></td>
+	 	<td width>
+		 	A segunda � aumentar a 
+produtividade dos profissionais j� empregados
+nas f�bricas de software.
+	 	</td>
+	 </tr>  
+ </table>
+</p>
+		
+
+</div>
+
+<div dojoType="dijit.layout.ContentPane" title="Imagens" style="padding-left:10px;padding-right:10px;padding-bottom:10px;padding-top:40px;display:none;" cacheContent="false">		
+
+<p class=MsoNormal style='text-align:justify;text-indent:15pt'>Por estar inserida em um ambiente
+que promove a pesquisa como fonte de bons neg�cios, a Adapit caracter�za-se por ser desenvolvedora
+de tecnologias pr�prias.
+<br>
+<p class=MsoNormal style='text-align:justify;text-indent:15pt'>A incubadora Raiar possibilita que
+a Adapit esteja em contato e colabora��o com pesquisadores de engenharia de software da
+PUCRS. Isto � importante, pois a Adapit precisa da pesquisa para inovar no setor.</p>
+<br>
+<p class=MsoNormal style='text-align:justify;text-indent:15pt'>A Adapit publicou uma s�rie
+de artigos sobre suas inova��es em revistas e 
+em congressos de engenharia de software, nacionais e internacionais.</p>
+<p>&nbsp;</p>
+</div>
+
+<div dojoType="dijit.layout.ContentPane" title="Clientes" style="padding-left:10px;padding-right:10px;padding-bottom:10px;padding-top:40px;display:none;" cacheContent="false">		
+<p class=MsoNormal style='text-align:justify;text-indent:15pt'>Por agrupar diversas f�bricas de software, o
+TECNOPUC oferece um espa�o excelente para divulga��o das solu��es da Adapit. A
+divulga��o que a empresa faz no local vem despertando muitos interessados.
+<br>
+<p class=MsoNormal style='text-align:justify;text-indent:15pt'>Em reconhecimento do esfor�o dedicado
+ pela empresa em inova��es no setor de software, o jornal Zero Hora publicou uma
+<a 
+href="http://zerohora.clicrbs.com.br/zerohora/jsp/default2.jsp?uf=1&local=1&source=a1727029.xml&template=3898.dwt&edition=9069"
+ target="_blank">mat�ria no caderno especial de s�bado do dia 05/01/2008</a>.
+ A mat�ria relata sobre o rumo dos diretores da Adapit, F�bio e Raquel,
+no sentido de construir um empreendimento em constante inova��o, focado em tecnologias. 
+F�bio e Raquel apareceram ao lado de famosos empreendedores que tiveram sucesso 
+como Bill Gates, Steve Jobs, e os criadores do Google.</p>
+
+</div>
+
+<div dojoType="dijit.layout.ContentPane" title="Investimento" style="padding-left:10px;padding-right:10px;padding-bottom:10px;padding-top:40px;display:none;" cacheContent="false">		
+<p class=MsoNormal style='text-align:justify;text-indent:15pt'>A �rea comercial da Adapit � muito movimentada
+por empres�rios e profissionais de empresas que fabricam software. Isto porque a mesma est� incubada
+na RAIAR, localizada no Tecnopuc, o parque tecnol�gico da Pontif�cia
+Universidade Cat�lica do Rio Grande do Sul (PUCRS). Veja as vantajens:</p>
+
+<p>
+ <table border="0" width="100%" cellspacing="5" cellpadding="0" style="background-color: transparent;">
+	 <tr>
+	 	<td width="20px"><img src="imgs/setamenu.gif"></td>
+	 	<td width>�rea que concentra empresas principalmente do setor de produ��o software.</td>
+	 </tr>
+	 <tr>
+	 	<td width="20px"><img src="imgs/setamenu.gif"></td>
+	 	<td width>Localizada em um dos centros de pesquisa e desenvolvimento de Porto Alegre.</td>
+	 </tr> 
+	 <tr>
+	 	<td width="20px"><img src="imgs/setamenu.gif"></td>
+	 	<td width>�rea de f�cil acesso, pr�xima a bancos e lojas.</td>
+	 </tr>
+ </table>
+</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:15pt'>O local � considerado muito
+bom por quest�es estrat�gicas, pois para a Adapit � positivo estar perto de f�bricas
+de software, que formam o seu p�blico alvo.</p>
+
+</div>
+
+<div dojoType="dijit.layout.ContentPane" title="Faq" style="padding-left:10px;padding-right:10px;padding-bottom:10px;padding-top:40px;display:none;" cacheContent="false">		
+<p class=MsoNormal style='text-align:justify;text-indent:15pt'>A �rea comercial da Adapit � muito movimentada
+por empres�rios e profissionais de empresas que fabricam software. Isto porque a mesma est� incubada
+na RAIAR, localizada no Tecnopuc, o parque tecnol�gico da Pontif�cia
+Universidade Cat�lica do Rio Grande do Sul (PUCRS). Veja as vantajens:</p>
+
+<p>
+ <table border="0" width="100%" cellspacing="5" cellpadding="0" style="background-color: transparent;">
+	 <tr>
+	 	<td width="20px"><img src="imgs/setamenu.gif"></td>
+	 	<td width>�rea que concentra empresas principalmente do setor de produ��o software.</td>
+	 </tr>
+	 <tr>
+	 	<td width="20px"><img src="imgs/setamenu.gif"></td>
+	 	<td width>Localizada em um dos centros de pesquisa e desenvolvimento de Porto Alegre.</td>
+	 </tr> 
+	 <tr>
+	 	<td width="20px"><img src="imgs/setamenu.gif"></td>
+	 	<td width>�rea de f�cil acesso, pr�xima a bancos e lojas.</td>
+	 </tr>
+ </table>
+</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:15pt'>O local � considerado muito
+bom por quest�es estrat�gicas, pois para a Adapit � positivo estar perto de f�bricas
+de software, que formam o seu p�blico alvo.</p>
+
+</div>
+
+<div dojoType="dijit.layout.ContentPane" title="Contato" style="padding-left:10px;padding-right:10px;padding-bottom:10px;padding-top:40px;display:none;" cacheContent="false">		
+<p class=MsoNormal style='text-align:justify;text-indent:15pt'>A �rea comercial da Adapit � muito movimentada
+por empres�rios e profissionais de empresas que fabricam software. Isto porque a mesma est� incubada
+na RAIAR, localizada no Tecnopuc, o parque tecnol�gico da Pontif�cia
+Universidade Cat�lica do Rio Grande do Sul (PUCRS). Veja as vantajens:</p>
+
+<p>
+ <table border="0" width="100%" cellspacing="5" cellpadding="0" style="background-color: transparent;">
+	 <tr>
+	 	<td width="20px"><img src="imgs/setamenu.gif"></td>
+	 	<td width>�rea que concentra empresas principalmente do setor de produ��o software.</td>
+	 </tr>
+	 <tr>
+	 	<td width="20px"><img src="imgs/setamenu.gif"></td>
+	 	<td width>Localizada em um dos centros de pesquisa e desenvolvimento de Porto Alegre.</td>
+	 </tr> 
+	 <tr>
+	 	<td width="20px"><img src="imgs/setamenu.gif"></td>
+	 	<td width>�rea de f�cil acesso, pr�xima a bancos e lojas.</td>
+	 </tr>
+ </table>
+</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:15pt'>O local � considerado muito
+bom por quest�es estrat�gicas, pois para a Adapit � positivo estar perto de f�bricas
+de software, que formam o seu p�blico alvo.</p>
+
+</div>		
+
+</div>
+  
+<div id="apresentacao_contatoDialog<%=GlobalVariables.countApresentacaoTab%>" 
+	dojoType="dijit.Dialog" title="Contato" 
+	style="display:none; width: 600px; height: 200px; top: 200px;  " 
+	bindArgs="{sync: true, preventCache: false}"
+	href="/adapit/institucional_contato.html"
+>
+
+<div id="apresentacao_solucoesDialog<%=GlobalVariables.countApresentacaoTab%>" 
+	dojoType="dijit.Dialog" title="Solu��es" 
+	style="display:none; width: 600px; height: 200px; top: 200px;  " 
+	bindArgs="{sync: true, preventCache: false}"
+	href="/adapit/institucional_solucoes.html"
+>
+
+<div id="apresentacao_treinamentoDialog<%=GlobalVariables.countApresentacaoTab%>" 
+	dojoType="dijit.Dialog" title="Treinamentos Customizados" 
+	style="display:none; width: 600px; height: 200px; top: 200px;  " 
+	bindArgs="{sync: true, preventCache: false}"
+	href="/adapit/servicos_treinamentos.html"
+>
+
+<div id="apresentacao_wctDialog<%=GlobalVariables.countApresentacaoTab%>" 
+	dojoType="dijit.Dialog" title="Work CASE Toolkit" 
+	style="display:none; width: 600px; height: 200px; top: 200px; " 
+	bindArgs="{sync: true, preventCache: false}"
+	href="/adapit/wct_visao_global.html"
+>
+	
+</div>

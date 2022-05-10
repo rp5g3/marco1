@@ -1,0 +1,31 @@
+<html>
+	<head>
+		<LINK rel="stylesheet" type="text/css" href="http://localhost:8082/adapit/css/main.css"/>
+		<LINK rel="stylesheet" type="text/css" href="http://localhost:8082/adapit/css/default.css"/>
+	</head>
+	<body>
+		<!-- 
+		parâmetros
+			welcome_message
+			URL
+			usuario
+		 -->
+		<div class="dates_vig"  style=" width:435px; height:310px;  left:0px; position:absolute;  top:0px; " >
+			<div class="default_titled_pane  ui-corner-bottom " style="width:100%; height:30px;">
+				<span>Adapit Soluções em TI - Autenticação de Registro</span>
+			</div>
+			<div  style=" width:412px; height:66px;  left:15px; position:absolute;  top:33px; " >
+				<p>${welcome_message}</p>
+				<p>Para ativar o seu cadastro clique 
+					<a href="http://${URL}/autenticateCadastre.html?id=${usuario.login}&ticket=${usuario.ticket}&aut=true" target="blanck">aqui</a>
+				</p>
+				<p>Para cancelar o seu cadastro clique
+					<a href="http://${URL}/autenticateCadastre.html?id=${usuario.login}&ticket=${usuario.ticket}&aut=false" target="blanck">aqui</a>
+				</p>
+				<p>Para mais informações consulte <a href="http://www.adapit.com.br" target="blanck" ><b>www.adapit.com.br</b></a>.</p>
+				
+			</div>
+		
+		</div>
+	</body>
+</html>

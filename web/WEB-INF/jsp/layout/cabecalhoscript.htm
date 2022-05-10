@@ -1,0 +1,214 @@
+	<script type="text/javascript" src="css/jquery-1.2.2.pack.js"></script>
+
+	<script type="text/javascript" src="css/ddaccordion.js">
+
+	/***********************************************
+	* Accordion Content script- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
+	* Visit http://www.dynamicDrive.com for hundreds of DHTML scripts
+	* This notice must stay intact for legal use
+	***********************************************/
+	
+	</script>
+
+	<script type="text/javascript">	
+		ddaccordion.init({
+			headerclass: "submenuheader", //Shared CSS class name of headers group
+			contentclass: "submenu", //Shared CSS class name of contents group
+			collapseprev: true, //Collapse previous content (so only one open at any time)? true/false 
+			defaultexpanded: [], //index of content(s) open by default [index1, index2, etc] [] denotes no content
+			animatedefault: false, //Should contents open by default be animated into view?
+			persiststate: true, //persist state of opened contents within browser session?
+			toggleclass: ["", ""], //Two CSS classes to be applied to the header when it's collapsed and expanded, respectively ["class1", "class2"]
+			togglehtml: ["suffix", "<img src='imgs/arrowDown.png' class='statusicon' />", "<img src='imgs/arrowUp.png' class='statusicon' />"], //Additional HTML added to the header when it's collapsed and expanded, respectively  ["position", "html1", "html2"] (see docs)
+			animatespeed: "normal" //speed of animation: "fast", "normal", or "slow"
+		})
+		
+	
+	</script>
+
+	
+
+	
+
+	
+	<script type="text/javascript" src="js/dojoajaxutil.js"></script>	
+
+	
+	<link rel="stylesheet" href="css/image-slideshow-vertical.css">
+	
+	<script type="text/javascript" src="js/image-slideshow-vertical.js">
+	/************************************************************************************************************
+	(C) www.dhtmlgoodies.com, November 2005
+	
+	This is a script from www.dhtmlgoodies.com. You will find this and a lot of other scripts at our website.	
+	
+	Terms of use:
+	You are free to use this script as long as the copyright message is kept intact. However, you may not
+	redistribute, sell or repost it without our permission.
+	
+	Thank you!
+	
+	www.dhtmlgoodies.com
+	Alf Magne Kalleland
+	
+	************************************************************************************************************/
+	
+
+	</script>
+
+
+	
+	<script type="text/javascript" src="dojoroot/dojo/dojo.js"
+			djConfig="isDebug: false, parseOnLoad: true"></script>
+	<script type="text/javascript" src="dojoroot/dijit/dijit.js"></script>
+	<script type="text/javascript" src="dojoroot/dojox/layout/FloatingPane.js"></script>
+	
+	<script type="text/javascript">
+			// this is just a list of 'official' dijit themes, you can use ?theme=String 
+			// for 'un-supported' themes, too. (eg: yours) 
+			var availableThemes = [
+				{ theme:"tundra", author:"Dojo", baseUri:"dojoroot/dijit/themes/"},
+				{ theme:"nihilo", author:"Dojo", baseUri:"dojoroot/dijit/themes/"},
+				{ theme:"soria", author:"dante", baseUri:"dojoroot/dijit/themes/"}
+			];
+	</script>
+
+	<script type="text/javascript"> 
+		dojo.provide("dijit.dijit-all");
+		dojo.require("dijit.dijit");
+
+		dojo.require("dijit.form.Button");
+	 	dojo.require("dijit.form.CheckBox");
+	 	dojo.require("dijit.form.ComboBox");
+	 	dojo.require("dijit.form.CurrencyTextBox");
+	 	dojo.require("dijit.form.DateTextBox");
+	 	dojo.require("dijit.form.FilteringSelect");
+
+	 	dojo.require("dijit.form.NumberSpinner");
+	 	dojo.require("dijit.form.NumberTextBox");
+	 	dojo.require("dijit.form.Slider");
+	 	dojo.require("dijit.form.Textarea");
+	 	dojo.require("dijit.form.TextBox");
+	 	dojo.require("dijit.form.ValidationTextBox");
+ 		dojo.require("dijit.form.Form");
+
+		// layouts used in page
+		dojo.require("dijit.layout.AccordionContainer");
+		dojo.require("dijit.layout.ContentPane");
+		dojo.require("dijit.layout.SplitContainer");
+		dojo.require("dijit.layout.TabContainer");
+		dojo.require("dijit.layout.LayoutContainer");
+		dojo.require("dijit.Dialog");
+	
+
+		//dojo.require("dijit.ColorPalette");
+ 		dojo.require("dijit.Declaration");
+ 		dojo.require("dijit.Dialog");
+ 		//dojo.require("dijit.Editor");//este aqui anula o jsDoMenu
+ 		//dojo.require("dijit.Menu");
+ 		//dojo.require("dijit.ProgressBar");
+ 		dojo.require("dijit.TitlePane");
+ 		dojo.require("dijit.Toolbar");
+ 		dojo.require("dijit.Tooltip");
+ 		dojo.require("dijit.Tree");
+ 		dojo.require("dijit.InlineEditBox");
+
+		
+
+		dojo.require("dojo.parser");	// scan page for widgets and instantiate them
+
+
+
+
+	</script>
+	
+
+	<script type="text/javascript">
+
+		function makeFloater() {
+			// programatically created FloatingPane with srcNode ref
+			var tmp = new dojox.layout.FloatingPane({  
+				title: "dynamically created ...",
+				id:"floater3",
+				closeable:true,
+				resizable:true,
+				dockable: false
+			},"nonFloater");
+			tmp.startup(); 
+		}
+
+		var mi = 1;
+		function newFloater(tit,requestUrl, wi, he,divId){
+			var node = document.createElement('div');
+			node.top=50;
+			node.left=50;
+			dojo.byId(divId).appendChild(node);
+			
+			dojo.addClass(node,"testFixedSize");
+			var tmp = new dojox.layout.FloatingPane({
+				title:tit,
+				href:requestUrl,
+				dockable: false,
+				maxable: true,
+				closable: true,
+				resizable: false
+			},node);
+			tmp.startup();
+			tmp.resize({ w:wi, h:he });
+			tmp.style.zIndex=2001;			
+		}
+
+		var vpx, vpy = null;
+		
+		function addProdutosTab(tabbedpane,tabid,tablabel){
+		    var containernode=dojo.byId(tabbedpane);
+		    		
+		    var tab1 = dojo.widget.createWidget("ContentPane",{id:tabid,label:tablabel,closable:true});
+		    	    
+		    containernode.addChild(tab1);		    		    
+		
+		}
+		
+		function addTab(tabbedpaneid,tabid,tablabel,url){
+			var tabs = dijit.byId(tabbedpaneid);
+			var randomnumber=Math.floor(Math.random()*1001);
+			var tabname=tabid+''+randomnumber;
+			var child = new dijit.layout.ContentPane({ href:url, id:tabname,title:tablabel,closable:true});			
+			tabs.addChild(child);
+		}
+
+		function showDialog(dialogtitle,dialogid,url) {			
+			var dlg = new dijit.Dialog({ href:url, id:dialogid,title:dialogtitle});
+			dlg.show();
+		}
+	</script>
+
+<%
+		com.adapit.portal.dto.UsuarioDTO usuario =(com.adapit.portal.dto.UsuarioDTO) session.getAttribute("user");	
+			
+    %>
+     <script type="text/javascript">
+		var timer = null;
+		var refreshTime=5;
+		var pararAtualizar=false;
+		var listarTodos=false;
+	    	function refreshShoppingCart() {
+			var lancesTb = dojo.byId('minhasComprasDiv');
+			if (lancesTb == null) return; 
+			if (timer) clearTimeout(timer);
+			if (!pararAtualizar){
+			  <% if (usuario != null){%>
+			  	
+			  			jqueryOpen('minhasCompras.html','minhasComprasDiv');
+						return false;
+				
+			  <%}%>			  
+			}
+		}
+		function changeRefreshTime(ref)
+		{
+			refreshTime = ref.options(ref.selectedIndex).text;
+			//alert('Tempo Trocado para '+refreshTime);
+		} 
+		
+    </script>

@@ -1,0 +1,271 @@
+<LINK rel="stylesheet" type="text/css" href="css/main.css"/>
+<% 
+String lang10 = (String) request.getSession().getAttribute("lang");
+	if(lang10 == null)
+		lang10 = "pt";
+%>
+<script type="text/javascript" src="js/jquery/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="js/jquery/jquery-ui-1.8.4.custom.min.js"></script>
+<script type="text/javascript" src="js/jquery/jquery.bgiframe-2.1.1.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$("#solucoestabs").tabs();
+	});
+</script>
+<style>
+.tab_content{
+	font-family: 'Arial',sans-serif;   
+	font-size: 12px; 
+	line-height: normal; 
+	font-size-adjust: none; 
+	font-stretch: normal; 
+	color: black;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+</style>
+
+<div class ="tab_content" >
+<div id="solucoestabs" >
+
+	<ul>
+		<li><a href="#Sistema_Work_Case_Toolkit_tabs"><b>Work Case Toolkit (WCT)</b></a></li>
+		<li><a href="#Consultoria_tabs"><b><%=(lang10.equalsIgnoreCase("en")?"Services and Consulting":"Consultoria e Servi&ccedil;os") %></b></a></li>
+		<li><a href="#Treinamentos_em_Tecnologias_tabs"><b><%=(lang10.equalsIgnoreCase("en")?"Technology Trainings":"Treinamentos em Tecnologias") %></b></a></li>
+		<li><a href="#Desenvolvimento_de_Software_tabs"><b><%=(lang10.equalsIgnoreCase("en")?"Software Development":"Desenvolvimento de Software") %></b></a></li>				
+	</ul>
+
+
+
+<!--<div id="Todos_os_Servi&ccedil;os_tabs" >		
+
+		
+<%@include file="servicos.jsp"%>
+</div>
+
+-->
+<div id="Sistema_Work_Case_Toolkit_tabs" style="padding:10px;">		
+		<%@include file="descricao.htm"%>
+		<p>
+			<a href=""			
+			onclick="jqueryOpen('produtos.html?sigla=wct','contentDiv'); return false;"			
+			style="cursor: hand; cursor: pointer;">
+			<%=(lang10.equalsIgnoreCase("en")?"Know more":"Saiba mais") %> ...</a> 
+
+		</p>
+		
+
+</div>
+
+<div id="Consultoria_tabs" style="padding:10px;">		
+
+<p><b><%=(lang10.equalsIgnoreCase("en")?"Services and Consulting":"Consultoria e Servi&ccedil;os") %></b></p>
+ <table border="0" width="950px" cellspacing="5" cellpadding="0" style="background-color: transparent;">
+	 <tr>
+	 	<td width="20px"><img src="imgs/setamenu.gif"></td>
+	 	<td width>
+	 	<%=(lang10.equalsIgnoreCase("en")?
+	 	"Software development architecture avaliation with its suggestion of improvements.":
+	 	"Avalia&ccedil;&atilde;o da arquitetura de desenvolvimento de software de sua empresa com sugest&atilde;o de melhorias.") %></td>
+	 </tr>
+	 <tr>
+	 	<td width="20px"><img src="imgs/setamenu.gif"></td>
+	 	<td width>
+	 	<%=(lang10.equalsIgnoreCase("en")?
+	 	"Monitoring and directing the deployment and configuration of an architecture of software development for your business.":
+	 	"Acompanhamento e direcionamento da implanta&ccedil;&atilde;o e configura&ccedil;&atilde;o de uma arquitetura de desenvolvimento de software adequada ao seu neg&oacute;cio.") %></td>
+	 </tr> 
+	 <tr>
+	 	<td width="20px"><img src="imgs/setamenu.gif"></td>
+	 	<td width><%=(lang10.equalsIgnoreCase("en")?
+	 	"Monitoring the development of applications with the WCT.":
+	 	"Acompanhamento no desenvolvimento de aplica&ccedil;&otilde;es com a WCT.") %></td>
+	 </tr>
+	 <tr>
+	 	<td width="20px"><img src="imgs/setamenu.gif"></td>
+	 	<td width><%=(lang10.equalsIgnoreCase("en")?
+	 	"Support the integration of WCT in the life cycle of software development processes.":
+	 	"Suporte &agrave; integra&ccedil;&atilde;o da WCT no ciclo de vida de processos de desenvolvimento de software.") %></td>
+	 </tr>
+	 <tr>
+	 	<td width="20px"><img src="imgs/setamenu.gif"></td>
+	 	<td width><%=(lang10.equalsIgnoreCase("en")?
+	 	"Development on demand transformer models for code-specific technologies.":
+	 	"Desenvolvimento por demanda de transformadores de modelos para c&oacute;digo de tecnologias espec&iacute;ficas.") %>
+	 	</td>
+	 </tr>
+	 <tr>
+	 	<td width="20px"><img src="imgs/setamenu.gif"></td>
+	 	<td width><%=(lang10.equalsIgnoreCase("en")?
+	 	"Contract maintenance and support for WCT.":
+	 	"Contrato de manuten&ccedil;&atilde;o e suporte pra WCT.") %></td>
+	 </tr> 
+ </table>		
+		
+</div>
+
+
+<div id="Treinamentos_em_Tecnologias_tabs" style="padding:10px;" >		
+<p>
+<%if(lang10.equalsIgnoreCase("pt")){ %>
+<b>Treinamentos
+em tecnologias de produ&ccedil;&atilde;o de sistemas</b> formam outro servi&ccedil;o disponibilizado
+na Adapit.</p>
+<p><b>Caracter&iacute;sticas do Servi&ccedil;o:</b>
+<%}else{%>
+<b> Training in software development context </b> are another service available
+in Adapit.</p>
+<p><b>Service Features:</b>
+<%}%>
+</p>
+
+ <table border="0" width="950px" cellspacing="5" cellpadding="0" style="background-color: transparent;">
+	 <tr>
+	 	<td width="20px"><img src="imgs/setamenu.gif"></td>
+	 	<td width>
+	 	<%=(lang10.equalsIgnoreCase("en")?
+	 	"Enable professionals in the technologies used in production for software factories.":
+	 	"Capacitam profissionais nas tecnologias utilizadas em produ&ccedil;&atilde;o por f&aacute;bricas de software.") %>
+	 	</td>
+	 </tr>
+	 <tr>
+	 	<td width="20px"><img src="imgs/setamenu.gif"></td>
+	 	<td width>
+	 	<%=(lang10.equalsIgnoreCase("en")?
+	 	"Trainings are customized to specific technologies used by factories.":
+	 	"S&atilde;o treinamentos personalizados para as tecnologias usadas pelas f&aacute;bricas.") %>
+	 	</td>
+	 </tr> 
+	 <tr>
+	 	<td width="20px"><img src="imgs/setamenu.gif"></td>
+	 	<td width>
+	 	<%=(lang10.equalsIgnoreCase("en")?
+	 	"Because they are customized, allows students to be productive on specific technologies in short time.":
+	 	"Por serem personalizados, os treinamentos permitem que os alunos sejam produtivos nas tecnologias em curto tempo.") %>
+	 	</td>
+	 </tr> 
+	 <tr>
+	 	<td width="20px"><img src="imgs/setamenu.gif"></td>
+	 	<td width>
+	 	<%=(lang10.equalsIgnoreCase("en")?
+	 	"Trainings which the content is requirement for hiring known in some companies at Porto Alegre.":
+	 	"Treinamentos os quais os conte&uacute;dos s&atilde;o requisitos para contrata&ccedil;&atilde;o	nas f&aacute;bricas de software.") %>
+	 	</td>
+	 </tr> 
+ </table>
+		<p>
+			<a href=""			
+			onclick="jqueryOpen('showFormacoes_.html?pageUrl=showAboutTrainings.html','contentDiv'); return false;"			
+			style="cursor: hand; cursor: pointer;">
+			<%=(lang10.equalsIgnoreCase("en")?"Types of Trainings":"Tipos de Treinamentos") %></a> | 
+			<a href=""			
+			onclick="jqueryOpen('showFormacoes_.html?','contentDiv'); return false;"			
+			style="cursor: hand; cursor: pointer;">
+			<%=(lang10.equalsIgnoreCase("en")?"Formations":"Forma&ccedil;&otilde;es") %></a> | 
+			<a href="files/Apresentacao_Treinamento_Adapit.pdf"			
+			target="blanck" style="cursor: hand; cursor: pointer;">
+			<%=(lang10.equalsIgnoreCase("en")?"Check out our folder":"Confira a Nossa Carta de Apresenta&ccedil;&atilde;o") %></a>
+		</p>
+</div>
+
+
+
+<div id="Desenvolvimento_de_Software_tabs" style="padding:10px;">		
+<p>
+<%if(lang10.equalsIgnoreCase("pt")){ %>
+<b>Desenvolvimento de software por demanda</b>
+para sistemas de com&eacute;rcio eletr&ocirc;nico, ERP e CRM.
+<%}else{%>
+<b>Software development on demand </ b>
+for e-commerce systems, ERP and CRM.
+<%}%>
+ 
+
+</p>
+<br>
+<table cellpadding="0" cellspacing="0" width="950px" height="50">
+	  <tr><th colspan="2" align="center"  valign="middle" height="25" 
+	  style="font-family: arial; font-size: 15; background-color:#999999">
+	  <center><font style="font-family: arial; font-size: 14; font: bold" color="#FFFFFF">
+	  <b><%=(lang10.equalsIgnoreCase("en")?"On Demmand Software Development":"Desenvolvimento de Software por Demanda") %></b></font></center></th></tr>
+	<td bgcolor="#FFFFFF" width="50%" valign="top">
+	   <p><center><b><%=(lang10.equalsIgnoreCase("en")?"Bennefits":"Benef&iacute;cios") %></b></center></p>
+	   <ul>
+		<li><%=(lang10.equalsIgnoreCase("en")?
+		"Use of open Ajax patterns such as JQuery or Dojo Toolkit.":
+		"Uso de padr&otilde;es Ajax abertos como Dojo Toolkit ou JQuery.") %>
+		<li><%=(lang10.equalsIgnoreCase("en")?
+		"Runs on any platform like web browser, desktop and mobile.":
+		"Roda em qualquer lugar como em web browser, desktop e mobile.") %>
+		<li><%=(lang10.equalsIgnoreCase("en")?
+		"Constant interaction with the customer.":
+		"Intera&ccedil;&atilde;o constante com o cliente.") %>
+		<li><%=(lang10.equalsIgnoreCase("en")?
+		"Investment available for micro enterprises.":
+		"Investimento acess&iacute;vel para micro empreendimentos.") %>
+		<li><%=(lang10.equalsIgnoreCase("en")?
+		"Support materials (tutorials and helps).":
+		"Material de apoio (apostilas e helps).") %>		
+	   </ul>	   
+	   </td>
+	   <td bgcolor="#FFFFFF" width="50%" valign="top">
+	   <p><center><b><%=(lang10.equalsIgnoreCase("en")?"Features":"Caracter&iacute;sticas") %></b></center></p>
+	   <ul>
+		<li><%=(lang10.equalsIgnoreCase("en")?
+		"Very agile development process, using Scrum and our software WCT.":
+		"Desenvolvimento muito &aacute;gil, usando Scrum e o nosso software WCT.") %>
+		<li><%=(lang10.equalsIgnoreCase("en")?
+		"First working prototype is delivered in a week.":
+		"Primeiro prot&oacute;tipo funcional &eacute; entregue em uma semana.") %>
+		<li><%=(lang10.equalsIgnoreCase("en")?
+		"Systems support visual quality":
+		"Sistemas de boa qualidade visual.") %>
+		<li><%=(lang10.equalsIgnoreCase("en")?
+		"Platform Independent":
+		"Independente de plataforma.") %>
+		<li><%=(lang10.equalsIgnoreCase("en")?
+		"Independent from Data Base Management System (DBMS)":
+		"Independente de sistema gerenciador de banco de dados (SGBD).") %>
+	   </ul>	   
+	   </td>	   
+	  </tr>											
+</table>
+<p><%=(lang10.equalsIgnoreCase("en")?"Service Features":"Caracter&iacute;sticas do Servi&ccedil;o") %>:</p>
+
+ <table border="0" width="950px" cellspacing="5" cellpadding="0" style="background-color: transparent;">
+	 <tr>
+	 	<td width="20px"><img src="imgs/setamenu.gif"></td>
+	 	<td width><%=(lang10.equalsIgnoreCase("en")?
+	 	"Very accessible software, because Adapit developed a technology that allows it to produce faster, having a low production cost.":
+	 	"Software muito acess&iacute;vel, pois a Adapit desenvolveu uma tecnologia que lhe permite produzir com maior agilidade, tendo um custo de produ&ccedil;&atilde;o baixo.") %>
+	 	</td>
+	 </tr>
+	 <tr>
+	 	<td width="20px"><img src="imgs/setamenu.gif"></td>
+	 	<td width><%=(lang10.equalsIgnoreCase("en")?
+	 	"The software is developed with the latest technologies.":
+	 	"Os softwares s&atilde;o desenvolvidos com as tecnologias mais recentes.") %>
+	 	</td>
+	 </tr> 
+	 <tr>
+	 	<td width="20px"><img src="imgs/setamenu.gif"></td>
+	 	<td width><%=(lang10.equalsIgnoreCase("en")?
+	 	"Use of open initiatives like Java, for the development and implementation of applications.":
+	 	"Utiliza&ccedil;&atilde;o de tecnologias livres, como Java, para o desenvolvimento e execu&ccedil;&atilde;o das aplica&ccedil;&otilde;es.") %>
+	 	</td>
+	 </tr> 
+ </table>
+		<p>
+			<a href=""			
+			onclick="jqueryOpen('produtos.html?information=softdema','contentDiv'); return false;"			
+			style="cursor: hand; cursor: pointer;">
+			<%=(lang10.equalsIgnoreCase("en")?"Know more":"Saiba mais") %> ...</a>
+		
+		</p>
+</div>
+
+
+</div>
+
+</div>

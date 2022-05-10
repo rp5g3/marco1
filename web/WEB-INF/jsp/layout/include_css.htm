@@ -1,0 +1,157 @@
+<%@ taglib prefix="jstl" uri="http://java.sun.com/jstl/core"%>
+<%@ taglib prefix="validation" uri="http://www.springmodules.org/tags/commons-validator"%>
+<%@ taglib prefix="binder" uri="http://www.springframework.org/tags"%>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<title>.: Adapit Solu&ccedil;&otilde;es em Tecnologia da Informa&ccedil;&atilde;o :.</title>
+	<link rel="shortcut icon" href="imgs/logo_adapit.ico" />
+	<!-- ==============default=================== -->
+	<LINK rel="stylesheet" type="text/css" href="css/main.css"/>
+	<LINK rel="stylesheet" type="text/css" href="css/default.css"/>
+	<!-- ==============jquery=================== -->
+	<link type="text/css" href="css/jquery/jquery-ui-1.8.4.custom.css" rel="stylesheet" />	
+	<!-- ==============rich text=================== -->
+	<link rel="stylesheet" href="css/jwysiwyg/jquery.wysiwyg.css" type="text/css" />
+
+<style type="text/css">
+   #just_dialog div button { font-size: 62.5%; }
+</style>
+	
+<LINK rel="stylesheet" type="text/css" href="css/menuTest.css"/>
+
+
+<style>
+
+.font_title_transform{
+	font-family: 'Arial',sans-serif; 
+	font-variant: small-caps; 
+	font-weight: bold; 
+	font-size: 16px; 
+	line-height: normal; 
+	font-size-adjust: none; 
+	font-stretch: normal; 
+	-x-system-font: none; 
+	color: white;
+}
+.font_title{
+	font-family: 'Arial',sans-serif;  
+	font-weight: bold; 
+	font-size: 14px; 
+	line-height: normal; 
+	font-size-adjust: none; 
+	font-stretch: normal; 
+	color: white;
+	vertical-align: middle;
+}
+
+font{
+	font-family: 'Arial',sans-serif;   
+	font-size: 12px; 
+	line-height: normal; 
+	font-size-adjust: none; 
+	font-stretch: normal; 
+	color: black;
+}
+
+.panel_title_lev2{
+	height:20px;
+	background:#333333; 
+	border-top:solid windowtext 1.0pt; 
+	border-left:solid windowtext 1.0pt; 
+	border-right:solid windowtext 1.0pt; 
+	border-color:silver;
+}
+
+.panel_title{
+	height:25px;
+	background:#890000; 
+	border-top:solid windowtext 1.0pt; 
+	border-left:solid windowtext 1.0pt; 
+	border-right:solid windowtext 1.0pt; 
+	border-color:silver;
+	padding-top:5px;
+}
+
+.panel_content{
+	 background:#FaFeF1; 
+	 border:solid windowtext 1.0pt; 
+	 border-color:silver;
+	 border-top:solid windowtext 0.0pt;
+	 font-family: 'Arial',sans-serif;   
+	font-size: 12px; 
+	line-height: normal; 
+	font-size-adjust: none; 
+	font-stretch: normal; 
+	color: black;
+}
+
+.pais_div{
+	height:15px;
+	background:#890000; 
+	border-bottom:solid windowtext 1.0pt; 
+	border-left:solid windowtext 1.0pt; 
+	border-right:solid windowtext 1.0pt; 
+	border-color:silver;
+}
+</style>
+<style>
+table td{
+	font-family: 'Arial',sans-serif;   
+	font-size: 12px; 
+	line-height: normal; 
+	font-size-adjust: none; 
+	font-stretch: normal; 
+	color: black;
+}
+	a:visited {
+		text-decoration: none;
+		font-family: Arial, Verdana, Helvetica, sans-serif;
+		font-weight: bold;
+		font-size: 12px;
+		color: #5500000;
+	}
+	
+	a:hover {
+		text-decoration: none;
+		font-family: Arial, Verdana, Helvetica, sans-serif;
+		font-weight: bold;
+		font-size: 12px;
+		color: #222222;
+	}
+	
+	a:active {
+		text-decoration: none;
+		font-family: Arial, Verdana, Helvetica, sans-serif;
+		font-weight: bold;
+		font-size: 12px;
+		color: #000000;
+	}
+	a:LINK{
+		text-decoration: none;
+		font-family: Arial, Verdana, Helvetica, sans-serif;
+		font-weight: bold;
+		font-size: 12px;
+		color: #000000;
+	}
+p{
+	text-align:justify;
+	text-indent:15pt;
+	font: normal 12px 'Arial', arial;
+}
+ol,ul{
+	font: normal 12px 'Arial', arial;
+}
+a.linkopacity b {
+	filter:alpha(opacity=80); 
+	-moz-opacity: 0.5; 
+	opacity: 0.5;
+}
+	
+a.linkopacity:hover b {
+	filter:alpha(opacity=100);   
+	-moz-opacity: 1.0;   
+	opacity: 1.0;
+}
+</style>

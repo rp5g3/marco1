@@ -1,0 +1,42 @@
+
+      <style type="text/css">
+        <!--
+
+        label{
+        	color:#000000;
+		   	font-family:Arial,verdana,'trebuchet ms',helvetica,sans-serif;
+		   	font-size:10px;
+		   	font-weight:bold;      
+        	vertical-align: left;  
+			text-align: left;          	   
+        }
+        label.title2{        	 
+			color:#000000;
+			font-family:Arial,verdana,'trebuchet ms',helvetica,sans-serif;
+			font-size:13px;
+			font-weight:bold;
+			vertical-align: center;
+			text-align: center;     
+        }
+
+        .error-msg-1 {
+        	color: #CC3311;
+        	text-align: center;
+        	font-size: 12px;
+        	font-family:Arial,verdana,'trebuchet ms',helvetica,sans-serif;
+        }
+        
+        #appContentDiv {
+			color:#000000;
+			font-family:Arial,verdana,'trebuchet ms',helvetica,sans-serif;
+			font-size:10px;
+			font-weight:bold;
+			margin-left: 0px;
+			margin-top: 0px;
+			margin-right: 0px;
+			margin-bottom: 0px;
+		}
+			
+   
+        -->
+      </style>

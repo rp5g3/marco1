@@ -1,0 +1,45 @@
+
+      <style type="text/css">
+        <!--
+        table.presentation{
+           border-collapse: collapse;
+        }
+        table.presentation tr td {
+           border:1px solid #666666;
+           font-family:"arial";
+           font-size: 12px;
+           padding: 0px;
+           background-color:#FEFEFE;
+        }
+        table.presentation tr tH {
+           border:1px solid #666666;
+           background-color:#EEEEEE;
+           font-family:"arial";
+           font-size: 12px;
+           font-weight:normal;
+           background-image: url("TableHeader.png");
+        }
+        div.scroll {
+           color:#FF0000;
+           padding:5px;
+           overflow:auto;
+        }
+        label{
+        	   color:#333333;
+        	   font-weight:bold;
+        	   font-size: 13px;
+        	   font-family:"arial";
+        	}
+        	input{
+        	   font-size: 12px;
+        	   font-family:"arial";
+        	}
+        	table{
+        	   background-color:#F3F2F3;
+        	}
+        	table tr td {
+        	   padding: 0px;
+        	   border-collapse: collapse;
+        	}
+        -->
+      </style>

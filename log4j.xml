@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<!-- Contributed by Marcelo Mrack, 29/Mar/2004 -->
+<!-- @see http://supportweb.cs.bham.ac.uk/documentation/tutorials/docsystem/build/tutorials/log4j/log4j.html -->
+<!-- @see Useful Layouts em http://www.vipan.com/htdocs/log4jhelp.html -->
+
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/" debug="false">
+
+   <appender name="CONSOLE" class="org.apache.log4j.ConsoleAppender">
+      <errorHandler class="org.jboss.logging.util.OnlyOnceErrorHandler"/>
+      <param name="Target" value="System.out"/>
+      <param name="Threshold" value="DEBUG"/>
+
+      <layout class="org.apache.log4j.PatternLayout">        
+         <param name="ConversionPattern" value="%d{ABSOLUTE} %-5p %m (%F:%L)%n" />
+      </layout>
+   </appender>	
+   
+   <category name="com.tknowledge.horizonte">
+      <priority value="DEBUG"/>
+   </category> 
+	
+	<root>
+		<priority value="DEBUG"/>
+		<appender-ref ref="CONSOLE"/>
+	</root>
+
+</log4j:configuration>

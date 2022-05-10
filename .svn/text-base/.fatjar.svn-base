@@ -1,0 +1,14 @@
+#Fat Jar Configuration File
+#Fri Dec 03 16:43:45 BRST 2010
+onejar.license.required=true
+manifest.classpath=
+manifest.removesigners=true
+onejar.checkbox=false
+jarname=Adapit_03__12_2010.jar
+manifest.mergeall=true
+manifest.mainclass=com.adapit.portal.ui.frames.AdapitVirtualFrame
+manifest.file=<createnew>
+jarname.isextern=false
+onejar.expand=
+excludes=
+includes=

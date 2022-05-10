@@ -1,0 +1,107 @@
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/adapitsys/!svn/ver/386/AdapitFromServerJQuery/src/com/adapit/portal/services/controllers
+END
+EstadoCivilPropertyEditor.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/services/controllers/EstadoCivilPropertyEditor.java
+END
+UsuarioViewController.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/adapitsys/!svn/ver/383/AdapitFromServerJQuery/src/com/adapit/portal/services/controllers/UsuarioViewController.java
+END
+PublicationViewController.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/adapitsys/!svn/ver/274/AdapitFromServerJQuery/src/com/adapit/portal/services/controllers/PublicationViewController.java
+END
+ApresentacaoViewController.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/adapitsys/!svn/ver/383/AdapitFromServerJQuery/src/com/adapit/portal/services/controllers/ApresentacaoViewController.java
+END
+UpdateViewController.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/adapitsys/!svn/ver/350/AdapitFromServerJQuery/src/com/adapit/portal/services/controllers/UpdateViewController.java
+END
+WCTViewController.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/services/controllers/WCTViewController.java
+END
+FabricaSoftwareViewController.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/services/controllers/FabricaSoftwareViewController.java
+END
+SoftwareMultiActionController.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/adapitsys/!svn/ver/383/AdapitFromServerJQuery/src/com/adapit/portal/services/controllers/SoftwareMultiActionController.java
+END
+TechDefinitionMultiActionController.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/adapitsys/!svn/ver/274/AdapitFromServerJQuery/src/com/adapit/portal/services/controllers/TechDefinitionMultiActionController.java
+END
+PaisPropertyEditor.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/services/controllers/PaisPropertyEditor.java
+END
+ComercialSolutionsViewController.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/adapitsys/!svn/ver/165/AdapitFromServerJQuery/src/com/adapit/portal/services/controllers/ComercialSolutionsViewController.java
+END
+ParticipanteMultiActionController.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/adapitsys/!svn/ver/375/AdapitFromServerJQuery/src/com/adapit/portal/services/controllers/ParticipanteMultiActionController.java
+END
+TrainingPresentationViewController.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/adapitsys/!svn/ver/383/AdapitFromServerJQuery/src/com/adapit/portal/services/controllers/TrainingPresentationViewController.java
+END
+InstitucionalViewController.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/adapitsys/!svn/ver/274/AdapitFromServerJQuery/src/com/adapit/portal/services/controllers/InstitucionalViewController.java
+END
+RHMultiActionController.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/adapitsys/!svn/ver/274/AdapitFromServerJQuery/src/com/adapit/portal/services/controllers/RHMultiActionController.java
+END
+NewsViewController.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/adapitsys/!svn/ver/274/AdapitFromServerJQuery/src/com/adapit/portal/services/controllers/NewsViewController.java
+END
+TreinamentosMultiActionController.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/adapitsys/!svn/ver/386/AdapitFromServerJQuery/src/com/adapit/portal/services/controllers/TreinamentosMultiActionController.java
+END

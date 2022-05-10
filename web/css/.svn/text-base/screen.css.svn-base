@@ -1,0 +1,46 @@
+<style>
+<!-- /* Style Definitions */
+td.ImagemLeftDIV {
+	background-image: url(../imgs/userleftcorner.png);
+	background-repeat:no-repeat;
+	width: 17px;
+	height: 21px;
+	border-color: black;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-top-width: 0px;
+	border-left-width: 0px;
+}
+
+
+td.ContentTitleLargeDIV {
+	background-image: url(../imgs/menubk3.png);
+	width: 560px;
+	height: 21px;
+	border-color: black;
+	border-right-width: 1px;
+	border-bottom-width: 0px;
+	border-top-width: 0px;
+	border-left-width: 0px;
+	color: white;
+	border-style: solid;
+	font-family: Arial;
+	font-size: 12px;
+	vertical-align: middle;
+}
+
+td.DefaultContentDIV {
+	background-color: transparent;
+	border-bottom-color: black;
+	border-bottom-width: 1px;
+	border-left-color: black;
+	border-left-width: 1px;
+	border-right-color: black;
+	border-right-width: 1px;
+	border-top-color: black;
+	border-top-width: 1px;
+	border-style: solid;
+	height: 100%;
+}
+-->
+</style>

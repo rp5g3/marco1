@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project name="ADAPIT - Adaptando Tecnologias e Agilizando o Seu Trabalho" default="prepare">
+	<property file="build.properties" />
+	<property name="name" value="adapit" />
+
+	<target name="init">
+		<mkdir dir="dist" />
+		<mkdir dir="${web.dir}" />
+		<mkdir dir="${web.bin}" />
+		<mkdir dir="${web.lib}" />
+		<mkdir dir="${web.work}" />
+		<mkdir dir="${test.bin}" />
+		<mkdir dir="${src.temp}" />
+		<path id="project.class.path">
+			<pathelement location="${web.bin}" />
+			<pathelement location="${test.bin}" />
+			<fileset dir="${web.lib}">
+				<exclude name="**/${jar.name}" />
+				<include name="**/*.jar" />
+			</fileset>
+			<fileset dir="${xdoclet.lib}">
+				<include name="**/*.jar" />
+			</fileset>
+			<fileset dir="${tomcat.dir}/common/lib">
+				<include name="servlet*.jar" />
+				<include name="jsp*.jar" />
+			</fileset>
+		</path>
+		<taskdef classpathref="project.class.path" resource="org/apache/commons/attributes/anttasks.properties" />
+	</target>
+
+	<target name="compile" depends="attrib">
+		<javac classpathref="project.class.path" destdir="${web.bin}" srcdir="${src.dir}" debug="true" />
+		<javac classpathref="project.class.path" destdir="${web.bin}" srcdir="${src.temp}" debug="true" />
+
+		<copy todir="${web.bin}">
+			<fileset dir="${src.dir}">
+				<exclude name="**/*.java" />
+			</fileset>
+		</copy>
+	</target>
+
+	<target name="attrib" depends="init">
+		<attribute-compiler destdir="${src.temp}">
+			<fileset dir="${src.dir}" includes="**/*.java" />
+		</attribute-compiler>
+	</target>
+
+	<target name="clean">
+		<delete dir="dist" />
+		<delete dir="${src.temp}" />
+		<delete dir="${web.bin}" />
+		<delete dir="${web.work}" />
+		<delete file="${web.lib}/${jar.name}" />
+	</target>
+	<target name="hibernate" depends="init">
+		<taskdef name="hibernatedoclet" classname="xdoclet.modules.hibernate.HibernateDocletTask" classpathref="project.class.path" />
+		<hibernatedoclet excludedTags="@version,@author,@todo,@see" destDir="${web.bin}" addedTags="@xdoclet-generated at ${TODAY},@copyright The XDoclet Team,@author XDoclet,@version ${version}">
+			<fileset dir="${src.dir}" includes="**/*.java" />
+			<hibernate version="2.0" />
+			<hibernatecfg hbm2ddl="${hibernate.hbm2ddl}" poolSize="${hibernate.poolsize}" jdbcUrl="${hibernate.url}" useOuterJoin="true" showSql="${hibernate.showsql}" dialect="${hibernate.dialect}" driver="${hibernate.driver}" userName="${hibernate.user}" password="${hibernate.password}" cglibUseReflectionOptimizer="${hibernate.cglib}" />
+		</hibernatedoclet>
+	</target>
+	<target name="spring" depends="init">
+		<taskdef name="springdoclet" classname="xdoclet.modules.spring.SpringDocletTask" classpathref="project.class.path" />
+		<taskdef name="webdoclet" classname="xdoclet.modules.web.WebDocletTask" classpathref="project.class.path" />
+		<springdoclet destDir="${web.dir}/WEB-INF">
+			<fileset dir="${src.dir}" includes="**/*.java" />
+			<springxml destDir="${web.dir}/WEB-INF" destinationFile="springAutogen.xml" defaultAutowire="byName" defaultLazyInit="true" xmlencoding="ISO-8859-1" />
+		</springdoclet>
+		<webdoclet destDir="${web.dir}/WEB-INF">
+			<fileset dir="${src.dir}" includes="**/*.java" />
+			<springvalidationxml destDir="${web.dir}/WEB-INF" />
+		</webdoclet>
+	</target>
+	<target name="all" depends="compile,attrib,hibernate,spring,jar" />
+
+	<target name="prepare" depends="undeploy,attrib,hibernate,spring,jar,deploywar" />
+
+	<target name="tests" depends="all">
+		<junit showoutput="true" printsummary="true">
+			<classpath refid="project.class.path" />
+			<formatter type="brief" />
+			<batchtest todir="dist">
+				<fileset dir="${test.bin}" includes="**/*Test.class">
+				</fileset>
+			</batchtest>
+		</junit>
+	</target>
+	<target name="schemaexport" depends="all">
+		<java classpathref="project.class.path" classname="com.workcase.utils.HibernateExportSchema" />
+	</target>
+
+	<target name="rebuild" depends="clean,all">
+	</target>
+
+
+
+	<target name="undeploy" description="Un-Deploy application">
+		<delete failonerror="false">
+			<fileset dir="${deploy.path}/${name}">
+				<include name="**/*.*" />
+			</fileset>
+		</delete>
+		<deltree dir="${deploy.path}/${name}" />
+	</target>
+
+	<target name="jar" description="jar">
+		<jar destfile="${web.lib}/${jar.name}" basedir="${web.bin}" compress="true" index="true">
+			<include name="**/*.*" />
+			<fileset dir="${web.dir}/WEB-INF" includes="jasper/*.jasper" />
+			<fileset dir="${web.dir}/WEB-INF" includes="springAutogen.xml" />
+			<fileset dir="${web.dir}/WEB-INF" includes="site-views.xml" />
+		</jar>
+		<attribute-indexer jarFile="${web.lib}/${jar.name}">
+			<classpath refid="project.class.path" />
+		</attribute-indexer>
+	</target>
+
+	<target name="deploywar" description="Deploy application as a WAR file">
+		<war destfile="${name}.war" webxml="${web.dir}/WEB-INF/web.xml">
+			<fileset dir="${web.dir}">
+				<include name="**/*.*" />
+			</fileset>
+		</war>
+		<copy todir="${deploy.path}" preservelastmodified="true">
+			<fileset dir=".">
+				<include name="*.war" />
+			</fileset>
+		</copy>
+	</target>
+	<target name="generatetablesjar" description="Gera o arquivo jar da aplicação servidor responsável em criar a base de dados inical do sistema">
+		<delete file="web/WEB-INF/generatetables.jar" />
+		<delete file="MANIFEST.MF" />
+
+		<manifest file="MANIFEST.MF">
+			<attribute name="Built-By" value="${user.name}" />
+
+			<attribute name="Main-Class" value="deploy.CreateTables" />
+
+			<attribute name="Class-Path" value=" lib/activation.jar lib/ajaxtags-1.3-beta-rc7.jar lib/antlr-2.7.6.jar lib/aopalliance.jar lib/leilao.jar
+			     		 lib/asm.jar lib/asm-attrs.jar lib/cglib-2.1.3.jar lib/commons-attributes-api.jar lib/commons-attributes-compiler.jar  
+			     		 lib/commons-beanutils.jar lib/commons-codec.jar lib/commons-collections.jar lib/commons-dbcp.jar  
+			     		 lib/commons-digester.jar lib/commons-discovery.jar lib/commons-fileupload.jar lib/commons-httpclient.jar  
+			     		 lib/commons-io.jar lib/commons-javaflow.jar lib/commons-lang.jar lib/commons-logging.jar  
+			     		 lib/commons-pool.jar lib/commons-validator.jar lib/connector.jar lib/dom4j-1.6.1.jar lib/ehcache-1.2.3.jar  
+			     		 lib/ejb3-persistence.jar lib/Filters.jar lib/hibernate3.jar lib/hibernate-annotations.jar  
+			     		 lib/hibernate-entitymanager.jar lib/itext-1.02b.jar lib/jai_codec.jar  lib/jai_core.jar  
+			     		 lib/jakarta-oro.jar lib/jasperreports-1.2.8.jar lib/javassist.jar lib/jaxen-1.1-beta-7.jar  
+			     		 lib/jboleto-0.9.6.jar lib/jboss-archive-browsing.jar lib/jboss-common.jar lib/jdbc2_0-stdext.jar  
+			     		 lib/jdt-compiler.jar lib/jmock-1.1.0RC1.jar lib/jsp-api.jar lib/jstl.jar lib/jta.jar  
+			     		 lib/log4j-1.2.11.jar lib/lucene-1.4.3.jar lib/mail.jar lib/mlibwrapper_jai.jar  
+			     		 lib/odmg.jar lib/ojdbc14_g.jar lib/pdfbox-0.6.5.jar lib/poi-2.0-final-20040126.jar lib/poi-2.5.1.jar  
+			     		 lib/postgresql-8.1-404.jdbc3.jar lib/qdox-1.6.jar lib/spring.jar lib/spring-aspects.jar lib/spring-hibernate3.jar
+			     		 lib/spring-mock.jar lib/spring-modules-jakarta-commons.jar  lib/spring-modules-validation.jar  
+			     		 lib/standard.jar lib/velocity-1.4.jar lib/velocity-tools-generic-1.1.jar lib/xml-apis.jar  
+			     		 lib/quartz-all-1.6.0.jar lib/itext-1.3.6-2006-02-10.jar lib/brazilutils-0.1.1.jar lib/jh.jar lib/jhall.jar  
+			     		 lib/jhbasic.jar lib/jsearch.jar 
+			     		lib/*.*" />
+		</manifest>
+
+		<jar destfile="web/WEB-INF/generatetables.jar" basedir="${web.bin}" includes="deploy/CreateTables.class, deploy/CreateTablesFrame.class, deploy/FirstUserCadastreFrame.class" manifest="MANIFEST.MF" />
+
+	</target>
+
+
+	<target name="GenerateSwingJar" description="Gera o arquivo jar da aplicação">
+		<delete file="AdapitApp.jar" />
+		<delete file="MANIFEST.MF" />
+
+		<manifest file="MANIFEST.MF">
+			<attribute name="Built-By" value="${user.name}" />
+
+			<attribute name="Main-Class" value="com.adapit.portal.ui.frames.LeilaoVirtualFrame" />
+
+			<attribute name="Class-Path" value="lib/jhbasic.jar lib/jsearch.jar lib/leilao.jar
+				     		lib/activation.jar lib/ajaxtags-1.3-beta-rc7.jar lib/antlr-2.7.6.jar lib/aopalliance.jar 
+				     		lib/asm.jar lib/asm-attrs.jar lib/cglib-2.1.3.jar lib/commons-attributes-api.jar lib/commons-attributes-compiler.jar  
+				     		lib/commons-beanutils.jar lib/commons-codec.jar lib/commons-collections.jar lib/commons-dbcp.jar  
+				     		lib/commons-digester.jar lib/commons-discovery.jar lib/commons-fileupload.jar lib/commons-httpclient.jar  
+				     		lib/commons-io.jar lib/commons-javaflow.jar lib/commons-lang.jar lib/commons-logging.jar  
+				     		lib/commons-pool.jar lib/commons-validator.jar lib/connector.jar lib/dom4j-1.6.1.jar lib/ehcache-1.2.3.jar  
+				     		lib/ejb3-persistence.jar lib/Filters.jar lib/hibernate3.jar lib/hibernate-annotations.jar  
+				     		lib/hibernate-entitymanager.jar lib/itext-1.02b.jar lib/jai_codec.jar  lib/jai_core.jar  
+				     		lib/jakarta-oro.jar lib/jasperreports-1.2.8.jar lib/javassist.jar lib/jaxen-1.1-beta-7.jar  
+				     		lib/jBoleto.jar lib/JBarcodeBean.jar lib/jboss-archive-browsing.jar lib/jboss-common.jar lib/jdbc2_0-stdext.jar  
+				     		lib/jdt-compiler.jar lib/jmock-1.1.0RC1.jar lib/jsp-api.jar lib/jstl.jar lib/jta.jar  
+				     		lib/log4j-1.2.11.jar lib/lucene-1.4.3.jar lib/mail.jar lib/mlibwrapper_jai.jar  
+				     		lib/odmg.jar lib/ojdbc14_g.jar lib/pdfbox-0.6.5.jar lib/poi-2.0-final-20040126.jar lib/poi-2.5.1.jar  
+				     		lib/postgresql-8.1-404.jdbc3.jar lib/qdox-1.6.jar lib/spring.jar lib/spring-aspects.jar lib/spring-hibernate3.jar
+				     		lib/spring-mock.jar lib/spring-modules-jakarta-commons.jar  lib/spring-modules-validation.jar  
+				     		lib/standard.jar lib/velocity-1.4.jar lib/velocity-tools-generic-1.1.jar lib/xml-apis.jar  
+				     		lib/quartz-all-1.6.0.jar lib/itext-1.3.6-2006-02-10.jar lib/brazilutils-0.1.1.jar lib/jh.jar lib/jhall.jar  
+				     		lib/jcalendar.jar	lib/l2fprod-common-all.jar lib/l2fprod-common-buttonbar.jar	lib/l2fprod-common-directorychooser.jar
+				     		lib/l2fprod-common-fontchooser.jar lib/l2fprod-common-outlookbar.jar lib/l2fprod-common-sandbox.jar
+				     		lib/l2fprod-common-shared.jar lib/l2fprod-common-sheet.jar lib/l2fprod-common-springrcp.jar lib/l2fprod-common-tasks.jar
+				     		lib/l2fprod-common-totd.jar lib/MultipleGradientPaint.jar lib/swing-layout.jar lib/swing-worker.jar lib/swingx-0.9.1.jar
+				     		lib/swingx-2008_01_20.jar lib/AlgoBros3_20041119.jar lib/CLooks_120.jar lib/fhlaf_1.0b2_bin.jar	lib/jane-0.1.jar
+				     		lib/kunststoff.jar lib/looks-2.1.4.jar lib/metouia.jar lib/oalnf.jar lib/OfficeLnFs_1.1.1.jar lib/OfficeLnFs_2.6.jar
+				     		lib/PgsLookAndFeel.jar lib/PgsLookAndFeel-jide.jar lib/quaqua.jar	lib/squareness.jar lib/PDFRenderer-2007_12_23.jar
+				     		lib/*.*" />
+		</manifest>
+
+		<jar destfile="AdapitApp.jar" manifest="MANIFEST.MF">
+			<include name="**/*.*" />
+			<fileset dir="${web.bin}" includes="**/*.*" />
+
+		</jar>
+	</target>
+
+	<taskdef uri="antlib:org.sonar.ant" resource="org/sonar/ant/antlib.xml">
+		<classpath path="../sonar-3.0.1/ant" />
+	</taskdef>
+
+
+	<!-- Add the target -->
+	<target name="sonar">
+		<!-- list of mandatories Sonar properties -->
+		<property name="sonar.sources" value="src" />
+		<property name="sonar.projectKey" value="Basso:AdapitFromServerJQuery" />
+		<property name="sonar.projectName" value="AdapitFromServerJQuery" />
+		<property name="sonar.projectVersion" value="1.0" />
+		<!-- list of optional Sonar properties -->
+
+		<property name="sonar.binaries" value="bin" />
+		<property name="sonar.tests" value="test" />
+		<property name="sonar.libraries" value="libs/log4j-1.2.11.jar" />
+
+		<sonar:sonar key="Basso:AdapitFromServerJQuery" version="0.1-SNAPSHOT" xmlns:sonar="antlib:org.sonar.ant" />
+	</target>
+</project>

@@ -1,0 +1,92 @@
+<% 
+String lang1 = (String) request.getSession().getAttribute("lang");
+	if(lang1 == null)
+		lang1 = "pt";
+%>
+
+<%if(lang1.equalsIgnoreCase("pt")){ %>
+
+<p class="MsoNormal" style='text-align:justify;text-indent:15pt'>O 
+sistema <a href="portal.html?sys=wct">
+		<b>Work Case Toolkit (WCT)</b></a>
+	 tem como p&uacute;blico alvo quem precisa desenvolver um sistema voltado para o reuso.</p>
+
+	 <table border="0" width="950px" cellspacing="5" cellpadding="0" style="background-color: transparent;">
+	 <tr>
+	 	<td width="20px"><img src="imgs/setamenu.gif"></td>
+	 	<td width>Permite gerar funcionalidades completas com simplicidade e facilidade.
+	 	</td>
+	 </tr>
+	 <tr>
+	 	<td width="20px"><img src="imgs/setamenu.gif"></td>
+	 	<td width>Agiliza a produ&ccedil;&atilde;o de artefatos baseados em Model Driven Development.
+	 	</td>
+	 </tr> 
+	  	
+	 <tr>
+	 	<td width="20px"><img src="imgs/setamenu.gif"></td>
+	 	<td width>Funcionalidades espec&iacute;ficas para CRUD (Cadastre, Read, Update, Delete), filtros espec&iacute;ficos 
+	 	de aplica&ccedil;&otilde;es web e desktop, utilizando m&uacute;ltiplas estrat&eacute;gias de prototipa&ccedil;&atilde;o.
+	 	</td>
+	 </tr> 
+	 
+	 <tr>
+	 	<td width="20px"><img src="imgs/setamenu.gif"></td>
+	 	<td width>Sistema em constante evolu&ccedil;&atilde;o, tendo seu rumo em conformidade com boas pr&aacute;ticas de engenharia de software.
+	 	</td>
+	 </tr>
+	 
+	 
+	 <tr>
+	 	<td width="20px"><img src="imgs/setamenu.gif"></td>
+	 	<td width>Sistema open source Apache 2.0.
+	 	</td>
+	 </tr> 
+ </table>
+	
+		
+<%}else{%>
+<p class="MsoNormal" style='text-align:justify;text-indent:15pt'>
+The system <a href="portal.html?sys=wct">
+		<b>Work Case Toolkit (WCT)</b></a>
+	 has as its target audience who needs to develop a system focused on reuse.</p>
+
+	 <table border="0" width="950px" cellspacing="5" cellpadding="0" style="background-color: transparent;">
+	 <tr>
+	 	<td width="20px"><img src="imgs/setamenu.gif"></td>
+	 	<td width>Allows you to generate comprehensive features with simplicity.
+	 	</td>
+	 </tr>
+	 <tr>
+	 	<td width="20px"><img src="imgs/setamenu.gif"></td>
+	 	<td width>Speeds the production of artifacts based on Model Driven Development.
+	 	</td>
+	 </tr> 
+	  	
+	 <tr>
+	 	<td width="20px"><img src="imgs/setamenu.gif"></td>
+	 	<td width>Features specific to CRUD (Create, Read, Update, Delete), 
+	 	specific filters for web and desktop
+	 	 applications using various strategies for prototyping.
+	 	</td>
+	 </tr> 
+	 
+	 <tr>
+	 	<td width="20px"><img src="imgs/setamenu.gif"></td>
+	 	<td width>
+	 	System in constant evolution taking its course in accordance
+	 	 with best practices in software engineering and in collaboration
+	 	  with researchers.
+	 	</td>
+	 </tr>
+	 
+	 
+	 <tr>
+	 	<td width="20px"><img src="imgs/setamenu.gif"></td>
+	 	<td width>Open source Apache 2.0 license.
+	 	</td>
+	 </tr> 
+ </table>
+
+<%}%>
+			

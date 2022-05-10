@@ -1,0 +1,39 @@
+      <style type="text/css">
+        <!--
+        
+        div.scroll {
+           color:FF0000;
+           padding:5px;
+           overflow:auto;
+           border-collapse: collapse;
+        }
+        
+        div.scrollbar{
+			scrollbar-face-color: #9495B3;
+			scrollbar-shadow-color: #70718F;
+			scrollbar-highlight-color: #E0E1FF;
+			scrollbar-3dlight-color: #bcbddb;
+			scrollbar-darkshadow-color: #808080;
+			scrollbar-track-color: #BCBDDB;
+			scrollbar-arrow-color: #323197
+        }
+        
+        div.tooltip_title{
+        		color:#252;
+		   		font-family:Arial,verdana,'trebuchet ms',helvetica,sans-serif;
+		   		font-size:13px;
+		   		font-weight:bold;      
+        	    vertical-align: top;
+        	    text-align: center;
+        }
+        
+        div.panel_title{
+        		color:#FFFFFF;
+		   		font-family:Arial,verdana,'trebuchet ms',helvetica,sans-serif;
+		   		font-size:15px;
+		   		font-weight:bold;
+        	    vertical-align: top;
+        	    text-align: center;
+        }
+-->
+</style>
