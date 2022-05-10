@@ -1,7 +1,5 @@
 package com.adapit.portal.entidades;
 
-import java.io.Serializable;
-
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -21,7 +19,7 @@ import org.hibernate.annotations.OnDeleteAction;
 @Entity
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 @Table(name="EnterprisePersonData")
-public class Juridica extends TipoPessoa implements Serializable {
+public class Juridica extends TipoPessoa {
 
 	private static final long serialVersionUID = 309882036324745L;
 	
