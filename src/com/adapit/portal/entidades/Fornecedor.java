@@ -5,7 +5,6 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collection;
 
@@ -28,7 +27,7 @@ import javax.swing.ImageIcon;
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
 @Table(name="SupplierPerson")
-public class Fornecedor extends Pessoa implements Serializable {
+public class Fornecedor extends Pessoa {
 
 	private static final long serialVersionUID = 1235213325627L;
 
@@ -125,7 +124,7 @@ public class Fornecedor extends Pessoa implements Serializable {
 						return bigIcon;
 					}
 					else{
-						System.err.println("Imagem da categoria é nula");
+						System.err.println("Imagem da categoria ï¿½ nula");
 					}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
@@ -175,10 +174,9 @@ public class Fornecedor extends Pessoa implements Serializable {
 						return bigIcon;
 					}
 					else{
-						System.err.println("Imagem da categoria é nula");
+						System.err.println("Imagem da categoria ï¿½ nula");
 					}
 				} catch (Exception e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 				else return bigIcon;
@@ -208,7 +206,7 @@ public class Fornecedor extends Pessoa implements Serializable {
 						return smallIcon;
 					}
 					else{
-						System.err.println("Imagem da categoria é nula");
+						System.err.println("Imagem da categoria ï¿½ nula");
 					}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block

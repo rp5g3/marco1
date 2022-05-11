@@ -89,10 +89,9 @@ public class CategoriaImagem implements Serializable{
 						return bigIcon;
 					}
 					else{
-						System.err.println("Imagem da categoria é nula");
+						System.err.println("Imagem da categoria ï¿½ nula");
 					}
 				} catch (Exception e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 				else return bigIcon;
@@ -122,10 +121,9 @@ public class CategoriaImagem implements Serializable{
 						return smallIcon;
 					}
 					else{
-						System.err.println("Imagem da categoria é nula");
+						System.err.println("Imagem da categoria ï¿½ nula");
 					}
 				} catch (Exception e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 				else return smallIcon;
@@ -176,12 +174,10 @@ public class CategoriaImagem implements Serializable{
 				}
 			}
 		} catch (java.lang.StackOverflowError e) {
-			// TODO
 			e.printStackTrace();
 		} catch (java.lang.Exception e) {
-			// TODO
 			e.printStackTrace();
-		}// end of catch block
+		}
 		return null;
 	}
 

@@ -1,6 +1,5 @@
 package com.adapit.portal.entidades;
 
-import java.io.Serializable;
 import java.util.List;
 
 import javax.persistence.Column;
@@ -14,7 +13,7 @@ import javax.persistence.Transient;
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
 @Table(name="SoftwareSolution")
-public class SoftwareSolution extends ComercialSolution implements Serializable {
+public class SoftwareSolution extends ComercialSolution {
 
 	private static final long serialVersionUID = 224236235700347L;
 	

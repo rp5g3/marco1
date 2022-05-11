@@ -1,0 +1,5 @@
+*.todo
+*.jar
+.idea
+/bin
+/build.properties

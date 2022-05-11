@@ -1,6 +1,5 @@
 package com.adapit.portal.entidades;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,7 +18,7 @@ import javax.persistence.Table;
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
 @Table(name="TrainingSolution")
-public class TrainingSolution extends ComercialSolution implements Serializable {
+public class TrainingSolution extends ComercialSolution {
 
 	private static final long serialVersionUID = 8877374868346L;
 	
@@ -67,7 +66,7 @@ public class TrainingSolution extends ComercialSolution implements Serializable 
 	}
 	
 	public enum TrainingSolutionType{
-		Tecnologia_Produção_Software, Tecnologia_Metal_Mecânica, Informática_Básica, Nivelamento_Técnico, Para_Venda, Para_Marketing, Organizacional, Capacitação_Profissional, Nível_Médio, Nível_Superior
+		Tecnologia_Producao_Software, Tecnologia_Metal_Mecanica, Informatica_Basica, Nivelamento_Tecnico, Para_Venda, Para_Marketing, Organizacional, Capacitacao_Profissional, Nivel_Medio, Nivel_Superior
 	}
 
 	public void setAutor(Instrutor comprador) {

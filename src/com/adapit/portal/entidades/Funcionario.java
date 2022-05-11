@@ -1,7 +1,5 @@
 package com.adapit.portal.entidades;
 
-
-import java.io.Serializable;
 import java.util.Date;
 
 import javax.persistence.CascadeType;
@@ -16,12 +14,11 @@ import javax.persistence.Table;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
-
 @Entity
 @Inheritance(strategy=InheritanceType.JOINED)
 @OnDelete(action=OnDeleteAction.CASCADE)
 @Table(name="EmployeePerson")
-public class Funcionario extends Pessoa implements Serializable{
+public class Funcionario extends Pessoa{
 	private static final long serialVersionUID = 827768940969346L;
 	
 	@OneToOne (

@@ -29,7 +29,7 @@ import org.hibernate.annotations.OnDeleteAction;
 @OnDelete(action=OnDeleteAction.CASCADE)
 @NamedQuery(name="participante.preferencias",query="select p.preferencias from Participante p where p.id=:id")
 @Table(name="ParticipantPerson")
-public class Participante extends PessoaEmDivulgacao implements Serializable{
+public class Participante extends PessoaEmDivulgacao {
 	
 	private static final long serialVersionUID = 82873749629372L;
 
@@ -80,7 +80,7 @@ public class Participante extends PessoaEmDivulgacao implements Serializable{
 	@OneToMany(mappedBy="inscrito",fetch=FetchType.LAZY)
 	private Collection<ComercialSolutionItem> itensTreinamentos = new ArrayList<ComercialSolutionItem>();
 	
-	private PrimeiroContatoIniciado primeiroContato = PrimeiroContatoIniciado.Recomendação;
+	private PrimeiroContatoIniciado primeiroContato = PrimeiroContatoIniciado.Recomendacao;
 
 	
 	public PrimeiroContatoIniciado getPrimeiroContato() {

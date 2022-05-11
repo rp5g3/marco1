@@ -136,26 +136,18 @@ public class AdapitVirtualFrame extends JFrame {
 	public AdapitVirtualFrame() {
 		super();		
 		
-		Usuario newUser = new Usuario();
-		
-		newUser.setActive(true);
-		newUser.setLogin("rafaDev");
-		newUser.setPassword("123123");
-			
-		Session s = null;
-		try {
-			s = LocalServicesUtility.getInstance().openSession();
-			s.beginTransaction();						
-			s.save(newUser);
-			s.getTransaction().commit();
-			
-		} catch (Exception ex) {
-			ex.printStackTrace();			
-			s.getTransaction().rollback();
-			throw ex;
-		} finally {
-			if (s != null && s.isOpen()) s.close();
-		}
+		/*
+		 * Usuario newUser = new Usuario();
+		 * 
+		 * newUser.setActive(true); newUser.setLogin("rafaDev");
+		 * newUser.setPassword("123123");
+		 * 
+		 * Session s = null; try { s = LocalServicesUtility.getInstance().openSession();
+		 * s.beginTransaction(); s.save(newUser); s.getTransaction().commit();
+		 * 
+		 * } catch (Exception ex) { ex.printStackTrace(); s.getTransaction().rollback();
+		 * throw ex; } finally { if (s != null && s.isOpen()) s.close(); }
+		 */
 		
 		instance=this;
 		initialize();
