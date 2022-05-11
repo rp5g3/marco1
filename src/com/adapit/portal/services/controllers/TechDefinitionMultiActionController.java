@@ -1,7 +1,7 @@
 package com.adapit.portal.services.controllers;
 
 
-import javax.annotation.Resource;
+// import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -81,7 +81,7 @@ public class TechDefinitionMultiActionController extends MultiActionController{
 			request.setAttribute("msg", "SucessDialogMessage");
 			request.setAttribute("kind", kind);
 			request.setAttribute("title", "SucessDialogTitle");
-			//Dados para editar o formulário
+			//Dados para editar o formulï¿½rio
 					request.setAttribute("techDefinition", techDefinition);
 			reverseBindTechDefinition(request);
 		}
