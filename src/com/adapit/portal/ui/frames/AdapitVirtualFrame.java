@@ -22,7 +22,12 @@ import javax.swing.JTextPane;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
 import com.adapit.portal.dto.UsuarioDTO;
+import com.adapit.portal.entidades.AddressType;
 import com.adapit.portal.entidades.Arquivo;
 import com.adapit.portal.entidades.ComercialSolution;
 import com.adapit.portal.entidades.ContatoTreinamento;
@@ -45,6 +50,7 @@ import com.adapit.portal.entidades.Update;
 import com.adapit.portal.entidades.UserCadastreType;
 import com.adapit.portal.entidades.Usuario;
 import com.adapit.portal.services.PersonType;
+import com.adapit.portal.services.local.LocalServicesUtility;
 import com.adapit.portal.services.remote.RemoteComercialSolutionService;
 import com.adapit.portal.services.remote.RemotePessoaService;
 import com.adapit.portal.services.remote.RemoteServicesUtility;
@@ -128,7 +134,29 @@ public class AdapitVirtualFrame extends JFrame {
 	 * This is the default constructor
 	 */
 	public AdapitVirtualFrame() {
-		super();	
+		super();		
+		
+		Usuario newUser = new Usuario();
+		
+		newUser.setActive(true);
+		newUser.setLogin("rafaDev");
+		newUser.setPassword("123123");
+			
+		Session s = null;
+		try {
+			s = LocalServicesUtility.getInstance().openSession();
+			s.beginTransaction();						
+			s.save(newUser);
+			s.getTransaction().commit();
+			
+		} catch (Exception ex) {
+			ex.printStackTrace();			
+			s.getTransaction().rollback();
+			throw ex;
+		} finally {
+			if (s != null && s.isOpen()) s.close();
+		}
+		
 		instance=this;
 		initialize();
 	}

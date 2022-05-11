@@ -84,7 +84,6 @@ public class Usuario implements Serializable {
 
 	@OneToOne(targetEntity = Pessoa.class, cascade = { CascadeType.REMOVE,
 			CascadeType.MERGE }, fetch = FetchType.EAGER)
-	@JoinColumn(name="personal_data_id")
 	private Pessoa dadosPessoais;
 
 	@OneToMany(targetEntity = Access.class, mappedBy = "usuario",

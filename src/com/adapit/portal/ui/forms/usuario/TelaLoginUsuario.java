@@ -78,7 +78,7 @@ public class TelaLoginUsuario extends JDialog implements ActionListener{
 	private JButton entrarButton;
 	
 	private String login="adapit";  //  @jve:decl-index=0:
-	private String pwd="aJeC27";
+	private String pwd="123123";
 	private static TelaLoginUsuario instance;
 	boolean exit;
 	public static TelaLoginUsuario getInstance(){
