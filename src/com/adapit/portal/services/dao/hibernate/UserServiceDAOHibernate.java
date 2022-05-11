@@ -78,7 +78,7 @@ public class UserServiceDAOHibernate extends GenericDAOHibernate implements
 	}
 
 	/**
-	 * retorna todos os usuário que alguma vez já foram desativados
+	 * retorna todos os usuï¿½rio que alguma vez jï¿½ foram desativados
 	 */
 	public List listJustDeactivated(DeactivationReason inactivationReasons) {
 		try {
@@ -98,7 +98,7 @@ public class UserServiceDAOHibernate extends GenericDAOHibernate implements
 	}
 
 	/**
-	 * retorna todos os usuários que são do tipo de pessoa juridica
+	 * retorna todos os usuï¿½rios que sï¿½o do tipo de pessoa juridica
 	 */
 	public List listByTipoPessoaJuridica(TipoPessoa joinTipoPessoa) {
 		try {
@@ -118,7 +118,7 @@ public class UserServiceDAOHibernate extends GenericDAOHibernate implements
 	}
 
 	/**
-	 * retorna todos os usuários que são do tipo de pessoa física
+	 * retorna todos os usuï¿½rios que sï¿½o do tipo de pessoa fï¿½sica
 	 */
 	public List listByTipoPessoaFisica(TipoPessoa joinTipoPessoa) {
 		try {
@@ -286,7 +286,7 @@ public class UserServiceDAOHibernate extends GenericDAOHibernate implements
 	}
 
 	/**
-	 * Remove o usuário pelo identificador da tabela
+	 * Remove o usuï¿½rio pelo identificador da tabela
 	 */
 	public Usuario deleteById(String id) throws Exception {
 		try {
@@ -429,7 +429,7 @@ public class UserServiceDAOHibernate extends GenericDAOHibernate implements
 	}
 
 	/**
-	 * Remove o usuário pelo login de usuário
+	 * Remove o usuï¿½rio pelo login de usuï¿½rio
 	 */
 	public Usuario deleteByLogin(String login) throws Exception {
 		try {
@@ -452,7 +452,7 @@ public class UserServiceDAOHibernate extends GenericDAOHibernate implements
 	}
 
 	/**
-	 * Remove o usuário pela senha de usuário
+	 * Remove o usuï¿½rio pela senha de usuï¿½rio
 	 */
 	public Usuario deleteByPassword(String password) throws Exception {
 		try {
@@ -475,7 +475,7 @@ public class UserServiceDAOHibernate extends GenericDAOHibernate implements
 	}
 
 	/**
-	 * verifica se o usuário existe no sistema
+	 * verifica se o usuï¿½rio existe no sistema
 	 */
 	public boolean isValid(String login, String password) {
 		try {
@@ -523,7 +523,7 @@ public class UserServiceDAOHibernate extends GenericDAOHibernate implements
 	}
 
 	/**
-	 * Retorna o usuário pelo identificador da tabela
+	 * Retorna o usuï¿½rio pelo identificador da tabela
 	 */
 	public Usuario getUserById(int id) throws Exception {
 		try {
@@ -543,7 +543,7 @@ public class UserServiceDAOHibernate extends GenericDAOHibernate implements
 	}
 
 	/**
-	 * Retorna o usuário pelo login e senha e estado de ativação
+	 * Retorna o usuï¿½rio pelo login e senha e estado de ativaï¿½ï¿½o
 	 */
 	public Usuario getUserByLoginAndPasswordAndActive(String login,
 			String password, boolean active) throws Exception {
@@ -572,7 +572,7 @@ public class UserServiceDAOHibernate extends GenericDAOHibernate implements
 	}
 
 	/**
-	 * Retorna o usuário pelo login e senha
+	 * Retorna o usuï¿½rio pelo login e senha
 	 */
 	public Usuario getUserByLoginAndPassword(String login, String password)
 			throws Exception {
@@ -598,7 +598,7 @@ public class UserServiceDAOHibernate extends GenericDAOHibernate implements
 	}
 	
 	/**
-	 * Retorna o usuário pelo login e senha
+	 * Retorna o usuï¿½rio pelo login e senha
 	 */
 	@Override
 	public Usuario getUserByLogin(String login)	throws Exception {
@@ -765,7 +765,7 @@ public class UserServiceDAOHibernate extends GenericDAOHibernate implements
 							else if (user.getUserCadastreType() == UserCadastreType.Instrutor) p = new Instrutor();
 							else if (user.getUserCadastreType() == UserCadastreType.Representante_legal) p = new RepresentanteLegal();
 							else if (user.getUserCadastreType() == UserCadastreType.Administrador_do_sistema ||
-									user.getUserCadastreType() == UserCadastreType.Funcionário) p = new Funcionario();
+									user.getUserCadastreType() == UserCadastreType.Funcionario) p = new Funcionario();
 							else if (user.getUserCadastreType() == UserCadastreType.Cliente) p = new Participante();
 							p.setId(idp);
 							p.setNome(nome);
@@ -956,11 +956,11 @@ public class UserServiceDAOHibernate extends GenericDAOHibernate implements
 					"Select u.dadosPessoais from Usuario u where u.login=:log")
 					.setParameter("log",userid).uniqueResult();
 			if (p == null){
-				System.out.println("Não encontrou o participante");
+				System.out.println("Nï¿½o encontrou o participante");
 				return new ArrayList();
 			}
 			else if (p.getMeusTreinamentos() == null){
-				System.out.println("Não existem lotes de preferência desse participante");
+				System.out.println("Nï¿½o existem lotes de preferï¿½ncia desse participante");
 				return new ArrayList();
 			}
 			Iterator<Treinamento> it = p.getMeusTreinamentos().iterator();
@@ -981,12 +981,12 @@ public class UserServiceDAOHibernate extends GenericDAOHibernate implements
 				/*StatusAgenda sa = l.getAgendaLote().getStatus();
 				if (sa == null){
 					lrd.setLeilaoIniciou(false);
-					lrd.setStatus(StatusAgenda.Em_execução_no_leilão_1);
+					lrd.setStatus(StatusAgenda.Em_execuï¿½ï¿½o_no_leilï¿½o_1);
 				}
 				else{
 					if (sa != StatusAgenda.Cancelada &&
-							sa != StatusAgenda.Em_execução_no_leilão_1 && 
-							sa != StatusAgenda.Em_execução_no_leilão_2)
+							sa != StatusAgenda.Em_execuï¿½ï¿½o_no_leilï¿½o_1 && 
+							sa != StatusAgenda.Em_execuï¿½ï¿½o_no_leilï¿½o_2)
 						lrd.setLeilaoIniciou(false);
 					else lrd.setLeilaoIniciou(true);
 					lrd.setStatus(sa);
@@ -996,9 +996,9 @@ public class UserServiceDAOHibernate extends GenericDAOHibernate implements
 						+ " and a.lote.id="
 						+ l.getId()
 						+ " and a.status<>"
-						+ StatusAgenda.Encerrada_final_leilão_1.ordinal()
+						+ StatusAgenda.Encerrada_final_leilï¿½o_1.ordinal()
 						+ " and a.status<>"
-						+ StatusAgenda.Encerrada_final_leilão_2.ordinal()
+						+ StatusAgenda.Encerrada_final_leilï¿½o_2.ordinal()
 						+ " and lance member of a.lances order by valor DESC";*/
 				
 				myLotes.add(lrd);
@@ -1065,12 +1065,12 @@ public class UserServiceDAOHibernate extends GenericDAOHibernate implements
 				/*StatusAgenda sa = l.getAgendaLote().getStatus();
 				if (sa == null){
 					lrd.setLeilaoIniciou(false);
-					lrd.setStatus(StatusAgenda.Em_execução_no_leilão_1);
+					lrd.setStatus(StatusAgenda.Em_execuï¿½ï¿½o_no_leilï¿½o_1);
 				}
 				else{
 					if (sa != StatusAgenda.Cancelada &&
-							sa != StatusAgenda.Em_execução_no_leilão_1 && 
-							sa != StatusAgenda.Em_execução_no_leilão_2)
+							sa != StatusAgenda.Em_execuï¿½ï¿½o_no_leilï¿½o_1 && 
+							sa != StatusAgenda.Em_execuï¿½ï¿½o_no_leilï¿½o_2)
 						lrd.setLeilaoIniciou(false);
 					else lrd.setLeilaoIniciou(true);
 					lrd.setStatus(sa);

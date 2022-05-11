@@ -267,7 +267,7 @@ public class AdapitVirtualFrame extends JFrame {
 					UIManager.setLookAndFeel(UIManager
 							.getSystemLookAndFeelClassName());
 					UIManager.put("OptionPane.cancelButtonText", "Cancelar");
-				    UIManager.put("OptionPane.noButtonText", "Não");
+				    UIManager.put("OptionPane.noButtonText", "Nï¿½o");
 				    UIManager.put("OptionPane.okButtonText", "Ok");
 				    UIManager.put("OptionPane.yesButtonText", "Sim");
 				} catch (ClassNotFoundException e) {
@@ -316,7 +316,7 @@ public class AdapitVirtualFrame extends JFrame {
 						UIManager.setLookAndFeel(UIManager
 								.getSystemLookAndFeelClassName());
 						UIManager.put("OptionPane.cancelButtonText", "Cancelar");
-					    UIManager.put("OptionPane.noButtonText", "Não");
+					    UIManager.put("OptionPane.noButtonText", "Nï¿½o");
 					    UIManager.put("OptionPane.okButtonText", "Ok");
 					    UIManager.put("OptionPane.yesButtonText", "Sim");
 					} catch (ClassNotFoundException e) {
@@ -468,7 +468,7 @@ public class AdapitVirtualFrame extends JFrame {
 			@Override
 			public Object construct() {
 				try {
-					TimerMessageFrame jd = new TimerMessageFrame("Carregando informações ... por favor aguarde");
+					TimerMessageFrame jd = new TimerMessageFrame("Carregando informaï¿½ï¿½es ... por favor aguarde");
 					jd.setSize(310,80);					
 					jd.setVisible(true);
 					
@@ -509,7 +509,7 @@ public class AdapitVirtualFrame extends JFrame {
 	private CadastrarComercialSolutionInternalFrame cadastrarComercialSolutionFrame;
 	
 	public void newComercialSolution() {
-		beginStatusBar("Cadastrar Soluções");
+		beginStatusBar("Cadastrar Soluï¿½ï¿½es");
 		if (cadastrarComercialSolutionFrame == null){
 			cadastrarComercialSolutionFrame = new CadastrarComercialSolutionInternalFrame();
 			mainDesktopPane.add(cadastrarComercialSolutionFrame);			
@@ -522,7 +522,7 @@ public class AdapitVirtualFrame extends JFrame {
 			cadastrarComercialSolutionFrame.getComercialSolutionCadastreForm().newRegister();
 			cadastrarComercialSolutionFrame.toFront();
 		}
-		endStatusBar("Cadastrar Soluções");
+		endStatusBar("Cadastrar Soluï¿½ï¿½es");
 	}
 
 	public void editComercialSolution(final ComercialSolution p) {
@@ -530,11 +530,11 @@ public class AdapitVirtualFrame extends JFrame {
 			@Override
 			public Object construct() {
 				try {
-					TimerMessageFrame jd = new TimerMessageFrame("Carregando informações ... por favor aguarde");
+					TimerMessageFrame jd = new TimerMessageFrame("Carregando informaï¿½ï¿½es ... por favor aguarde");
 					jd.setSize(310,80);					
 					jd.setVisible(true);					
 
-					beginStatusBar("Editar Solução");
+					beginStatusBar("Editar Soluï¿½ï¿½o");
 					try {
 						if (cadastrarComercialSolutionFrame == null){
 							cadastrarComercialSolutionFrame = new CadastrarComercialSolutionInternalFrame();
@@ -554,7 +554,7 @@ public class AdapitVirtualFrame extends JFrame {
 						e.printStackTrace();
 					}
 					
-					endStatusBar("Editar Solução");
+					endStatusBar("Editar Soluï¿½ï¿½o");
 					
 					jd.stop();
 				} catch (Exception e) {
@@ -589,7 +589,7 @@ public class AdapitVirtualFrame extends JFrame {
 	
 	private CadastroDomainInterestInternalFrame dominioFrame;
 	public void newSoftwareDomain() {
-		beginStatusBar("Cadastrar Domínios de Software");
+		beginStatusBar("Cadastrar Domï¿½nios de Software");
 		//if (dominioFrame == null){
 			dominioFrame = new CadastroDomainInterestInternalFrame();
 			mainDesktopPane.add(dominioFrame);			
@@ -602,7 +602,7 @@ public class AdapitVirtualFrame extends JFrame {
 			dominioFrame.newRegister();
 			dominioFrame.toFront();
 		}*/
-		endStatusBar("Cadastrar Domínios de Software");
+		endStatusBar("Cadastrar Domï¿½nios de Software");
 	}
 
 	public void editSoftwareSolution(final SoftwareSolution p) {
@@ -610,7 +610,7 @@ public class AdapitVirtualFrame extends JFrame {
 			@Override
 			public Object construct() {
 				try {
-					TimerMessageFrame jd = new TimerMessageFrame("Carregando informações ... por favor aguarde");
+					TimerMessageFrame jd = new TimerMessageFrame("Carregando informaï¿½ï¿½es ... por favor aguarde");
 					jd.setSize(310,80);					
 					jd.setVisible(true);
 					
@@ -674,7 +674,7 @@ public class AdapitVirtualFrame extends JFrame {
 			@Override
 			public Object construct() {
 				try {
-					TimerMessageFrame jd = new TimerMessageFrame("Carregando informações ... por favor aguarde");
+					TimerMessageFrame jd = new TimerMessageFrame("Carregando informaï¿½ï¿½es ... por favor aguarde");
 					jd.setSize(310,80);					
 					jd.setVisible(true);
 					
@@ -751,7 +751,7 @@ public class AdapitVirtualFrame extends JFrame {
 			@Override
 			public Object construct() {
 				try {
-					TimerMessageFrame jd = new TimerMessageFrame("Carregando informações ... por favor aguarde");
+					TimerMessageFrame jd = new TimerMessageFrame("Carregando informaï¿½ï¿½es ... por favor aguarde");
 					jd.setSize(310,80);					
 					jd.setVisible(true);
 					
@@ -806,7 +806,7 @@ public class AdapitVirtualFrame extends JFrame {
 			@Override
 			public Object construct() {
 				try {
-					TimerMessageFrame jd = new TimerMessageFrame("Carregando informações ... por favor aguarde");
+					TimerMessageFrame jd = new TimerMessageFrame("Carregando informaï¿½ï¿½es ... por favor aguarde");
 					jd.setSize(310,80);					
 					jd.setVisible(true);
 					
@@ -839,7 +839,7 @@ public class AdapitVirtualFrame extends JFrame {
 			@Override
 			public Object construct() {
 				try {
-					TimerMessageFrame jd = new TimerMessageFrame("Carregando informações ... por favor aguarde");
+					TimerMessageFrame jd = new TimerMessageFrame("Carregando informaï¿½ï¿½es ... por favor aguarde");
 					jd.setSize(310,80);					
 					jd.setVisible(true);					
 					beginStatusBar("Editar treinamento");
@@ -873,7 +873,7 @@ public class AdapitVirtualFrame extends JFrame {
 			@Override
 			public Object construct() {
 				try {
-					TimerMessageFrame jd = new TimerMessageFrame("Carregando informações ... por favor aguarde");
+					TimerMessageFrame jd = new TimerMessageFrame("Carregando informaï¿½ï¿½es ... por favor aguarde");
 					jd.setSize(310,80);					
 					jd.setVisible(true);		
 					beginStatusBar("Fechamento de treinamento");
@@ -904,7 +904,7 @@ public class AdapitVirtualFrame extends JFrame {
 			@Override
 			public Object construct() {
 				try {
-					TimerMessageFrame jd = new TimerMessageFrame("Carregando informações ... por favor aguarde");
+					TimerMessageFrame jd = new TimerMessageFrame("Carregando informaï¿½ï¿½es ... por favor aguarde");
 					jd.setSize(310,80);					
 					jd.setVisible(true);			
 					beginStatusBar("Editar fechamento de treinamento");
@@ -936,7 +936,7 @@ public class AdapitVirtualFrame extends JFrame {
 			@Override
 			public Object construct() {
 				try {
-					TimerMessageFrame jd = new TimerMessageFrame("Carregando informações ... por favor aguarde");
+					TimerMessageFrame jd = new TimerMessageFrame("Carregando informaï¿½ï¿½es ... por favor aguarde");
 					jd.setSize(310,80);					
 					jd.setVisible(true);
 					beginStatusBar("Editar fechamento de treinamento");
@@ -966,7 +966,7 @@ public class AdapitVirtualFrame extends JFrame {
 	public RelatorioTreinamentosInternalFrame lastRelatorioTreinamentos;
 	
 	public void relatorioTreinamentos(){
-		beginStatusBar("Relatório de treinamentos");
+		beginStatusBar("Relatï¿½rio de treinamentos");
 		if (lastRelatorioTreinamentos != null){
 			lastRelatorioTreinamentos.postInDesktopPane();
 		}else{
@@ -974,13 +974,13 @@ public class AdapitVirtualFrame extends JFrame {
 			gui.postInDesktopPane();
 			lastRelatorioTreinamentos = gui;
 		}
-		endStatusBar("Relatório de treinamentos");
+		endStatusBar("Relatï¿½rio de treinamentos");
 	}
 	
 	public RelatorioTurmasInternalFrame lastRelatorioTurmas;
 	
 	public void relatorioTurmas(){
-		beginStatusBar("Relatório de turmas");
+		beginStatusBar("Relatï¿½rio de turmas");
 		if (lastRelatorioTurmas != null){
 			lastRelatorioTurmas.postInDesktopPane();
 		}else{
@@ -988,7 +988,7 @@ public class AdapitVirtualFrame extends JFrame {
 			gui.postInDesktopPane();
 			lastRelatorioTurmas = gui;
 		}
-		endStatusBar("Relatório de turmas");
+		endStatusBar("Relatï¿½rio de turmas");
 	}
 	
 	public void comercialSolutionsList() {
@@ -1020,7 +1020,7 @@ public class AdapitVirtualFrame extends JFrame {
 	
 	private FuncionarioCadastreInternalFrame funcionarioCadastreFrame;
 	public void cadastrarFuncionario(){
-		beginStatusBar("Cadastrar Funcionário");
+		beginStatusBar("Cadastrar Funcionario");
 		if (funcionarioCadastreFrame == null){
 			funcionarioCadastreFrame = new FuncionarioCadastreInternalFrame();
 			funcionarioCadastreFrame.getCadastrarUsuarioFuncionario().newRegister();
@@ -1033,7 +1033,7 @@ public class AdapitVirtualFrame extends JFrame {
 			funcionarioCadastreFrame.getCadastrarUsuarioFuncionario().newRegister();
 			funcionarioCadastreFrame.postInDesktopPane();
 		}
-		endStatusBar("Cadastrar Funcionário");
+		endStatusBar("Cadastrar Funcionario");
 	}
 	
 	
@@ -1043,7 +1043,7 @@ public class AdapitVirtualFrame extends JFrame {
 			@Override
 			public Object construct() {
 				try {
-					TimerMessageFrame jd = new TimerMessageFrame("Carregando informações ... por favor aguarde");
+					TimerMessageFrame jd = new TimerMessageFrame("Carregando informaï¿½ï¿½es ... por favor aguarde");
 					jd.setSize(310,80);					
 					jd.setVisible(true);
 					if (funcionarioCadastreFrame == null) {
@@ -1051,11 +1051,11 @@ public class AdapitVirtualFrame extends JFrame {
 						funcionarioCadastreFrame.getCadastrarUsuarioFuncionario().setUsuario(u);
 						funcionarioCadastreFrame.getCadastrarUsuarioFuncionario().editRegister();
 					}else{
-						beginStatusBar("Editar Funcionário");
+						beginStatusBar("Editar Funcionario");
 						funcionarioCadastreFrame.getCadastrarUsuarioFuncionario().setUsuario(u);
 						funcionarioCadastreFrame.getCadastrarUsuarioFuncionario().editRegister();
 						funcionarioCadastreFrame.postInDesktopPane();
-						endStatusBar("Editar Funcionário");
+						endStatusBar("Editar Funcionario");
 					}
 			
 					jd.stop();
@@ -1097,7 +1097,7 @@ public class AdapitVirtualFrame extends JFrame {
 			@Override
 			public Object construct() {
 				try {
-					TimerMessageFrame jd = new TimerMessageFrame("Carregando informações ... por favor aguarde");
+					TimerMessageFrame jd = new TimerMessageFrame("Carregando informaï¿½ï¿½es ... por favor aguarde");
 					jd.setSize(310,80);					
 					jd.setVisible(true);
 					try{
@@ -1148,7 +1148,7 @@ public class AdapitVirtualFrame extends JFrame {
 			@Override
 			public Object construct() {
 				try {
-					TimerMessageFrame jd = new TimerMessageFrame("Carregando informações ... por favor aguarde");
+					TimerMessageFrame jd = new TimerMessageFrame("Carregando informaï¿½ï¿½es ... por favor aguarde");
 					jd.setSize(310,80);					
 					jd.setVisible(true);
 					InstrutorCadastreDialog gui = new InstrutorCadastreDialog();
@@ -1172,7 +1172,7 @@ public class AdapitVirtualFrame extends JFrame {
 			@Override
 			public Object construct() {
 				try {
-					TimerMessageFrame jd = new TimerMessageFrame("Carregando informações ... por favor aguarde");
+					TimerMessageFrame jd = new TimerMessageFrame("Carregando informaï¿½ï¿½es ... por favor aguarde");
 					jd.setSize(310,80);					
 					jd.setVisible(true);
 					InstrutorCadastreDialog gui = new InstrutorCadastreDialog();
@@ -1197,7 +1197,7 @@ public class AdapitVirtualFrame extends JFrame {
 			@Override
 			public Object construct() {
 				try {
-					TimerMessageFrame jd = new TimerMessageFrame("Carregando informações ... por favor aguarde");
+					TimerMessageFrame jd = new TimerMessageFrame("Carregando informaï¿½ï¿½es ... por favor aguarde");
 					jd.setSize(310,80);					
 					jd.setVisible(true);
 					ComitenteCadastreDialog gui = new ComitenteCadastreDialog(pt);
@@ -1225,7 +1225,7 @@ public class AdapitVirtualFrame extends JFrame {
 			@Override
 			public Object construct() {
 				try {
-					TimerMessageFrame jd = new TimerMessageFrame("Carregando informações ... por favor aguarde");
+					TimerMessageFrame jd = new TimerMessageFrame("Carregando informaï¿½ï¿½es ... por favor aguarde");
 					jd.setSize(310,80);					
 					jd.setVisible(true);
 					ComitenteCadastreDialog gui = new ComitenteCadastreDialog(pt);
@@ -1262,7 +1262,7 @@ public class AdapitVirtualFrame extends JFrame {
 			@Override
 			public Object construct() {
 				try {
-					TimerMessageFrame jd = new TimerMessageFrame("Carregando informações ... por favor aguarde");
+					TimerMessageFrame jd = new TimerMessageFrame("Carregando informaï¿½ï¿½es ... por favor aguarde");
 					jd.setSize(310,80);					
 					jd.setVisible(true);
 					ParticipanteCadastreDialog gui = new ParticipanteCadastreDialog(pt);
@@ -1285,8 +1285,8 @@ public class AdapitVirtualFrame extends JFrame {
 	}
 	
 	public void listarUsuarios() {
-		beginStatusBar("Listar Usuários");
-		javax.swing.JInternalFrame gui = new javax.swing.JInternalFrame("Listar Usuários");
+		beginStatusBar("Listar Usuï¿½rios");
+		javax.swing.JInternalFrame gui = new javax.swing.JInternalFrame("Listar Usuï¿½rios");
 		
 		gui.setDefaultCloseOperation(javax.swing.JFrame.DISPOSE_ON_CLOSE);
 		gui.setLayout(new java.awt.BorderLayout());
@@ -1301,7 +1301,7 @@ public class AdapitVirtualFrame extends JFrame {
 		mainDesktopPane.add(gui);
 		gui.setVisible(true);
 		gui.toFront();
-		endStatusBar("Listar Usuários");
+		endStatusBar("Listar Usuï¿½rios");
 	}
 	
 	TurmaCadastreInternalFrame turmaCadastreFrame;
@@ -1317,7 +1317,7 @@ public class AdapitVirtualFrame extends JFrame {
 			@Override
 			public Object construct() {
 				try {
-					TimerMessageFrame jd = new TimerMessageFrame("Carregando informações ... por favor aguarde");
+					TimerMessageFrame jd = new TimerMessageFrame("Carregando informaï¿½ï¿½es ... por favor aguarde");
 					jd.setSize(310,80);					
 					jd.setVisible(true);
 					if (turmaCadastreFrame == null){
@@ -1355,11 +1355,11 @@ public class AdapitVirtualFrame extends JFrame {
 	}
 	
 	public void showOperationSucess(){
-		JOptionPane.showMessageDialog(this,"A operação foi realizada com sucesso!", "Operação realizada com sucesso", JOptionPane.INFORMATION_MESSAGE);
+		JOptionPane.showMessageDialog(this,"A operaï¿½ï¿½o foi realizada com sucesso!", "Operaï¿½ï¿½o realizada com sucesso", JOptionPane.INFORMATION_MESSAGE);
 	}
 	
 	public void showOperationSucess(String title){
-		JOptionPane.showMessageDialog(this,"A operação foi realizada com sucesso!", title, JOptionPane.INFORMATION_MESSAGE);
+		JOptionPane.showMessageDialog(this,"A operaï¿½ï¿½o foi realizada com sucesso!", title, JOptionPane.INFORMATION_MESSAGE);
 	}
 	
 	public void showOperationSucess(String title, String msg){
@@ -1367,15 +1367,15 @@ public class AdapitVirtualFrame extends JFrame {
 	}
 	
 	public void showErrorCamposInvalidos(){
-		JOptionPane.showMessageDialog(this,"O formulário não foi preenchido corretamente!", "Dados incorretos", JOptionPane.ERROR_MESSAGE);
+		JOptionPane.showMessageDialog(this,"O formulï¿½rio nï¿½o foi preenchido corretamente!", "Dados incorretos", JOptionPane.ERROR_MESSAGE);
 	}
 	
 	public void showErrorCamposInvalidosWithinTabs(){
-		JOptionPane.showMessageDialog(this,"O formulário não foi preenchido corretamente!", "Dados incorretos nas abas em destaque", JOptionPane.ERROR_MESSAGE);
+		JOptionPane.showMessageDialog(this,"O formulï¿½rio nï¿½o foi preenchido corretamente!", "Dados incorretos nas abas em destaque", JOptionPane.ERROR_MESSAGE);
 	}
 	
 	public void showErrorCamposInvalidos(String title){
-		JOptionPane.showMessageDialog(this,"O formulário não foi preenchido corretamente!", title, JOptionPane.ERROR_MESSAGE);
+		JOptionPane.showMessageDialog(this,"O formulï¿½rio nï¿½o foi preenchido corretamente!", title, JOptionPane.ERROR_MESSAGE);
 	}
 	
 	public void showErrorDialog(String title, String msg){
@@ -1393,7 +1393,7 @@ public class AdapitVirtualFrame extends JFrame {
 	public CadastroFormacaoInternalFrame lastCadastroFormacaoInternalFrame;
 	
 	public void novaFormacao(){
-		beginStatusBar("Cadastrar formações");
+		beginStatusBar("Cadastrar formaï¿½ï¿½es");
 		if (lastCadastroFormacaoInternalFrame != null){
 			lastCadastroFormacaoInternalFrame.getFormacaoCadastreForm().newRegister();
 			lastCadastroFormacaoInternalFrame.postInDesktopPane();
@@ -1402,7 +1402,7 @@ public class AdapitVirtualFrame extends JFrame {
 			gui.postInDesktopPane();
 			lastCadastroFormacaoInternalFrame = gui;			
 		}
-		endStatusBar("Cadastrar formações");
+		endStatusBar("Cadastrar formaï¿½ï¿½es");
 	}
 	
 	public void editarFormacao(final FormacaoTreinamento f){
@@ -1410,10 +1410,10 @@ public class AdapitVirtualFrame extends JFrame {
 			@Override
 			public Object construct() {
 				try {
-					TimerMessageFrame jd = new TimerMessageFrame("Carregando informações ... por favor aguarde");
+					TimerMessageFrame jd = new TimerMessageFrame("Carregando informaï¿½ï¿½es ... por favor aguarde");
 					jd.setSize(310,80);					
 					jd.setVisible(true);
-					beginStatusBar("Editar formações");
+					beginStatusBar("Editar formaï¿½ï¿½es");
 					if (lastCadastroFormacaoInternalFrame != null){
 						lastCadastroFormacaoInternalFrame.getFormacaoCadastreForm().editRegister(f);
 						lastCadastroFormacaoInternalFrame.postInDesktopPane();
@@ -1423,7 +1423,7 @@ public class AdapitVirtualFrame extends JFrame {
 						gui.postInDesktopPane();
 						lastCadastroFormacaoInternalFrame = gui;			
 					}
-					endStatusBar("Editar formações");
+					endStatusBar("Editar formaï¿½ï¿½es");
 			
 					jd.stop();
 				} catch (Exception e) {
@@ -1591,7 +1591,7 @@ public class AdapitVirtualFrame extends JFrame {
 	private Instrutor leiloeiro;
 	public Instrutor getLeiloeiro() {
 		if (leiloeiro == null){
-			TelaLoginUsuario login = TelaLoginUsuario.getInstance("Operação permitida somente para leiloeiros",true,false);			
+			TelaLoginUsuario login = TelaLoginUsuario.getInstance("Operaï¿½ï¿½o permitida somente para leiloeiros",true,false);			
 			if (login.getUsuarioDTO() == null) login.setVisible(true);
 			else try {
 				leiloeiro = login.getLeiloeiro();
@@ -1620,7 +1620,7 @@ public class AdapitVirtualFrame extends JFrame {
 	private Participante participante;
 	public Participante getParticipante() {
 		if (participante == null){
-			TelaLoginUsuario login = TelaLoginUsuario.getInstance("Operação permitida somente para participantes",true,false);			
+			TelaLoginUsuario login = TelaLoginUsuario.getInstance("Operaï¿½ï¿½o permitida somente para participantes",true,false);			
 			if (login.getUsuarioDTO() == null) login.setVisible(true);
 			else try {
 				participante = login.getParticipante();
@@ -1651,7 +1651,7 @@ public class AdapitVirtualFrame extends JFrame {
 	private Funcionario funcionario;
 	public Funcionario getFuncionario() {
 		if (funcionario == null){
-			TelaLoginUsuario login = TelaLoginUsuario.getInstance("Operação permitida somente para funcionários",true,false);			
+			TelaLoginUsuario login = TelaLoginUsuario.getInstance("Operaï¿½ï¿½o permitida somente para Funcionarios",true,false);			
 			if (login.getUsuarioDTO() == null) login.setVisible(true);
 			else try {
 				funcionario = login.getFuncionario();
@@ -1680,7 +1680,7 @@ public class AdapitVirtualFrame extends JFrame {
 	private PessoaEmDivulgacao pessoaEmDivulgacao;
 	public PessoaEmDivulgacao getComitente() {
 		if (pessoaEmDivulgacao == null){
-			TelaLoginUsuario login = TelaLoginUsuario.getInstance("Operação permitida somente para comitentes",true,false);			
+			TelaLoginUsuario login = TelaLoginUsuario.getInstance("Operaï¿½ï¿½o permitida somente para comitentes",true,false);			
 			if (login.getUsuarioDTO() == null) login.setVisible(true);
 			else try {
 				pessoaEmDivulgacao = login.getComitente();
@@ -1711,7 +1711,7 @@ public class AdapitVirtualFrame extends JFrame {
 			@Override
 			public Object construct() {
 				try {
-					TimerMessageFrame jd = new TimerMessageFrame("Carregando informações ... por favor aguarde");
+					TimerMessageFrame jd = new TimerMessageFrame("Carregando informaï¿½ï¿½es ... por favor aguarde");
 					jd.setSize(310,80);					
 					jd.setVisible(true);
 					TelaLoginUsuario login = TelaLoginUsuario.getInstance();			
@@ -1724,7 +1724,7 @@ public class AdapitVirtualFrame extends JFrame {
 					
 					if (udto.getTipoPessoa() == PersonType.Fisica){
 						if (u.getUserCadastreType().equals(UserCadastreType.Administrador_do_sistema)
-							|| u.getUserCadastreType().equals(UserCadastreType.Funcionário)){
+							|| u.getUserCadastreType().equals(UserCadastreType.Funcionario)){
 							u.setDadosPessoais(getFuncionario());
 							AdapitVirtualFrame.getInstance().editarFuncionario(u);
 						}else if (u.getUserCadastreType().equals(UserCadastreType.Instrutor)){
@@ -1787,7 +1787,7 @@ public class AdapitVirtualFrame extends JFrame {
 		
 		if (udto.getTipoPessoa() == PersonType.Fisica){
 			if (u.getRule().equals(UserCadastreType.Administrador_do_sistema)
-				|| u.getRule().equals(UserCadastreType.Funcionário)){
+				|| u.getRule().equals(UserCadastreType.Funcionario)){
 				u.setDadosPessoais(getFuncionario());
 				LeilaoVirtualFrame.getInstance().editarFuncionario(u);
 			}else if (u.getRule().equals(UserCadastreType.Leiloeiro)){
@@ -1893,7 +1893,7 @@ public class AdapitVirtualFrame extends JFrame {
 			@Override
 			public Object construct() {
 				try {
-					TimerMessageFrame jd = new TimerMessageFrame("Carregando informações ... por favor aguarde");
+					TimerMessageFrame jd = new TimerMessageFrame("Carregando informaï¿½ï¿½es ... por favor aguarde");
 					jd.setSize(310,80);					
 					jd.setVisible(true);
 					beginStatusBar("Editar news");
@@ -1960,7 +1960,7 @@ public class AdapitVirtualFrame extends JFrame {
 			@Override
 			public Object construct() {
 				try {
-					TimerMessageFrame jd = new TimerMessageFrame("Carregando informações ... por favor aguarde");
+					TimerMessageFrame jd = new TimerMessageFrame("Carregando informaï¿½ï¿½es ... por favor aguarde");
 					jd.setSize(310,80);					
 					jd.setVisible(true);
 					beginStatusBar("Editar Conta a Pagar Por Lote");
@@ -1991,7 +1991,7 @@ public class AdapitVirtualFrame extends JFrame {
 			@Override
 			public Object construct() {
 				try {
-					TimerMessageFrame jd = new TimerMessageFrame("Carregando informações ... por favor aguarde");
+					TimerMessageFrame jd = new TimerMessageFrame("Carregando informaï¿½ï¿½es ... por favor aguarde");
 					jd.setSize(310,80);					
 					jd.setVisible(true);
 					beginStatusBar("Editar Conta a Pagar Por Lote");
@@ -2023,7 +2023,7 @@ public class AdapitVirtualFrame extends JFrame {
 			@Override
 			public Object construct() {
 				try {
-					TimerMessageFrame jd = new TimerMessageFrame("Carregando informações ... por favor aguarde");
+					TimerMessageFrame jd = new TimerMessageFrame("Carregando informaï¿½ï¿½es ... por favor aguarde");
 					jd.setSize(310,80);					
 					jd.setVisible(true);
 					beginStatusBar("Editar Conta a Pagar Por Lote");
@@ -2105,7 +2105,7 @@ public class AdapitVirtualFrame extends JFrame {
 			@Override
 			public Object construct() {
 				try {
-					TimerMessageFrame jd = new TimerMessageFrame("Carregando informações ... por favor aguarde");
+					TimerMessageFrame jd = new TimerMessageFrame("Carregando informaï¿½ï¿½es ... por favor aguarde");
 					jd.setSize(310,80);					
 					jd.setVisible(true);
 					beginStatusBar("Editar Artigo");
@@ -2163,7 +2163,7 @@ public class AdapitVirtualFrame extends JFrame {
 		final JInternalFrame jif = new JInternalFrame();
 		jif.setDefaultCloseOperation(JInternalFrame.DISPOSE_ON_CLOSE);
 		jif.setClosable(true);
-		jif.setTitle("Destaques da Página");
+		jif.setTitle("Destaques da Pï¿½gina");
 		DestaqueForm df = new DestaqueForm();
 		jif.add(df,BorderLayout.CENTER);
 		df.editRegister();
@@ -2186,7 +2186,7 @@ public class AdapitVirtualFrame extends JFrame {
 		final JInternalFrame jif = new JInternalFrame();
 		jif.setDefaultCloseOperation(JInternalFrame.DISPOSE_ON_CLOSE);
 		jif.setClosable(true);
-		jif.setTitle("Manutenção de Arquivos do Servidor");
+		jif.setTitle("Manutenï¿½ï¿½o de Arquivos do Servidor");
 		FileFilterPanel df = new FileFilterPanel();
 		jif.add(df,BorderLayout.CENTER);
 		
@@ -2255,7 +2255,7 @@ public class AdapitVirtualFrame extends JFrame {
 	private CadastrarUpdateInternalFrame cadastrarUpdateFrame;
 	
 	public void novoUpdate(final ComercialSolution c) {
-		beginStatusBar("Cadastrar versão");
+		beginStatusBar("Cadastrar versï¿½o");
 		if (cadastrarUpdateFrame == null){
 			cadastrarUpdateFrame = new CadastrarUpdateInternalFrame(c);
 			mainDesktopPane.add(cadastrarUpdateFrame);			
@@ -2268,7 +2268,7 @@ public class AdapitVirtualFrame extends JFrame {
 			cadastrarUpdateFrame.getUpdateCadastreForm().newRegister();
 			cadastrarUpdateFrame.toFront();
 		}
-		endStatusBar("Cadastrar versão");
+		endStatusBar("Cadastrar versï¿½o");
 	}
 	
 	public void editarUpdate(final Update p, final ComercialSolution c) {
@@ -2276,10 +2276,10 @@ public class AdapitVirtualFrame extends JFrame {
 			@Override
 			public Object construct() {
 				try {
-					TimerMessageFrame jd = new TimerMessageFrame("Carregando informações ... por favor aguarde");
+					TimerMessageFrame jd = new TimerMessageFrame("Carregando informaï¿½ï¿½es ... por favor aguarde");
 					jd.setSize(310,80);					
 					jd.setVisible(true);
-					beginStatusBar("Editar versão");
+					beginStatusBar("Editar versï¿½o");
 					if (cadastrarUpdateFrame == null){
 						cadastrarUpdateFrame = new CadastrarUpdateInternalFrame(c);
 						mainDesktopPane.add(cadastrarUpdateFrame);			
@@ -2295,7 +2295,7 @@ public class AdapitVirtualFrame extends JFrame {
 						cadastrarUpdateFrame.toFront();
 					}
 			
-					endStatusBar("Editar versão");
+					endStatusBar("Editar versï¿½o");
 			
 					jd.stop();
 				} catch (Exception e) {
@@ -2366,16 +2366,16 @@ public class AdapitVirtualFrame extends JFrame {
 	}
 
 	/**
-	 * Cria um diálogo padrão
-	 * @param title o título do diálogo
-	 * @param content o painel de conteúdo
-	 * @param buttons a lista dos botões
-	 * @param listeners a lista dos listeners dos botões
-	 * @param icons os ícones dos botões
+	 * Cria um diï¿½logo padrï¿½o
+	 * @param title o tï¿½tulo do diï¿½logo
+	 * @param content o painel de conteï¿½do
+	 * @param buttons a lista dos botï¿½es
+	 * @param listeners a lista dos listeners dos botï¿½es
+	 * @param icons os ï¿½cones dos botï¿½es
 	 * @param w width
 	 * @param h heigth
-	 * @param modal é modal
-	 * @param center true é colocado no centro e false é maximizado
+	 * @param modal ï¿½ modal
+	 * @param center true ï¿½ colocado no centro e false ï¿½ maximizado
 	 * @return
 	 */
 	public JDialog createDialog(String title, JComponent content, String buttons[], ActionListener listeners[], Icon icons[], int w, int h, boolean modal, boolean center) {
@@ -2416,16 +2416,16 @@ public class AdapitVirtualFrame extends JFrame {
 	}
 	
 	/**
-	 * Cria um diálogo padrão
-	 * @param title o título do diálogo
-	 * @param content o painel de conteúdo
-	 * @param buttons a lista dos botões
-	 * @param listeners a lista dos listeners dos botões
-	 * @param icons os ícones dos botões
+	 * Cria um diï¿½logo padrï¿½o
+	 * @param title o tï¿½tulo do diï¿½logo
+	 * @param content o painel de conteï¿½do
+	 * @param buttons a lista dos botï¿½es
+	 * @param listeners a lista dos listeners dos botï¿½es
+	 * @param icons os ï¿½cones dos botï¿½es
 	 * @param w width
 	 * @param h heigth
-	 * @param modal é modal
-	 * @param center true é colocado no centro e false é maximizado
+	 * @param modal ï¿½ modal
+	 * @param center true ï¿½ colocado no centro e false ï¿½ maximizado
 	 * @return
 	 */
 	public JDialog createDialog(String title, JComponent content, String buttons[], ActionListener listeners[], Icon icons[], int w, int h, boolean modal, boolean center, boolean resizable) {
@@ -2467,12 +2467,12 @@ public class AdapitVirtualFrame extends JFrame {
 	}
 	
 	/**
-	 * Cria um internal frame padrão
-	 * @param title o título do frame
-	 * @param content o painel de conteúdo
-	 * @param buttons a lista dos botões
-	 * @param listeners a lista dos listeners dos botões
-	 * @param icons os ícones dos botões
+	 * Cria um internal frame padrï¿½o
+	 * @param title o tï¿½tulo do frame
+	 * @param content o painel de conteï¿½do
+	 * @param buttons a lista dos botï¿½es
+	 * @param listeners a lista dos listeners dos botï¿½es
+	 * @param icons os ï¿½cones dos botï¿½es
 	 * @param w width
 	 * @param h heigth
 	 * @return
