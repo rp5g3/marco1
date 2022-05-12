@@ -3,3 +3,6 @@
 .idea
 /bin
 /build.properties
+src/localServices.xml
+src/hibernateContext.xml
+src/com/adapit/portal/ui/frames/AdapitVirtualFrame.java
