@@ -145,7 +145,7 @@ public class CadastroPessoaMultiActionController extends FormMultiActionControll
 					//Proibido atualizar senha e talz					
 					//s.update(usuario);
 					if (request.getSession(true).getAttribute("user") == null)
-						throw new Exception("Não é possível atualizar um usuário não logado!");
+						throw new Exception("Nï¿½o ï¿½ possï¿½vel atualizar um usuï¿½rio nï¿½o logado!");
 					s.update(endereco);
 					s.update(pessoa);
 					s.update(tipoPessoa);
@@ -229,7 +229,7 @@ public class CadastroPessoaMultiActionController extends FormMultiActionControll
 	protected BindException validate(HttpServletRequest request) throws Exception {
 		usuario = (Usuario) getCommand(request);
 		
-		if (usuario == null || usuario.getLogin() == null) throw new Exception("Usuário e login não podem ser nulos!");
+		if (usuario == null || usuario.getLogin() == null) throw new Exception("Usuï¿½rio e login nï¿½o podem ser nulos!");
 		m = new HashMap();
 		
 		ht = new Hashtable();		
@@ -275,7 +275,7 @@ public class CadastroPessoaMultiActionController extends FormMultiActionControll
 				//throw errors;
 			}*/
 		}else{
-			System.out.println("Existem erros de formulário detectados na classe base");
+			System.out.println("Existem erros de formulï¿½rio detectados na classe base");
 		}
 		
 		populateErrorList(request, errors, ht, arr);
@@ -295,7 +295,7 @@ public class CadastroPessoaMultiActionController extends FormMultiActionControll
 		}
 		if (usuario.isNewUser()){
 			if (usuario.getPassword().equals(usuario.getPasswordConf())){
-				System.out.println("Validando o usuário");
+				System.out.println("Validando o usuï¿½rio");
 				if( !(usuario.getPassword().length() < 6 || usuario.getPassword().length() > 8)){
 					if (usuario.isNewUser()){
 						boolean existe = usuarioExiste(usuario);
@@ -305,7 +305,7 @@ public class CadastroPessoaMultiActionController extends FormMultiActionControll
 							errors.addError(oe);
 							return false;
 						}else{
-							System.out.println("Usuario não existe e pode ser cadastrado");
+							System.out.println("Usuario nï¿½o existe e pode ser cadastrado");
 							return true;
 						}				
 					}
@@ -319,7 +319,7 @@ public class CadastroPessoaMultiActionController extends FormMultiActionControll
 					return false;
 				}
 			}else{
-				System.out.println("Senhas não conferem");
+				System.out.println("Senhas nï¿½o conferem");
 				if( !(usuario.getPassword().length() < 6 || usuario.getPassword().length() > 8)){
 					ObjectError oe1 = new ObjectError("usuario", new String[]{"password"}, new Object[]{"passwordConf"},"errors.differentpass");
 					errors.addError(oe1);
@@ -414,8 +414,8 @@ public class CadastroPessoaMultiActionController extends FormMultiActionControll
 								messages.getMessage("participante.estadoCivil",
 										new Object[][]{{"errors.required"}}));
 					}else{
-						if (estadocivil.equals(EstadoCivil.União_estável.name()))
-							tipoPessoa.setEstadoCivil(EstadoCivil.União_estável);
+						if (estadocivil.equals(EstadoCivil.Uniao_estavel.name()))
+							tipoPessoa.setEstadoCivil(EstadoCivil.Uniao_estavel);
 						else{
 							estadocivil = estadocivil.substring(0, estadocivil.length()-3);
 							tipoPessoa.setEstadoCivil(EstadoCivil.valueOf(estadocivil.replaceAll(" ","_")));
