@@ -144,7 +144,7 @@ public class Fornecedor extends Pessoa {
 						return bigIcon;
 					}
 					else{
-						System.err.println("Imagem da categoria � nula");
+						System.err.println("Imagem da categoria e nula");
 					}
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -176,7 +176,7 @@ public class Fornecedor extends Pessoa {
 						return smallIcon;
 					}
 					else{
-						System.err.println("Imagem da categoria � nula");
+						System.err.println("Imagem da categoria e nula");
 					}
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
