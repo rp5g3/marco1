@@ -82,7 +82,7 @@ public class ComercialSolution implements Serializable{
 	@Column(name="keys_words")
 	private String keyWords;
 	
-	private CommercialSolutionType solutionType = CommercialSolutionType.Outros_servi�os;
+	private CommercialSolutionType solutionType = CommercialSolutionType.Outros_servicos;
 	
 	@Column(name="publish_to_customer")
 	private boolean publicar=false;

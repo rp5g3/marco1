@@ -89,7 +89,7 @@ public class CategoriaImagem implements Serializable{
 						return bigIcon;
 					}
 					else{
-						System.err.println("Imagem da categoria � nula");
+						System.err.println("Imagem da categoria e nula");
 					}
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -121,7 +121,7 @@ public class CategoriaImagem implements Serializable{
 						return smallIcon;
 					}
 					else{
-						System.err.println("Imagem da categoria � nula");
+						System.err.println("Imagem da categoria e nula");
 					}
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -143,9 +143,6 @@ public class CategoriaImagem implements Serializable{
 		try {
 			FileInputStream fileInputStream = new FileInputStream(file);
 			fileInputStream.read(b);
-			/*for (int i = 0; i < b.length; i++) {
-				System.out.print((char)b[i]);
-			}*/
 		} catch (FileNotFoundException e) {
 			System.out.println("File Not Found.");
 			e.printStackTrace();
