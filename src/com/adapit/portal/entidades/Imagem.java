@@ -125,7 +125,7 @@ public class Imagem implements Serializable{
 						return mediumIcon;
 					}
 					else{
-						System.err.println("Imagem é nula");
+						System.err.println("Imagem ï¿½ nula");
 					}
 				} catch (Exception e) {					
 					e.printStackTrace();
@@ -279,7 +279,7 @@ public class Imagem implements Serializable{
 						return smallIcon;
 					}
 					else{
-						System.err.println("Imagem é nula");
+						System.err.println("Imagem ï¿½ nula");
 					}
 				} catch (Exception e) {					
 					e.printStackTrace();
@@ -559,7 +559,6 @@ public class Imagem implements Serializable{
 		return this.categoria;
 	}
 
-	
 
 	public ArrayList<ComercialSolution> getComercialSolution() {
 		return comercialSolution;
@@ -568,23 +567,5 @@ public class Imagem implements Serializable{
 	public void setComercialSolution(ArrayList<ComercialSolution> sol) {
 		this.comercialSolution = sol;
 	}
-
-	/*@ManyToMany(fetch=FetchType.LAZY, mappedBy="imagens", targetEntity=Produto.class)
-	public ArrayList<Produto> getProdutos() {
-		return produtos;
-	}
-
-	public void setProdutos(ArrayList<Produto> produtos) {
-		this.produtos = produtos;
-	}*/
-	
-/*	@ManyToOne(targetEntity=Produto.class,cascade={CascadeType.PERSIST,CascadeType.REFRESH,CascadeType.MERGE},fetch=FetchType.LAZY)
-	public Produto getProduto() {
-		return produto;
-	}
-
-	public void setProduto(Produto produto) {
-		this.produto = produto;
-	}*/
 
 }

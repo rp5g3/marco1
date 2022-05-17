@@ -111,36 +111,6 @@ public class Fornecedor extends Pessoa {
 	@Transient
 	private Icon bigIcon,smallIcon;
 	
-	/*@Transient
-	public Icon getBigIcon(boolean update) {
-		try {
-			if (logotipo != null){				
-				if (update || bigIcon == null)	
-				try {
-					java.awt.Image image = new javax.swing.ImageIcon(getImageBytes(logotipo)).getImage();
-					if (image != null) {
-						Image im = image.getScaledInstance(102, 102,java.awt.Image.SCALE_SMOOTH);						
-						bigIcon = new javax.swing.ImageIcon(im);
-						return bigIcon;
-					}
-					else{
-						System.err.println("Imagem da categoria � nula");
-					}
-				} catch (Exception e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-				else return bigIcon;
-			}else{
-				return getIcon("/imgs/warn.png",102,102);
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
-			return getIcon("/imgs/warn.png",102,102);
-			
-		}
-		return getIcon("/imgs/warn.png",102,102);
-	}*/
 	
 	@Transient
 	public Icon getBigIcon(boolean update) {
@@ -229,9 +199,6 @@ public class Fornecedor extends Pessoa {
 		try {
 			FileInputStream fileInputStream = new FileInputStream(file);
 			fileInputStream.read(b);
-			/*for (int i = 0; i < b.length; i++) {
-				System.out.print((char)b[i]);
-			}*/
 		} catch (FileNotFoundException e) {
 			System.out.println("File Not Found.");
 			e.printStackTrace();

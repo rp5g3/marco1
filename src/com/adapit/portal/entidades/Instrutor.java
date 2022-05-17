@@ -40,15 +40,6 @@ public class Instrutor extends Participante implements Serializable{
 	@Basic(fetch = FetchType.LAZY)
 	@OneToMany(targetEntity = TurmaTreinamento.class, mappedBy = "instrutor", cascade = {CascadeType.REFRESH })
 	protected Collection<TurmaTreinamento> turmas = new ArrayList<TurmaTreinamento>();
-
-	/*public void setUser(Usuario user ){
-		this.user=user;
-	}
-	
-	
-	public Usuario getUser(){
-		return this.user;
-	}*/
 	
 	public void setTurmas(Collection<TurmaTreinamento> leiloes) {
 		this.turmas = leiloes;

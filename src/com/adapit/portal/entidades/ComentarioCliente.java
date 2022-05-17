@@ -23,7 +23,6 @@ import javax.persistence.TemporalType;
 
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
-//@SequenceGenerator(name="CustomerComment_Gen",allocationSize=1,initialValue=1,sequenceName="CustomerCommentSeq")
 @NamedQueries(value={
 @NamedQuery(name="comentarioCliente.listByIdPessoa",query="select a from ComentarioCliente a where a.pessoa.id=:id order by a.dataHora ASC"),
 @NamedQuery(name="comentarioCliente.listWebByCommercialSolution",query="select a from ComentarioCliente a where a.commercialSolution.id=:comid and a.aprovado=true order by a.classificacao ASC"),
@@ -37,10 +36,6 @@ import javax.persistence.TemporalType;
 public class ComentarioCliente implements Serializable{
 
 	private static final long serialVersionUID = 233257443368822482L;
-	
-	/*@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="CustomerComment_Gen")
-	@Id
-	private int id;*/
 
 	@Id
 	@Column(nullable = false,name="person_id", insertable = false, updatable = false)
@@ -73,14 +68,6 @@ public class ComentarioCliente implements Serializable{
 	@Column(nullable=false,length=2000,name="comment")
 	private String comentario;
 	
-	/*public void setId(int id) {
-		this.id = id;
-	}
-	
-	public int getId() {
-		return this.id;
-	}*/
-
 	/**
 	 * 
 	 * @spring.validator arg0resource="access.data" type="date"

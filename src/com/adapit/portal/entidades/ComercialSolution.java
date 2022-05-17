@@ -82,7 +82,7 @@ public class ComercialSolution implements Serializable{
 	@Column(name="keys_words")
 	private String keyWords;
 	
-	private CommercialSolutionType solutionType = CommercialSolutionType.Outros_serviços;
+	private CommercialSolutionType solutionType = CommercialSolutionType.Outros_serviï¿½os;
 	
 	@Column(name="publish_to_customer")
 	private boolean publicar=false;
@@ -159,13 +159,9 @@ public class ComercialSolution implements Serializable{
 	@Transient
 	public String getFormatedDescricao() {
 		String str = "<table border=0 cellpadding=0 cellspacing=0 width=\"100%\" style=\"background-color:transparent;\">";
-		//String title = getCategoria().getNome();
+		
 		try {
 			String content = getDescricao();
-
-			/*if (title != null && !title.equals("")) {
-				str += "<tr><td><b>"+title+ "</b></td></tr>";
-			}*/
 			if (content != null && !content.equals("") && utilizarFormatador){
 				String dados[] = content.split("\n");
 				for (int j = 0; j < dados.length; j++) {
@@ -188,7 +184,7 @@ public class ComercialSolution implements Serializable{
 				str += "</tr>";
 			}else{
 				str += "<tr>";
-				str += "<td>Sem informações do produto/serviço</td>";				
+				str += "<td>Sem informaï¿½ï¿½es do produto/serviï¿½o</td>";				
 				str += "</tr>";
 			}
 			
@@ -213,11 +209,6 @@ public class ComercialSolution implements Serializable{
 	public boolean getUtilizarFormatador() {
 		return utilizarFormatador;
 	}
-
-/*	public boolean isUtilizarFormatador() {
-		return utilizarFormatador;
-	}
-*/
 
 	public void setUtilizarFormatador(boolean utilizarFormatador) {
 		this.utilizarFormatador = utilizarFormatador;
