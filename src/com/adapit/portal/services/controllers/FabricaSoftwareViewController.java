@@ -52,8 +52,8 @@ public class FabricaSoftwareViewController extends MultiActionController impleme
 	}
 
 	
-	@SuppressWarnings({ "unused", "unchecked" })
-	private void errorsValidate(BindException errors, ArrayList arr){
+	@SuppressWarnings({ "unused" })
+	private void errorsValidate(BindException errors, ArrayList<String> arr){
 		if (errors.hasErrors()) {
 			Iterator it = errors.getAllErrors().iterator();
 			while (it.hasNext()){
