@@ -68,9 +68,6 @@ public class Arquivo implements Serializable{
 	@Enumerated(EnumType.ORDINAL)
 	private AccessKind accessKind=AccessKind.FreeAccess;
 	
-/*	@Column(nullable=true)
-	private int fileVersion;*/
-	
 	@ManyToMany
 	@JoinTable(name="USER_CANREAD_FILE")	
 	private List<Usuario> canReadUserList = new ArrayList<Usuario>();
@@ -129,7 +126,7 @@ public class Arquivo implements Serializable{
     @Transient
     public static byte[] getBytesFromFile2(File file) throws IOException {
     	byte[] b = new byte[(int) file.length()];
-    	//System.out.println("Comprimento " + file.length());
+    	
 		try {
 			FileInputStream fileInputStream = new FileInputStream(file);
 			fileInputStream.read(b);
@@ -142,31 +139,9 @@ public class Arquivo implements Serializable{
 			System.out.println("Error Reading The File.");
 			e1.printStackTrace();
 		}
-		//System.out.println("Conte�do " + b);
+		
 		return b;
-        /*InputStream is = new FileInputStream(file);
-        
-        long length = file.length();
-
-        if (length > Integer.MAX_VALUE) {
-            // File is too large
-        }
-
-        byte[] bytes = new byte[(int)length];
-
-        int offset = 0;
-        int numRead = 0;
-        while (offset < bytes.length
-               && (numRead=is.read(bytes, offset, bytes.length-offset)) >= 0) {
-            offset += numRead;
-        }
-    
-        if (offset < bytes.length) {
-            throw new IOException("Could not completely read file "+file.getName());
-        }
-
-        is.close();
-        return bytes;*/
+     
     }
 
 	
@@ -302,16 +277,6 @@ public class Arquivo implements Serializable{
 	public void setAccessKind(AccessKind accessKind) {
 		this.accessKind = accessKind;
 	}
-
-
-/*	public int getFileVersion() {
-		return fileVersion;
-	}
-
-
-	public void setFileVersion(int version) {
-		this.fileVersion = version;
-	}*/
 
 
 	public List<Usuario> getCanReadUserList() {

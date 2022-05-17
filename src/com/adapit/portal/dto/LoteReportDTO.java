@@ -22,7 +22,7 @@ public class LoteReportDTO implements Serializable {
 	private boolean leilaoIniciou=false;
 	private long idParticipante;
 	private int idAgenda;
-	//private float proximoLance;
+
 
 	public float getLanceInicial() {
 		return lanceInicial;

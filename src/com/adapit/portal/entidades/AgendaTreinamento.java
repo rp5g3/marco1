@@ -56,12 +56,6 @@ public class AgendaTreinamento implements Serializable{
 	@Temporal(TemporalType.DATE)
 	private Date inicioPrevisto;
 	
-/*	@Column(name="initialValue")
-	private float lanceInicial;
-	
-	@Column(name="increment")
-	private float incremento;*/
-	
 	@Column(name="expectedFinishing")
 	@Temporal(TemporalType.DATE)
 	private Date terminoPrevisto;
@@ -73,7 +67,7 @@ public class AgendaTreinamento implements Serializable{
 	private Date termino;
 	
 	@Enumerated(EnumType.ORDINAL)
-	private StatusAgenda status = StatusAgenda.Não_cadastrada;
+	private StatusAgenda status = StatusAgenda.Nï¿½o_cadastrada;
 	
 	@Column(name="confirmed")
 	private boolean confirmada=false;
@@ -122,8 +116,6 @@ public class AgendaTreinamento implements Serializable{
 		this.encerrada = encerrada;
 	}
 
-	
-	
 	public void setTreinamento(Treinamento treinamento ){
 		this.treinamento=treinamento;
 	}
@@ -136,7 +128,6 @@ public class AgendaTreinamento implements Serializable{
 	public void setEncerramento(Encerramento encerramento ){
 		this.encerramento=encerramento;
 	}
-	
 	
 	
 	public Encerramento getEncerramento(){
@@ -163,16 +154,6 @@ public class AgendaTreinamento implements Serializable{
 		return this.inicioPrevisto;
 	}
 	
-	/**
-	 * @spring.validator arg0resource="agendaTreinamento.lanceInicial" type="double"
-	 */
-/*	public void setLanceInicial(float lanceInicial ){
-		this.lanceInicial=lanceInicial;
-	}
-	
-	public float getLanceInicial(){
-		return this.lanceInicial;
-	}*/
 	
 	/**
 	 * @spring.validator arg0resource="agendaTreinamento.terminoPrevisto" type="required,date"
@@ -227,33 +208,6 @@ public class AgendaTreinamento implements Serializable{
 		this.confirmada = confirmada;
 	}
 
-/*	public float getIncremento() {
-		return incremento;
-	}*/
-
-	/**
-	 * @spring.validator arg0resource="agendaTreinamento.incremento" type="double"
-	 */
-/*	public void setIncremento(float incremento) {
-		this.incremento = incremento;
-	}*/
-
-
-
-/*	
-	@Transient
-	public boolean isInNextValueInterval(float valor, float ultimo) {
-		float valorMin = ultimo + incremento;
-		if (valor >= valorMin) return true;
-		return false;
-	}
-	
-	@Transient
-	public boolean isInNextValueIntervalDifferent(float valor, float ultimo) {
-		float valorMin = ultimo + incremento;
-		if (valor > valorMin) return true;
-		return false;
-	}*/
 
 	public boolean isRecebendoInteressados() {
 		return recebendoInteressados;

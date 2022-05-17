@@ -165,10 +165,6 @@ public class AgendaProjeto implements Serializable{
 	public void setTermino(Date termino) {
 		this.termino = termino;
 	}
-
-	/*public boolean isConfirmada() {
-		return confirmada;
-	}*/
 	
 	public boolean getConfirmada() {
 		return confirmada;
