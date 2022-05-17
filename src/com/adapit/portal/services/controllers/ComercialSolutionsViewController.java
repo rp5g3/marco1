@@ -69,7 +69,7 @@ public class ComercialSolutionsViewController extends MultiActionController impl
 
 	
 	@SuppressWarnings({ "unused", "unchecked" })
-	private void errorsValidate(BindException errors, ArrayList arr){
+	private void errorsValidate(BindException errors, ArrayList<String> arr){
 		if (errors.hasErrors()) {
 			Iterator it = errors.getAllErrors().iterator();
 			while (it.hasNext()){
