@@ -122,7 +122,7 @@ AgendaTreinamentoService, GenericDAO{
 			s = LocalServicesUtility.getInstance().openSession();
 			List list = s.createQuery("select lote.id, lote.codigo from "+treinamentoEntityName+" lote" +
 					" where lote.arrematado=true" +
-					" and lote.status<>'"+ScheduledTrainingStatus.Não_homologado.name()+"'" +
+					" and lote.status<>'"+ScheduledTrainingStatus.Nao_homologado.name()+"'" +
 					" and lote.turma.id =" + 
 					idLeilao+
 					" order by lote.codigo").list();			
@@ -249,7 +249,7 @@ AgendaTreinamentoService, GenericDAO{
 		try {						
 			s = LocalServicesUtility.getInstance().openSession();			
 			Treinamento lote = (Treinamento) s.load(Treinamento.class,idLote);
-			if (lote == null) throw new ValidationException("Treinamento não encontrado! Passe um identificador válido");
+			if (lote == null) throw new ValidationException("Treinamento nï¿½o encontrado! Passe um identificador vï¿½lido");
 			if (lote.getAgendaTreinamento() != null){
 				lote.getAgendas().add(lote.getAgendaTreinamento());
 				s.beginTransaction();
